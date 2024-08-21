@@ -4,6 +4,7 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":60,"eventType":7,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"o_poolSelect",
@@ -27,7 +28,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"poolIcon","filters":[],"listItems":[],"multiselect":false,"name":"poolIcon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"poolIcon","filters":[],"listItems":[],"multiselect":false,"name":"poolIcon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"sp_defaultIcon","path":"sprites/sp_defaultIcon/sp_defaultIcon.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"sp_defaultIcon","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"poolTitle","filters":[],"listItems":[],"multiselect":false,"name":"poolTitle","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 ","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"poolDesc","filters":[],"listItems":[],"multiselect":false,"name":"poolDesc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"asdasd sdfasd sdf  bh fdaguhsAEDikj  fuduhjas  ; fd a s dgfsdfa a f sfgsad saasdasd sdfasd sdf  bh fdaguhsAEDikj  fuduhjas  ; fd a s dgfsdfa a f sfgsad sa","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"poolCurrency","filters":[],"listItems":[],"multiselect":false,"name":"poolCurrency","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"120","varType":1,},
