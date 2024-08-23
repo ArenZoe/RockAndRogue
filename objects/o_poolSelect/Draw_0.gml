@@ -100,19 +100,19 @@ if(!(x < 100))
 		/// @DnDSaveInfo : "font" "f_ssFontSmall"
 		draw_set_font(f_ssFontSmall);
 	
+		/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 366ADCFA
+		/// @DnDParent : 75F76C0F
+		/// @DnDArgument : "code" "draw_text_ext(x+120,y+150,string_copy(poolDesc,0,70),15,200)$(13_10)"
+		draw_text_ext(x+120,y+150,string_copy(poolDesc,0,70),15,200)
+	
 		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 2F5F33D5
 		/// @DnDParent : 75F76C0F
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
-	
-		/// @DnDAction : YoYo Games.Common.Execute_Code
-		/// @DnDVersion : 1
-		/// @DnDHash : 366ADCFA
-		/// @DnDParent : 75F76C0F
-		/// @DnDArgument : "code" "draw_text_ext(x+20,y+150,string_copy(poolDesc,0,70),15,200)$(13_10)"
-		draw_text_ext(x+20,y+150,string_copy(poolDesc,0,70),15,200)
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Line
 		/// @DnDVersion : 1

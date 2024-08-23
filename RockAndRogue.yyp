@@ -27,10 +27,8 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"aaaaa' - Copy (2).rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"aaaaa' - Copy (2).rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"aaaaa' - Copy (3).rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"aaaaa' - Copy (3).rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"aaaaa' - Copy.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"aaaaa' - Copy.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"aaaaa'.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"aaaaa'.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"defaultEDM.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultEDM.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"test.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"test.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"test2.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"test2.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"z_4.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"z_4.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -51,6 +49,7 @@
     {"id":{"name":"o_poolScrollLeft","path":"objects/o_poolScrollLeft/o_poolScrollLeft.yy",},},
     {"id":{"name":"o_poolScrollRight","path":"objects/o_poolScrollRight/o_poolScrollRight.yy",},},
     {"id":{"name":"o_poolSelect","path":"objects/o_poolSelect/o_poolSelect.yy",},},
+    {"id":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
     {"id":{"name":"sc_Load","path":"scripts/sc_Load/sc_Load.yy",},},
     {"id":{"name":"sp_Credit","path":"sprites/sp_Credit/sp_Credit.yy",},},
@@ -70,6 +69,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
+    {"roomId":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
