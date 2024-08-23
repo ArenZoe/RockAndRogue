@@ -43,6 +43,7 @@
     {"id":{"name":"f_ssFont","path":"fonts/f_ssFont/f_ssFont.yy",},},
     {"id":{"name":"f_ssFontBig","path":"fonts/f_ssFontBig/f_ssFontBig.yy",},},
     {"id":{"name":"f_ssFontSmall","path":"fonts/f_ssFontSmall/f_ssFontSmall.yy",},},
+    {"id":{"name":"o_addPack","path":"objects/o_addPack/o_addPack.yy",},},
     {"id":{"name":"o_downloadButton","path":"objects/o_downloadButton/o_downloadButton.yy",},},
     {"id":{"name":"o_invisibleLoader","path":"objects/o_invisibleLoader/o_invisibleLoader.yy",},},
     {"id":{"name":"o_playButton","path":"objects/o_playButton/o_playButton.yy",},},
