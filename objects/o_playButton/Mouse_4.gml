@@ -20,8 +20,48 @@ if(!(x < 100))
 		/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 		/// @DnDVersion : 1
 		/// @DnDHash : 0D12FE47
+		/// @DnDDisabled : 1
 		/// @DnDParent : 7D19E8B2
 		/// @DnDArgument : "msg" ""You picked pack with id: " + buttonPackID"
-		show_debug_message(string("You picked pack with id: " + buttonPackID));
+	
+	
+		/// @DnDAction : YoYo Games.Loops.For_Loop
+		/// @DnDVersion : 1
+		/// @DnDHash : 26202551
+		/// @DnDParent : 7D19E8B2
+		/// @DnDArgument : "cond" "i < array_length(global.packs)"
+		for(i = 0; i < array_length(global.packs); i += 1) {
+			/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 63845184
+			/// @DnDParent : 26202551
+			/// @DnDArgument : "var" "global.packs[i].id"
+			/// @DnDArgument : "value" "buttonPackID"
+			if(global.packs[i].id == buttonPackID)
+			{
+				/// @DnDAction : YoYo Games.Common.Set_Global
+				/// @DnDVersion : 1
+				/// @DnDHash : 2E45BA45
+				/// @DnDParent : 63845184
+				/// @DnDArgument : "value" "global.packs[i]"
+				/// @DnDArgument : "var" "pack"
+				global.pack = global.packs[i];
+			
+				/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
+				/// @DnDVersion : 1
+				/// @DnDHash : 1995A245
+				/// @DnDDisabled : 1
+				/// @DnDParent : 63845184
+				/// @DnDArgument : "msg" "global.pack"
+			}
+		}
+	
+		/// @DnDAction : YoYo Games.Rooms.Go_To_Room
+		/// @DnDVersion : 1
+		/// @DnDHash : 23E8D116
+		/// @DnDParent : 7D19E8B2
+		/// @DnDArgument : "room" "r_gameplay"
+		/// @DnDSaveInfo : "room" "r_gameplay"
+		room_goto(r_gameplay);
 	}
 }

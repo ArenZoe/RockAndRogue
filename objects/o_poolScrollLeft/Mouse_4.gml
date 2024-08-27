@@ -19,8 +19,9 @@ if(!(global.Position <= 0))
 	/// @DnDVersion : 1
 	/// @DnDHash : 70582E3E
 	/// @DnDParent : 0455E21B
+	/// @DnDArgument : "init_temp" "1"
 	/// @DnDArgument : "cond" "i < instance_number(o_poolSelect)"
-	for(i = 0; i < instance_number(o_poolSelect); i += 1) {
+	for(var i = 0; i < instance_number(o_poolSelect); i += 1) {
 		/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 		/// @DnDVersion : 1
 		/// @DnDHash : 03767B42

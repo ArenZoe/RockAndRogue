@@ -100,16 +100,10 @@ global.Position = 0/**/
 
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
-/// @DnDHash : 11798511
-/// @DnDDisabled : 1
-/// @DnDArgument : "cond" "i < array_length(global.packs)"
-
-
-/// @DnDAction : YoYo Games.Loops.For_Loop
-/// @DnDVersion : 1
 /// @DnDHash : 5A307C25
+/// @DnDArgument : "init_temp" "1"
 /// @DnDArgument : "cond" "i < array_length(global.packs)"
-for(i = 0; i < array_length(global.packs); i += 1) {
+for(var i = 0; i < array_length(global.packs); i += 1) {
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 0D41A0E6

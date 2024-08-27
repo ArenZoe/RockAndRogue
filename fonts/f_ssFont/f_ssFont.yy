@@ -108,7 +108,7 @@
     "125":{"character":125,"h":19,"offset":0,"shift":8,"w":8,"x":141,"y":23,},
     "126":{"character":126,"h":19,"offset":0,"shift":9,"w":9,"x":130,"y":23,},
     "127":{"character":127,"h":19,"offset":0,"shift":3,"w":0,"x":231,"y":44,},
-    "9647":{"character":9647,"h":19,"offset":3,"shift":18,"w":12,"x":133,"y":107,},
+    "198":{"character":198,"h":19,"offset":0,"shift":25,"w":24,"x":133,"y":107,},
   },
   "hinting":0,
   "includeTTF":false,
@@ -523,7 +523,8 @@
   "pointRounding":0,
   "ranges":[
     {"lower":32,"upper":127,},
-    {"lower":9647,"upper":9647,},
+    {"lower":198,"upper":198,},
+    {"lower":937,"upper":937,},
   ],
   "regenerateBitmap":false,
   "resourceType":"GMFont",

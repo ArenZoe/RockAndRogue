@@ -13,8 +13,8 @@
   "name":"o_playButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Main Menu",
+    "path":"folders/Objects/Main Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

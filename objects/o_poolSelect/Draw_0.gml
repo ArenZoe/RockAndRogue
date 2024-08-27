@@ -138,14 +138,14 @@ if(!(x < 100))
 		/// @DnDArgument : "y_relative" "1"
 		/// @DnDArgument : "xscale" "0.4"
 		/// @DnDArgument : "yscale" "0.4"
-		/// @DnDArgument : "sprite" "sp_currencyIcon"
-		/// @DnDArgument : "col" "$FF08B53A"
-		/// @DnDSaveInfo : "sprite" "sp_currencyIcon"
-		draw_sprite_ext(sp_currencyIcon, 0, x + 20, y + 280, 0.4, 0.4, 0, $FF08B53A & $ffffff, 1);
+		/// @DnDArgument : "sprite" "sp_coin"
+		/// @DnDArgument : "col" "$FF00FF00"
+		/// @DnDSaveInfo : "sprite" "sp_coin"
+		draw_sprite_ext(sp_coin, 0, x + 20, y + 280, 0.4, 0.4, 0, $FF00FF00 & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
-		/// @DnDHash : 2AAB88F1
+		/// @DnDHash : 610C30E2
 		/// @DnDParent : 75F76C0F
 		/// @DnDArgument : "x" "110"
 		/// @DnDArgument : "x_relative" "1"
@@ -153,9 +153,10 @@ if(!(x < 100))
 		/// @DnDArgument : "y_relative" "1"
 		/// @DnDArgument : "xscale" "0.4"
 		/// @DnDArgument : "yscale" "0.4"
-		/// @DnDArgument : "sprite" "sp_difficultyIcon"
-		/// @DnDSaveInfo : "sprite" "sp_difficultyIcon"
-		draw_sprite_ext(sp_difficultyIcon, 0, x + 110, y + 280, 0.4, 0.4, 0, $FFFFFF & $ffffff, 1);
+		/// @DnDArgument : "sprite" "sp_diff"
+		/// @DnDArgument : "col" "$FF00B2FF"
+		/// @DnDSaveInfo : "sprite" "sp_diff"
+		draw_sprite_ext(sp_diff, 0, x + 110, y + 280, 0.4, 0.4, 0, $FF00B2FF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Drawing.Set_Font
 		/// @DnDVersion : 1
