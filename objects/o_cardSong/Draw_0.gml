@@ -79,8 +79,8 @@ draw_set_valign(fa_top);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2D9AA288
-/// @DnDArgument : "code" "draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,40),18,400)"
-draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,40),18,400)
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,38),18,400)"
+draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,38),18,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -122,17 +122,6 @@ draw_set_font(f_ssFontTiny);
 draw_set_colour($FF4C4C4C & $ffffff);
 var l3B0C3482_0=($FF4C4C4C >> 24);
 draw_set_alpha(l3B0C3482_0 / $ff);
-
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
-/// @DnDVersion : 1
-/// @DnDHash : 12E8A24A
-/// @DnDArgument : "x" "112"
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "70"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""
-/// @DnDArgument : "var" "global.pack.songs[songIndex].charter"
-draw_text(x + 112, y + 70,  + string(global.pack.songs[songIndex].charter));
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1

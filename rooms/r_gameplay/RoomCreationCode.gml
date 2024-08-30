@@ -24,3 +24,14 @@ global.gameRound = 1;
 /// @DnDArgument : "value" "120"
 /// @DnDArgument : "var" "nextStars"
 global.nextStars = 120;
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 687FE3C0
+/// @DnDArgument : "value" "true"
+/// @DnDArgument : "var" "buttonsActive"
+global.buttonsActive = true;
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 0E3D7604

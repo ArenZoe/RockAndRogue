@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"o_InventoryPanel",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"o_sellInactive",
+  "eventList":[],
   "managed":true,
-  "name":"o_InventoryPanel",
+  "name":"o_sellInactive",
   "overriddenProperties":[],
   "parent":{
-    "name":"Common Panels",
-    "path":"folders/Objects/Common Panels.yy",
+    "name":"Shop",
+    "path":"folders/Objects/Shop.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sp_square",
-    "path":"sprites/sp_square/sp_square.yy",
+    "name":"sp_sellButton",
+    "path":"sprites/sp_sellButton/sp_sellButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
