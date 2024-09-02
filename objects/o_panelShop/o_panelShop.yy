@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"o_useInactive",
-  "eventList":[],
+  "%Name":"o_panelShop",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"o_useInactive",
+  "name":"o_panelShop",
   "overriddenProperties":[],
   "parent":{
     "name":"Shop",
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sp_useButton",
-    "path":"sprites/sp_useButton/sp_useButton.yy",
+    "name":"sp_square",
+    "path":"sprites/sp_square/sp_square.yy",
   },
   "spriteMaskId":null,
   "visible":true,
