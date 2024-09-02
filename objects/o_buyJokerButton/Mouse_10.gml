@@ -1,6 +1,6 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 0D2E472B
-/// @DnDArgument : "expr" "$FF666666"
+/// @DnDHash : 21BCD6FC
+/// @DnDArgument : "expr" "$FF07CC00"
 /// @DnDArgument : "var" "renderColour"
-renderColour = $FF666666;
+renderColour = $FF07CC00;

@@ -39,6 +39,7 @@
     {"$GMObjectProperty":"v1","%Name":"showDesc","filters":[],"listItems":[],"multiselect":false,"name":"showDesc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"game_get_speed(gamespeed_fps) * 0.8","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"showDescCap","filters":[],"listItems":[],"multiselect":false,"name":"showDescCap","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"game_get_speed(gamespeed_fps) * 0.8","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"selected","filters":[],"listItems":[],"multiselect":false,"name":"selected","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"inShop","filters":[],"listItems":[],"multiselect":false,"name":"inShop","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

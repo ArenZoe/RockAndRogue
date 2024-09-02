@@ -6,8 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_7A0D3E3D","path":"rooms/r_gameplay/r_gameplay.yy",},
-    {"name":"inst_374BDF10","path":"rooms/r_gameplay/r_gameplay.yy",},
     {"name":"inst_217979B7","path":"rooms/r_gameplay/r_gameplay.yy",},
     {"name":"inst_50A18A41","path":"rooms/r_gameplay/r_gameplay.yy",},
     {"name":"inst_3934897F","path":"rooms/r_gameplay/r_gameplay.yy",},
@@ -15,6 +13,8 @@
     {"name":"inst_5442AE85","path":"rooms/r_gameplay/r_gameplay.yy",},
     {"name":"inst_55114E98","path":"rooms/r_gameplay/r_gameplay.yy",},
     {"name":"inst_2CE35FE4","path":"rooms/r_gameplay/r_gameplay.yy",},
+    {"name":"inst_69789B55","path":"rooms/r_gameplay/r_gameplay.yy",},
+    {"name":"inst_65313B05","path":"rooms/r_gameplay/r_gameplay.yy",},
   ],
   "isDnd":true,
   "layers":[
@@ -25,12 +25,12 @@
       ],"layers":[],"name":"SongCards","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_3934897F","colour":3358864436,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3934897F","objectId":{"name":"o_panelSetlist","path":"objects/o_panelSetlist/o_panelSetlist.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":9.5,"scaleY":10.25,"x":640.0,"y":32.0,},
-        {"$GMRInstance":"v1","%Name":"inst_7A0D3E3D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A0D3E3D","objectId":{"name":"o_tempSquare","path":"objects/o_tempSquare/o_tempSquare.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":2.0,"x":464.0,"y":608.0,},
-        {"$GMRInstance":"v1","%Name":"inst_374BDF10","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_374BDF10","objectId":{"name":"o_tempSquare","path":"objects/o_tempSquare/o_tempSquare.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":2.0,"x":320.0,"y":608.0,},
         {"$GMRInstance":"v1","%Name":"inst_217979B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_217979B7","objectId":{"name":"o_cardSongPool","path":"objects/o_cardSongPool/o_cardSongPool.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
         {"$GMRInstance":"v1","%Name":"inst_50A18A41","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_50A18A41","objectId":{"name":"o_cardStatus","path":"objects/o_cardStatus/o_cardStatus.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":304.0,"y":32.0,},
         {"$GMRInstance":"v1","%Name":"inst_6D2019CE","colour":3358864436,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D2019CE","objectId":{"name":"o_InventoryPanel","path":"objects/o_InventoryPanel/o_InventoryPanel.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.75,"scaleY":8.25,"x":32.0,"y":160.0,},
         {"$GMRInstance":"v1","%Name":"inst_2CE35FE4","colour":3358864436,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2CE35FE4","objectId":{"name":"o_panelShop","path":"objects/o_panelShop/o_panelShop.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.75,"scaleY":8.25,"x":304.0,"y":160.0,},
+        {"$GMRInstance":"v1","%Name":"inst_69789B55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_69789B55","objectId":{"name":"o_setlistRefresh","path":"objects/o_setlistRefresh/o_setlistRefresh.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":464.0,"y":608.0,},
+        {"$GMRInstance":"v1","%Name":"inst_65313B05","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65313B05","objectId":{"name":"o_shopRefresh","path":"objects/o_shopRefresh/o_shopRefresh.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":320.0,"y":608.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"Effect_2","depth":300,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_2","properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},

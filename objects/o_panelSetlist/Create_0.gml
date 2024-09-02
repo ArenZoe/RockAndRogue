@@ -1,3 +1,18 @@
+/// @DnDAction : YoYo Games.Instances.Color_Sprite
+/// @DnDVersion : 1
+/// @DnDHash : 3ADEAC2D
+/// @DnDArgument : "colour" "$C8343434"
+image_blend = $C8343434 & $ffffff;
+image_alpha = ($C8343434 >> 24) / $ff;
+
+/// @DnDAction : YoYo Games.Instances.Sprite_Scale
+/// @DnDVersion : 1
+/// @DnDHash : 3AB2D0C0
+/// @DnDArgument : "xscale" "9.5"
+/// @DnDArgument : "yscale" "10.25"
+image_xscale = 9.5;
+image_yscale = 10.25;
+
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
 /// @DnDHash : 24200B77

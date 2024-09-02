@@ -17,6 +17,14 @@ for(i = 0; i < 4; i += 1) {
 	/// @DnDSaveInfo : "objectid" "o_joker"
 	newJoker = instance_create_layer(x + 80, y + 64 * (i +1), "Buttons", o_joker);
 
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 12179321
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "newJoker.inShop"
+	newJoker.inShop = true;
+
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 4EDB8DB2
@@ -26,10 +34,10 @@ for(i = 0; i < 4; i += 1) {
 	/// @DnDArgument : "ypos" "64 * (i +1)"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "var" "newJokerButton"
-	/// @DnDArgument : "objectid" "o_buyButton"
+	/// @DnDArgument : "objectid" "o_buyJokerButton"
 	/// @DnDArgument : "layer" ""Buttons""
-	/// @DnDSaveInfo : "objectid" "o_buyButton"
-	newJokerButton = instance_create_layer(x + 16, y + 64 * (i +1), "Buttons", o_buyButton);
+	/// @DnDSaveInfo : "objectid" "o_buyJokerButton"
+	newJokerButton = instance_create_layer(x + 16, y + 64 * (i +1), "Buttons", o_buyJokerButton);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -67,6 +75,14 @@ for(i = 0; i < 3; i += 1) {
 	/// @DnDSaveInfo : "objectid" "o_consumable"
 	newItem = instance_create_layer(x + 32 + (i * 96), y + 320, "Buttons", o_consumable);
 
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 71377D82
+	/// @DnDParent : 02514183
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "var" "newItem.inShop"
+	newItem.inShop = true;
+
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 0AB4FCC1
@@ -76,10 +92,10 @@ for(i = 0; i < 3; i += 1) {
 	/// @DnDArgument : "ypos" "384"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "var" "newItemButton"
-	/// @DnDArgument : "objectid" "o_buyButton"
+	/// @DnDArgument : "objectid" "o_buyConsumableButton"
 	/// @DnDArgument : "layer" ""Buttons""
-	/// @DnDSaveInfo : "objectid" "o_buyButton"
-	newItemButton = instance_create_layer(x + 32 + (i * 96), y + 384, "Buttons", o_buyButton);
+	/// @DnDSaveInfo : "objectid" "o_buyConsumableButton"
+	newItemButton = instance_create_layer(x + 32 + (i * 96), y + 384, "Buttons", o_buyConsumableButton);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

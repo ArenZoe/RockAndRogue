@@ -1,6 +1,6 @@
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
-/// @DnDHash : 0E3F3195
+/// @DnDHash : 53914766
 /// @DnDArgument : "var" "global.gameMoney"
 /// @DnDArgument : "op" "4"
 /// @DnDArgument : "value" "price"
@@ -8,32 +8,15 @@ if(global.gameMoney >= price)
 {
 	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 	/// @DnDVersion : 1
-	/// @DnDHash : 13468BE5
-	/// @DnDParent : 0E3F3195
-	/// @DnDArgument : "msg" ""SETLIST REFRESH""
-	show_debug_message(string("SETLIST REFRESH"));
-
-	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 5A0BD058
-	/// @DnDApplyTo : {o_panelSetlist}
-	/// @DnDParent : 0E3F3195
-	with(o_panelSetlist) instance_destroy();
-
-	/// @DnDAction : YoYo Games.Instances.Create_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 575B7ED9
-	/// @DnDParent : 0E3F3195
-	/// @DnDArgument : "xpos" "640"
-	/// @DnDArgument : "ypos" "32"
-	/// @DnDArgument : "objectid" "o_panelSetlist"
-	/// @DnDSaveInfo : "objectid" "o_panelSetlist"
-	instance_create_layer(640, 32, "Instances", o_panelSetlist);
+	/// @DnDHash : 3CA14B3C
+	/// @DnDParent : 53914766
+	/// @DnDArgument : "msg" ""SHOP REFRESH""
+	show_debug_message(string("SHOP REFRESH"));
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
-	/// @DnDHash : 79BF509D
-	/// @DnDParent : 0E3F3195
+	/// @DnDHash : 4C39B199
+	/// @DnDParent : 53914766
 	/// @DnDArgument : "value" "-price"
 	/// @DnDArgument : "value_relative" "1"
 	/// @DnDArgument : "var" "global.gameMoney"
@@ -41,8 +24,8 @@ if(global.gameMoney >= price)
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 27A67D23
-	/// @DnDParent : 0E3F3195
+	/// @DnDHash : 6E69E753
+	/// @DnDParent : 53914766
 	/// @DnDArgument : "expr" "+1"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "price"
@@ -51,13 +34,13 @@ if(global.gameMoney >= price)
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
-/// @DnDHash : 308F0115
+/// @DnDHash : 7264D0C5
 else
 {
 	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 	/// @DnDVersion : 1
-	/// @DnDHash : 21F2C69A
-	/// @DnDParent : 308F0115
+	/// @DnDHash : 3B755B9C
+	/// @DnDParent : 7264D0C5
 	/// @DnDArgument : "msg" ""Not enough moneys :(""
 	show_debug_message(string("Not enough moneys :("));
 }

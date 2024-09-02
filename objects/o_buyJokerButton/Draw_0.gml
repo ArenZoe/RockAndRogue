@@ -27,8 +27,8 @@ draw_set_colour($FF000000 & $ffffff);draw_set_alpha(1);
 /// @DnDVersion : 1
 /// @DnDHash : 3A0ECDAA
 /// @DnDParent : 1D1BFEEF
-/// @DnDArgument : "code" "draw_roundrect_ext(x,y,x+128,y+64,5,5,false)"
-draw_roundrect_ext(x,y,x+128,y+64,5,5,false)
+/// @DnDArgument : "code" "draw_roundrect_ext(x,y,x+48,y+48,5,5,false)"
+draw_roundrect_ext(x,y,x+48,y+48,5,5,false)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -42,16 +42,17 @@ draw_set_colour(renderColour & $ffffff);draw_set_alpha(1);
 /// @DnDVersion : 1
 /// @DnDHash : 2DDD99D5
 /// @DnDParent : 1D1BFEEF
-/// @DnDArgument : "code" "draw_roundrect_ext(x+2,y+2,x+126,y+62,5,5,false)"
-draw_roundrect_ext(x+2,y+2,x+126,y+62,5,5,false)
+/// @DnDArgument : "code" "draw_roundrect_ext(x+2,y+2,x+46,y+46,5,5,false)"
+draw_roundrect_ext(x+2,y+2,x+46,y+46,5,5,false)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1
 /// @DnDHash : 5EBCDC1B
 /// @DnDParent : 1D1BFEEF
 /// @DnDArgument : "halign" "fa_center"
+/// @DnDArgument : "valign" "fa_middle"
 draw_set_halign(fa_center);
-draw_set_valign(fa_top);
+draw_set_valign(fa_middle);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -74,5 +75,5 @@ draw_set_alpha(l17A7F5DC_0 / $ff);
 /// @DnDVersion : 1
 /// @DnDHash : 06FE1F84
 /// @DnDParent : 1D1BFEEF
-/// @DnDArgument : "code" "draw_text_ext(x+64,y+4,string_concat("Setlist Refresh: $",price),20,58)"
-draw_text_ext(x+64,y+4,string_concat("Setlist Refresh: $",price),20,58)
+/// @DnDArgument : "code" "draw_text(x+24,y+25,string_concat("$",price))"
+draw_text(x+24,y+25,string_concat("$",price))

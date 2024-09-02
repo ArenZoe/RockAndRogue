@@ -74,5 +74,5 @@ draw_set_alpha(l17A7F5DC_0 / $ff);
 /// @DnDVersion : 1
 /// @DnDHash : 06FE1F84
 /// @DnDParent : 1D1BFEEF
-/// @DnDArgument : "code" "draw_text_ext(x+64,y+4,string_concat("Setlist Refresh: $",price),20,58)"
-draw_text_ext(x+64,y+4,string_concat("Setlist Refresh: $",price),20,58)
+/// @DnDArgument : "code" "draw_text_ext(x+64,y+4,string_concat("Shop Refresh: $",price),20,58)"
+draw_text_ext(x+64,y+4,string_concat("Shop Refresh: $",price),20,58)

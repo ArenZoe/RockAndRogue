@@ -23,6 +23,13 @@ draw_set_font(f_ssFontBigger);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 68D0F580
+draw_set_colour($FFFFFFFF & $ffffff);
+var l68D0F580_0=($FFFFFFFF >> 24);
+draw_set_alpha(l68D0F580_0 / $ff);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 0521D7EE
