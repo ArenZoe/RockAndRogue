@@ -4,7 +4,7 @@
 	"title": "The AE Experience",
 	"description": "The default pack, an EDM-based experience!",
 	"downloadLink": "https://clonehero.gitlab.io/sources/icons/fuse.png",
-	"startingMoney": 10,
+	"startingMoney": 999,
 	"difficulty": "Normal",
 	"songs": [
 		{

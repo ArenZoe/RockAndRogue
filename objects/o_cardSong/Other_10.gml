@@ -23,13 +23,13 @@ thisPlayButton.songIndex += songIndex;
 /// @DnDVersion : 1
 /// @DnDHash : 3F19276C
 /// @DnDArgument : "init_temp" "1"
-/// @DnDArgument : "cond" "i < modifierCount"
-for(var i = 0; i < modifierCount; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDArgument : "cond" "i < array_length(modifiers)"
+for(var i = 0; i < array_length(modifiers); i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 2005BFBB
 	/// @DnDComment : this will create modifiers in a for loop later on
 	/// @DnDParent : 3F19276C
-	/// @DnDArgument : "xpos" "464 - (i*112)"
+	/// @DnDArgument : "xpos" "448 - (i*120)"
 	/// @DnDArgument : "xpos_relative" "1"
 	/// @DnDArgument : "ypos" "112"
 	/// @DnDArgument : "ypos_relative" "1"
@@ -38,4 +38,12 @@ for(var i = 0; i < modifierCount; i += 1) {	/// @DnDAction : YoYo Games.Instanc
 	/// @DnDArgument : "objectid" "o_songModifier"
 	/// @DnDArgument : "layer" ""Buttons""
 	/// @DnDSaveInfo : "objectid" "o_songModifier"
-	var thisModifier = instance_create_layer(x + 464 - (i*112), y + 112, "Buttons", o_songModifier);}
+	var thisModifier = instance_create_layer(x + 448 - (i*120), y + 112, "Buttons", o_songModifier);
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 62CCB52F
+	/// @DnDParent : 3F19276C
+	/// @DnDArgument : "expr" "modifiers[i]"
+	/// @DnDArgument : "var" "thisModifier.songModifier"
+	thisModifier.songModifier = modifiers[i];}

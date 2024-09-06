@@ -32,15 +32,17 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 	/// @DnDSaveInfo : "objectid" "o_cardSong"
 	var thisSong = instance_create_layer(x + 16, y + 80 + (i*192), "SongCards", o_cardSong);
 
-	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
-	/// @DnDHash : 07B2995F
+	/// @DnDHash : 306AAC00
+	/// @DnDInput : 2
 	/// @DnDParent : 24200B77
 	/// @DnDArgument : "var" "randomSong"
 	/// @DnDArgument : "var_temp" "1"
-	/// @DnDArgument : "type" "1"
-	/// @DnDArgument : "max" "array_length(global.pack.songs) - 1"
-	var randomSong = floor(random_range(0, array_length(global.pack.songs) - 1 + 1));
+	/// @DnDArgument : "function" "selectSong"
+	/// @DnDArgument : "arg" "global.gameRound"
+	/// @DnDArgument : "arg_1" "i"
+	var randomSong = selectSong(global.gameRound, i);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -59,15 +61,16 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 	/// @DnDArgument : "var" "thisSong.songAlbum"
 	thisSong.songAlbum = sprite_add(global.pack.songs[thisSong.songIndex].albumArt, 1, false, true, 0, 0);
 
-	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
-	/// @DnDHash : 768CEC70
-	/// @DnDComment : replace this with actual song logic later :)
+	/// @DnDHash : 0C9F4D54
+	/// @DnDInput : 2
 	/// @DnDParent : 24200B77
-	/// @DnDArgument : "var" "thisSong.modifierCount"
-	/// @DnDArgument : "type" "1"
-	/// @DnDArgument : "max" "4"
-	thisSong.modifierCount = floor(random_range(0, 4 + 1));
+	/// @DnDArgument : "var" "thisSong.modifiers"
+	/// @DnDArgument : "function" "selectModifiers"
+	/// @DnDArgument : "arg" "global.gameRound"
+	/// @DnDArgument : "arg_1" "i"
+	thisSong.modifiers = selectModifiers(global.gameRound, i);
 
 	/// @DnDAction : YoYo Games.Instances.Call_User_Event
 	/// @DnDVersion : 1

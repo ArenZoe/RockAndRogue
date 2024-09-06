@@ -60,9 +60,9 @@ if(!(x < 100)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 3011EFD2
 		/// @DnDParent : 7D19E8B2
-		/// @DnDArgument : "value" "1"
+		/// @DnDArgument : "value" "21"
 		/// @DnDArgument : "var" "gameRound"
-		global.gameRound = 1;
+		global.gameRound = 21;
 	
 		/// @DnDAction : YoYo Games.Common.Set_Global
 		/// @DnDVersion : 1
@@ -71,6 +71,14 @@ if(!(x < 100)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDArgument : "value" "120"
 		/// @DnDArgument : "var" "nextStars"
 		global.nextStars = 120;
+	
+		/// @DnDAction : YoYo Games.Common.Set_Global
+		/// @DnDVersion : 1
+		/// @DnDHash : 4F628F12
+		/// @DnDParent : 7D19E8B2
+		/// @DnDArgument : "value" "[]"
+		/// @DnDArgument : "var" "seenSongs"
+		global.seenSongs = [];
 	
 		/// @DnDAction : YoYo Games.Rooms.Go_To_Room
 		/// @DnDVersion : 1
