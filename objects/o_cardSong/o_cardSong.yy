@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v1","%Name":"songIndex","filters":[],"listItems":[],"multiselect":false,"name":"songIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"songAlbum","filters":[],"listItems":[],"multiselect":false,"name":"songAlbum","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"sp_defaultAlbum","path":"sprites/sp_defaultAlbum/sp_defaultAlbum.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"sp_defaultAlbum","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"songMoney","filters":[],"listItems":[],"multiselect":false,"name":"songMoney","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"20","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"modifierCount","filters":[],"listItems":[],"multiselect":false,"name":"modifierCount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

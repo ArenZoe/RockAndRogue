@@ -5,9 +5,7 @@
 /// @DnDArgument : "not" "1"
 /// @DnDArgument : "op" "1"
 /// @DnDArgument : "value" "100"
-if(!(x < 100))
-{
-	/// @DnDAction : YoYo Games.Common.If_Variable
+if(!(x < 100)){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 7D19E8B2
 	/// @DnDParent : 07E3BEFA
@@ -15,9 +13,7 @@ if(!(x < 100))
 	/// @DnDArgument : "not" "1"
 	/// @DnDArgument : "op" "2"
 	/// @DnDArgument : "value" "1100"
-	if(!(x > 1100))
-	{
-		/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
+	if(!(x > 1100)){	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 		/// @DnDVersion : 1
 		/// @DnDHash : 0D12FE47
 		/// @DnDDisabled : 1
@@ -29,17 +25,15 @@ if(!(x < 100))
 		/// @DnDVersion : 1
 		/// @DnDHash : 26202551
 		/// @DnDParent : 7D19E8B2
+		/// @DnDArgument : "init_temp" "1"
 		/// @DnDArgument : "cond" "i < array_length(global.packs)"
-		for(i = 0; i < array_length(global.packs); i += 1) {
-			/// @DnDAction : YoYo Games.Common.If_Variable
+		for(var i = 0; i < array_length(global.packs); i += 1) {	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 63845184
 			/// @DnDParent : 26202551
 			/// @DnDArgument : "var" "global.packs[i].id"
 			/// @DnDArgument : "value" "buttonPackID"
-			if(global.packs[i].id == buttonPackID)
-			{
-				/// @DnDAction : YoYo Games.Common.Set_Global
+			if(global.packs[i].id == buttonPackID){	/// @DnDAction : YoYo Games.Common.Set_Global
 				/// @DnDVersion : 1
 				/// @DnDHash : 2E45BA45
 				/// @DnDParent : 63845184
@@ -52,9 +46,7 @@ if(!(x < 100))
 				/// @DnDHash : 1995A245
 				/// @DnDDisabled : 1
 				/// @DnDParent : 63845184
-				/// @DnDArgument : "msg" "global.pack"
-			}
-		}
+				/// @DnDArgument : "msg" "global.pack"}}
 	
 		/// @DnDAction : YoYo Games.Common.Set_Global
 		/// @DnDVersion : 1
@@ -86,6 +78,4 @@ if(!(x < 100))
 		/// @DnDParent : 7D19E8B2
 		/// @DnDArgument : "room" "r_gameplay"
 		/// @DnDSaveInfo : "room" "r_gameplay"
-		room_goto(r_gameplay);
-	}
-}
+		room_goto(r_gameplay);}}

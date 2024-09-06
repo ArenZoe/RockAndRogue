@@ -10,16 +10,14 @@ image_alpha = ($C8343434 >> 24) / $ff;
 /// @DnDHash : 3AB2D0C0
 /// @DnDArgument : "xscale" "9.5"
 /// @DnDArgument : "yscale" "10.25"
-image_xscale = 9.5;
-image_yscale = 10.25;
+image_xscale = 9.5;image_yscale = 10.25;
 
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
 /// @DnDHash : 24200B77
 /// @DnDArgument : "init_temp" "1"
 /// @DnDArgument : "cond" "i < 3"
-for(var i = 0; i < 3; i += 1) {
-	/// @DnDAction : YoYo Games.Instances.Create_Instance
+for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 5A26B714
 	/// @DnDParent : 24200B77
@@ -61,6 +59,16 @@ for(var i = 0; i < 3; i += 1) {
 	/// @DnDArgument : "var" "thisSong.songAlbum"
 	thisSong.songAlbum = sprite_add(global.pack.songs[thisSong.songIndex].albumArt, 1, false, true, 0, 0);
 
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 768CEC70
+	/// @DnDComment : replace this with actual song logic later :)
+	/// @DnDParent : 24200B77
+	/// @DnDArgument : "var" "thisSong.modifierCount"
+	/// @DnDArgument : "type" "1"
+	/// @DnDArgument : "max" "4"
+	thisSong.modifierCount = floor(random_range(0, 4 + 1));
+
 	/// @DnDAction : YoYo Games.Instances.Call_User_Event
 	/// @DnDVersion : 1
 	/// @DnDHash : 7BCDB965
@@ -68,5 +76,4 @@ for(var i = 0; i < 3; i += 1) {
 	/// @DnDParent : 24200B77
 	with(thisSong) {
 	event_user(0);
-	}
-}
+	}}
