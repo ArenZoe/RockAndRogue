@@ -97,16 +97,11 @@ draw_set_colour($FF262626 & $ffffff);
 var l123D7617_0=($FF262626 >> 24);
 draw_set_alpha(l123D7617_0 / $ff);
 
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
-/// @DnDHash : 24949B8B
-/// @DnDArgument : "x" "112"
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "54"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""
-/// @DnDArgument : "var" "global.pack.songs[songIndex].artist"
-draw_text(x + 112, y + 54,  + string(global.pack.songs[songIndex].artist));
+/// @DnDHash : 7811E556
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+54,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)"
+draw_text_ext(x+112,y+54,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -290,3 +285,14 @@ draw_sprite_ext(asset_get_index(string_concat("instrument_",global.pack.songs[so
 /// @DnDArgument : "frame" "clamp(global.pack.songs[songIndex].intensity, 0, 7)"
 /// @DnDSaveInfo : "sprite" "sp_intensity"
 draw_sprite_ext(sp_intensity, clamp(global.pack.songs[songIndex].intensity, 0, 7), x + 12, y + 144, .4, .4, 0, $FFFFFF & $ffffff, 1);
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDVersion : 1
+/// @DnDHash : 2B47A28B
+/// @DnDComment : debug test for $(13_10)showing song bucket
+/// @DnDDisabled : 1
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-10"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "caption" ""Bucket: ""
+/// @DnDArgument : "var" "global.pack.songs[songIndex].bucket"

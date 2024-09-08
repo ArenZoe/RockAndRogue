@@ -60,9 +60,9 @@ if(!(x < 100)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 3011EFD2
 		/// @DnDParent : 7D19E8B2
-		/// @DnDArgument : "value" "21"
+		/// @DnDArgument : "value" "1"
 		/// @DnDArgument : "var" "gameRound"
-		global.gameRound = 21;
+		global.gameRound = 1;
 	
 		/// @DnDAction : YoYo Games.Common.Set_Global
 		/// @DnDVersion : 1
