@@ -32,7 +32,6 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"name","filters":[],"listItems":[],"multiselect":false,"name":"name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Default Joker\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"icon","filters":[],"listItems":[],"multiselect":false,"name":"icon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"sp_defaultJoker","path":"sprites/sp_defaultJoker/sp_defaultJoker.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"sp_defaultJoker","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"jokerID","filters":[],"listItems":[],"multiselect":false,"name":"jokerID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"description","filters":[],"listItems":[],"multiselect":false,"name":"description","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"wagoogus! this is some default joker description text. We should find a name that isn't jokers though. This isn't Balatro\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"buyValue","filters":[],"listItems":[],"multiselect":false,"name":"buyValue","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"sellValue","filters":[],"listItems":[],"multiselect":false,"name":"sellValue","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
@@ -40,6 +39,7 @@
     {"$GMObjectProperty":"v1","%Name":"showDescCap","filters":[],"listItems":[],"multiselect":false,"name":"showDescCap","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"game_get_speed(gamespeed_fps) * 0.8","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"selected","filters":[],"listItems":[],"multiselect":false,"name":"selected","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"inShop","filters":[],"listItems":[],"multiselect":false,"name":"inShop","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"index","filters":[],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
