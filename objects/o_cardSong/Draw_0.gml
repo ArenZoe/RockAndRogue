@@ -176,14 +176,14 @@ draw_text_ext(x+186,y+84,string_copy(global.pack.songs[songIndex].genre,0,20),18
 /// @DnDHash : 06982CD7
 /// @DnDArgument : "x" "362"
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "62"
+/// @DnDArgument : "y" "74"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "xscale" "0.4"
 /// @DnDArgument : "yscale" "0.4"
 /// @DnDArgument : "sprite" "sp_coin"
 /// @DnDArgument : "col" "$FF00FF00"
 /// @DnDSaveInfo : "sprite" "sp_coin"
-draw_sprite_ext(sp_coin, 0, x + 362, y + 62, 0.4, 0.4, 0, $FF00FF00 & $ffffff, 1);
+draw_sprite_ext(sp_coin, 0, x + 362, y + 74, 0.4, 0.4, 0, $FF00FF00 & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -211,11 +211,11 @@ draw_set_alpha(l1ECCD834_0 / $ff);
 /// @DnDHash : 232C6426
 /// @DnDArgument : "x" "390"
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "58"
+/// @DnDArgument : "y" "70"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "var" "songMoney"
-draw_text(x + 390, y + 58,  + string(songMoney));
+draw_text(x + 390, y + 70,  + string(songMoney));
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1

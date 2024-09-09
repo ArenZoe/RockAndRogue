@@ -72,6 +72,14 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 	/// @DnDArgument : "arg_1" "i"
 	thisSong.modifiers = selectModifiers(global.gameRound, i);
 
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 2A7542ED
+	/// @DnDParent : 24200B77
+	/// @DnDArgument : "expr" "i+1 + array_length(thisSong.modifiers) + floor((global.pack.songs[thisSong.songIndex].length/ 1000 / 60) % 60 / 2) + global.pack.songs[thisSong.songIndex].intensity"
+	/// @DnDArgument : "var" "thisSong.songMoney"
+	thisSong.songMoney = i+1 + array_length(thisSong.modifiers) + floor((global.pack.songs[thisSong.songIndex].length/ 1000 / 60) % 60 / 2) + global.pack.songs[thisSong.songIndex].intensity;
+
 	/// @DnDAction : YoYo Games.Instances.Call_User_Event
 	/// @DnDVersion : 1
 	/// @DnDHash : 7BCDB965
