@@ -1,3 +1,21 @@
+/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+/// @DnDVersion : 1
+/// @DnDHash : 715C07E6
+/// @DnDInput : 2
+/// @DnDArgument : "value" "4.75"
+/// @DnDArgument : "value_1" "8.25"
+/// @DnDArgument : "instvar" "15"
+/// @DnDArgument : "instvar_1" "16"
+image_xscale = 4.75;
+image_yscale = 8.25;
+
+/// @DnDAction : YoYo Games.Instances.Color_Sprite
+/// @DnDVersion : 1
+/// @DnDHash : 6CE36A40
+/// @DnDArgument : "colour" "$C8343434"
+image_blend = $C8343434 & $ffffff;
+image_alpha = ($C8343434 >> 24) / $ff;
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 2FE2A35C

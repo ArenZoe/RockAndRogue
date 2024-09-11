@@ -12,6 +12,20 @@ show_debug_message(string("Now playing " + global.pack.songs[songIndex].name));
 /// @DnDArgument : "var" "gameRound"
 global.gameRound += +1;
 
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 3EEF723D
+/// @DnDArgument : "value" "global.setlistRefreshCostDefault"
+/// @DnDArgument : "var" "global.setlistRefreshCost"
+global.setlistRefreshCost = global.setlistRefreshCostDefault;
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 35B65C79
+/// @DnDArgument : "value" "global.shopRefreshCostDefault"
+/// @DnDArgument : "var" "global.shopRefreshCost"
+global.shopRefreshCost = global.shopRefreshCostDefault;
+
 /// @DnDAction : YoYo Games.Rooms.Restart_Room
 /// @DnDVersion : 1
 /// @DnDHash : 2445BF0D

@@ -85,6 +85,7 @@
     {"id":{"name":"sc_msToTimestamp","path":"scripts/sc_msToTimestamp/sc_msToTimestamp.yy",},},
     {"id":{"name":"sc_selectModifiers","path":"scripts/sc_selectModifiers/sc_selectModifiers.yy",},},
     {"id":{"name":"sc_selectSong","path":"scripts/sc_selectSong/sc_selectSong.yy",},},
+    {"id":{"name":"sc_setGlobals","path":"scripts/sc_setGlobals/sc_setGlobals.yy",},},
     {"id":{"name":"instrument_bass","path":"sprites/instrument_bass/instrument_bass.yy",},},
     {"id":{"name":"instrument_bassghl","path":"sprites/instrument_bassghl/instrument_bassghl.yy",},},
     {"id":{"name":"instrument_drums","path":"sprites/instrument_drums/instrument_drums.yy",},},
