@@ -4,14 +4,7 @@
 /// @DnDArgument : "var" "global.gameMoney"
 /// @DnDArgument : "op" "4"
 /// @DnDArgument : "value" "global.setlistRefreshCost"
-if(global.gameMoney >= global.setlistRefreshCost){	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
-	/// @DnDVersion : 1
-	/// @DnDHash : 13468BE5
-	/// @DnDParent : 0E3F3195
-	/// @DnDArgument : "msg" ""SETLIST REFRESH""
-	show_debug_message(string("SETLIST REFRESH"));
-
-	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+if(global.gameMoney >= global.setlistRefreshCost){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 5A0BD058
 	/// @DnDApplyTo : {o_panelSetlist}

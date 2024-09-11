@@ -20,12 +20,63 @@ image_alpha = ($C8343434 >> 24) / $ff;
 /// @DnDVersion : 1
 /// @DnDHash : 2FE2A35C
 /// @DnDInput : 2
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "[global.jokers.testJoker1,global.jokers.testJoker2,global.jokers.testJoker3,global.jokers.testJoker4]"
 /// @DnDArgument : "expr_1" "[global.items.testItem1,global.items.testItem2,global.items.testItem3]"
 /// @DnDArgument : "var" "global.shopInventory"
 /// @DnDArgument : "var_1" "global.shopInventoryItems"
-global.shopInventory = [global.jokers.testJoker1,global.jokers.testJoker2,global.jokers.testJoker3,global.jokers.testJoker4];
-global.shopInventoryItems = [global.items.testItem1,global.items.testItem2,global.items.testItem3];
+
+
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 1EC5837A
+/// @DnDArgument : "code" "global.shopInventory = [];$(13_10)global.shopInventoryItems = [];$(13_10)var availableJokers = [];$(13_10)var availableItems = [];$(13_10)availableJokers = struct_get_names(global.jokers);$(13_10)availableItems = struct_get_names(global.items);$(13_10)$(13_10)//delete inventory jokers from available list$(13_10)$(13_10)for (var i = 0; i < array_length(availableJokers); i++){$(13_10)	if (array_contains(global.jokerInventory,global.jokers[$ availableJokers[i]])){$(13_10)		array_delete(availableJokers, i, 1);$(13_10)		i--;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 4; i++){$(13_10)	//choose random joker from available list$(13_10)	var randomJoker = irandom(array_length(availableJokers)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventory,global.jokers[$ availableJokers[randomJoker]]);$(13_10)	array_delete(availableJokers,randomJoker,1);$(13_10)	$(13_10)	$(13_10)}$(13_10)$(13_10)//delete inventory items from available list$(13_10)$(13_10)for (var i = 0; i < array_length(availableItems); i++){$(13_10)	if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){$(13_10)		array_delete(availableItems, i, 1);$(13_10)		i--;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 3; i++){$(13_10)	//choose random item from available list$(13_10)	var randomItem = irandom(array_length(availableItems)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventoryItems,global.items[$ availableItems[randomItem]]);$(13_10)	array_delete(availableItems,randomItem,1);$(13_10)	$(13_10)	$(13_10)}"
+global.shopInventory = [];
+global.shopInventoryItems = [];
+var availableJokers = [];
+var availableItems = [];
+availableJokers = struct_get_names(global.jokers);
+availableItems = struct_get_names(global.items);
+
+//delete inventory jokers from available list
+
+for (var i = 0; i < array_length(availableJokers); i++){
+	if (array_contains(global.jokerInventory,global.jokers[$ availableJokers[i]])){
+		array_delete(availableJokers, i, 1);
+		i--;
+	}
+}
+
+for (var i = 0; i < 4; i++){
+	//choose random joker from available list
+	var randomJoker = irandom(array_length(availableJokers)-1);
+	
+	//then add to shop inv and remove from available
+	array_push(global.shopInventory,global.jokers[$ availableJokers[randomJoker]]);
+	array_delete(availableJokers,randomJoker,1);
+	
+	
+}
+
+//delete inventory items from available list
+
+for (var i = 0; i < array_length(availableItems); i++){
+	if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){
+		array_delete(availableItems, i, 1);
+		i--;
+	}
+}
+
+for (var i = 0; i < 3; i++){
+	//choose random item from available list
+	var randomItem = irandom(array_length(availableItems)-1);
+	
+	//then add to shop inv and remove from available
+	array_push(global.shopInventoryItems,global.items[$ availableItems[randomItem]]);
+	array_delete(availableItems,randomItem,1);
+	
+	
+}
 
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1

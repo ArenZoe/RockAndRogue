@@ -1,14 +1,3 @@
-/// @DnDAction : YoYo Games.Common.Set_Global
-/// @DnDVersion : 1
-/// @DnDHash : 2E786501
-/// @DnDInput : 2
-/// @DnDArgument : "value" "[]"
-/// @DnDArgument : "value_1" "[]"
-/// @DnDArgument : "var" "jokerInventory"
-/// @DnDArgument : "var_1" "itemInventory"
-global.jokerInventory = [];
-global.itemInventory = [];
-
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
 /// @DnDHash : 16FD4710

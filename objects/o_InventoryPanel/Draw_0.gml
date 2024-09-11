@@ -46,3 +46,24 @@ draw_text(x + 120, y + 16, string("Inventory") + "");
 /// @DnDArgument : "y2" "48"
 /// @DnDArgument : "y2_relative" "1"
 draw_line(x + 16, y + 48, x + 226, y + 48);
+
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 4FF2D3F6
+/// @DnDArgument : "color" "$7DB2B2B2"
+draw_set_colour($7DB2B2B2 & $ffffff);
+var l4FF2D3F6_0=($7DB2B2B2 >> 24);
+draw_set_alpha(l4FF2D3F6_0 / $ff);
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Line
+/// @DnDVersion : 1
+/// @DnDHash : 73D41D49
+/// @DnDArgument : "x1" "16"
+/// @DnDArgument : "x1_relative" "1"
+/// @DnDArgument : "y1" "384"
+/// @DnDArgument : "y1_relative" "1"
+/// @DnDArgument : "x2" "226"
+/// @DnDArgument : "x2_relative" "1"
+/// @DnDArgument : "y2" "384"
+/// @DnDArgument : "y2_relative" "1"
+draw_line(x + 16, y + 384, x + 226, y + 384);

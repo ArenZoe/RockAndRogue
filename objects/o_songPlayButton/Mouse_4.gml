@@ -12,6 +12,14 @@ show_debug_message(string("Now playing " + global.pack.songs[songIndex].name));
 /// @DnDArgument : "var" "gameRound"
 global.gameRound += +1;
 
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 28C360CA
+/// @DnDArgument : "expr" "+songMoney"
+/// @DnDArgument : "expr_relative" "1"
+/// @DnDArgument : "var" "global.gameMoney"
+global.gameMoney += +songMoney;
+
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 3EEF723D
@@ -26,7 +34,32 @@ global.setlistRefreshCost = global.setlistRefreshCostDefault;
 /// @DnDArgument : "var" "global.shopRefreshCost"
 global.shopRefreshCost = global.shopRefreshCostDefault;
 
-/// @DnDAction : YoYo Games.Rooms.Restart_Room
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1
-/// @DnDHash : 2445BF0D
-room_restart();
+/// @DnDHash : 6536D7C7
+/// @DnDApplyTo : {o_panelSetlist}
+with(o_panelSetlist) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 22816E8D
+/// @DnDApplyTo : {o_panelShop}
+with(o_panelShop) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 3EE0CA4D
+/// @DnDArgument : "xpos" "640"
+/// @DnDArgument : "ypos" "32"
+/// @DnDArgument : "objectid" "o_panelSetlist"
+/// @DnDSaveInfo : "objectid" "o_panelSetlist"
+instance_create_layer(640, 32, "Instances", o_panelSetlist);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 57056838
+/// @DnDArgument : "xpos" "304"
+/// @DnDArgument : "ypos" "160"
+/// @DnDArgument : "objectid" "o_panelShop"
+/// @DnDSaveInfo : "objectid" "o_panelShop"
+instance_create_layer(304, 160, "Instances", o_panelShop);

@@ -61,8 +61,32 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
+	/// @DnDHash : 392F60D5
+	/// @DnDInput : 2
+	/// @DnDParent : 0E53B639
+	/// @DnDArgument : "value" "[]"
+	/// @DnDArgument : "value_1" "[]"
+	/// @DnDArgument : "var" "jokerInventory"
+	/// @DnDArgument : "var_1" "itemInventory"
+	global.jokerInventory = [];
+	global.itemInventory = [];
+
+	/// @DnDAction : YoYo Games.Common.Set_Global
+	/// @DnDVersion : 1
 	/// @DnDHash : 15DBA926
 	/// @DnDParent : 0E53B639
 	/// @DnDArgument : "value" "[]"
 	/// @DnDArgument : "var" "seenSongs"
-	global.seenSongs = [];}
+	global.seenSongs = [];
+
+	/// @DnDAction : YoYo Games.Common.Set_Global
+	/// @DnDVersion : 1
+	/// @DnDHash : 2A44B6FE
+	/// @DnDInput : 2
+	/// @DnDParent : 0E53B639
+	/// @DnDArgument : "value" "[]"
+	/// @DnDArgument : "value_1" "[]"
+	/// @DnDArgument : "var" "shopInventory"
+	/// @DnDArgument : "var_1" "shopInventoryItems"
+	global.shopInventory = [];
+	global.shopInventoryItems = [];}
