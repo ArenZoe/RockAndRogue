@@ -30,7 +30,7 @@ image_alpha = ($C8343434 >> 24) / $ff;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 1EC5837A
-/// @DnDArgument : "code" "global.shopInventory = [];$(13_10)global.shopInventoryItems = [];$(13_10)var availableJokers = [];$(13_10)var availableItems = [];$(13_10)availableJokers = struct_get_names(global.jokers);$(13_10)availableItems = struct_get_names(global.items);$(13_10)$(13_10)//delete inventory jokers from available list$(13_10)$(13_10)for (var i = 0; i < array_length(availableJokers); i++){$(13_10)	if (array_contains(global.jokerInventory,global.jokers[$ availableJokers[i]])){$(13_10)		array_delete(availableJokers, i, 1);$(13_10)		i--;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 4; i++){$(13_10)	//choose random joker from available list$(13_10)	var randomJoker = irandom(array_length(availableJokers)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventory,global.jokers[$ availableJokers[randomJoker]]);$(13_10)	array_delete(availableJokers,randomJoker,1);$(13_10)	$(13_10)	$(13_10)}$(13_10)$(13_10)//delete inventory items from available list$(13_10)$(13_10)for (var i = 0; i < array_length(availableItems); i++){$(13_10)	if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){$(13_10)		array_delete(availableItems, i, 1);$(13_10)		i--;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 3; i++){$(13_10)	//choose random item from available list$(13_10)	var randomItem = irandom(array_length(availableItems)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventoryItems,global.items[$ availableItems[randomItem]]);$(13_10)	array_delete(availableItems,randomItem,1);$(13_10)	$(13_10)	$(13_10)}"
+/// @DnDArgument : "code" "global.shopInventory = [];$(13_10)global.shopInventoryItems = [];$(13_10)var availableJokers = [];$(13_10)var availableItems = [];$(13_10)availableJokers = struct_get_names(global.jokers);$(13_10)availableItems = struct_get_names(global.items);$(13_10)$(13_10)//delete inventory jokers from available list$(13_10)$(13_10)for (var i = 0; i < array_length(availableJokers); i++){$(13_10)	if (array_contains(global.jokerInventory,global.jokers[$ availableJokers[i]])){$(13_10)		array_delete(availableJokers, i, 1);$(13_10)		i--;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 4; i++){$(13_10)	//choose random joker from available list$(13_10)	var randomJoker = irandom(array_length(availableJokers)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventory,global.jokers[$ availableJokers[randomJoker]]);$(13_10)	array_delete(availableJokers,randomJoker,1);$(13_10)	$(13_10)	$(13_10)}$(13_10)$(13_10)for (var i = 0; i < 3; i++){$(13_10)	//choose random item from available list$(13_10)	var randomItem = irandom(array_length(availableItems)-1);$(13_10)	$(13_10)	//then add to shop inv and remove from available$(13_10)	array_push(global.shopInventoryItems,global.items[$ availableItems[randomItem]]);$(13_10)	array_delete(availableItems,randomItem,1);$(13_10)	$(13_10)	$(13_10)}"
 global.shopInventory = [];
 global.shopInventoryItems = [];
 var availableJokers = [];
@@ -58,15 +58,6 @@ for (var i = 0; i < 4; i++){
 	
 }
 
-//delete inventory items from available list
-
-for (var i = 0; i < array_length(availableItems); i++){
-	if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){
-		array_delete(availableItems, i, 1);
-		i--;
-	}
-}
-
 for (var i = 0; i < 3; i++){
 	//choose random item from available list
 	var randomItem = irandom(array_length(availableItems)-1);
@@ -77,85 +68,6 @@ for (var i = 0; i < 3; i++){
 	
 	
 }
-
-/// @DnDAction : YoYo Games.Loops.For_Loop
-/// @DnDVersion : 1
-/// @DnDHash : 03A72545
-/// @DnDArgument : "cond" "i < array_length(global.shopInventory)"
-for(i = 0; i < array_length(global.shopInventory); i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 509D548E
-	/// @DnDParent : 03A72545
-	/// @DnDArgument : "xpos" "80"
-	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "64 * (i +1)"
-	/// @DnDArgument : "ypos_relative" "1"
-	/// @DnDArgument : "var" "newJoker"
-	/// @DnDArgument : "objectid" "o_joker"
-	/// @DnDArgument : "layer" ""Buttons""
-	/// @DnDSaveInfo : "objectid" "o_joker"
-	newJoker = instance_create_layer(x + 80, y + 64 * (i +1), "Buttons", o_joker);
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 12179321
-	/// @DnDInput : 7
-	/// @DnDParent : 03A72545
-	/// @DnDArgument : "expr" "true"
-	/// @DnDArgument : "expr_1" "global.shopInventory[i].name"
-	/// @DnDArgument : "expr_2" "global.shopInventory[i].description"
-	/// @DnDArgument : "expr_3" "global.shopInventory[i].buyValue"
-	/// @DnDArgument : "expr_4" "global.shopInventory[i].sellValue"
-	/// @DnDArgument : "expr_5" "global.shopInventory[i].icon"
-	/// @DnDArgument : "expr_6" "newJoker.icon"
-	/// @DnDArgument : "var" "newJoker.inShop"
-	/// @DnDArgument : "var_1" "newJoker.name"
-	/// @DnDArgument : "var_2" "newJoker.description"
-	/// @DnDArgument : "var_3" "newJoker.buyValue"
-	/// @DnDArgument : "var_4" "newJoker.sellValue"
-	/// @DnDArgument : "var_5" "newJoker.icon"
-	/// @DnDArgument : "var_6" "newJoker.sprite_index"
-	newJoker.inShop = true;
-	newJoker.name = global.shopInventory[i].name;
-	newJoker.description = global.shopInventory[i].description;
-	newJoker.buyValue = global.shopInventory[i].buyValue;
-	newJoker.sellValue = global.shopInventory[i].sellValue;
-	newJoker.icon = global.shopInventory[i].icon;
-	newJoker.sprite_index = newJoker.icon;
-
-	/// @DnDAction : YoYo Games.Instances.Create_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 4EDB8DB2
-	/// @DnDParent : 03A72545
-	/// @DnDArgument : "xpos" "16"
-	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "64 * (i +1)"
-	/// @DnDArgument : "ypos_relative" "1"
-	/// @DnDArgument : "var" "newJokerButton"
-	/// @DnDArgument : "objectid" "o_buyJokerButton"
-	/// @DnDArgument : "layer" ""Buttons""
-	/// @DnDSaveInfo : "objectid" "o_buyJokerButton"
-	newJokerButton = instance_create_layer(x + 16, y + 64 * (i +1), "Buttons", o_buyJokerButton);
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 61B8065A
-	/// @DnDParent : 03A72545
-	/// @DnDArgument : "expr" "i"
-	/// @DnDArgument : "var" "newJokerButton.index"
-	newJokerButton.index = i;
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 352E2AF3
-	/// @DnDInput : 2
-	/// @DnDParent : 03A72545
-	/// @DnDArgument : "expr" "newJoker.buyValue"
-	/// @DnDArgument : "expr_1" "newJoker"
-	/// @DnDArgument : "var" "newJokerButton.price"
-	/// @DnDArgument : "var_1" "newJokerButton.jokerReference"
-	newJokerButton.price = newJoker.buyValue;
-	newJokerButton.jokerReference = newJoker;}
 
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
@@ -235,3 +147,82 @@ for(i = 0; i < array_length(global.shopInventoryItems); i += 1) {	/// @DnDActio
 	/// @DnDArgument : "var_1" "newItemButton.itemReference"
 	newItemButton.price = newItem.buyValue;
 	newItemButton.itemReference = newItem;}
+
+/// @DnDAction : YoYo Games.Loops.For_Loop
+/// @DnDVersion : 1
+/// @DnDHash : 03A72545
+/// @DnDArgument : "cond" "i < array_length(global.shopInventory)"
+for(i = 0; i < array_length(global.shopInventory); i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 509D548E
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "xpos" "80"
+	/// @DnDArgument : "xpos_relative" "1"
+	/// @DnDArgument : "ypos" "64 * (i +1)"
+	/// @DnDArgument : "ypos_relative" "1"
+	/// @DnDArgument : "var" "newJoker"
+	/// @DnDArgument : "objectid" "o_joker"
+	/// @DnDArgument : "layer" ""Inventory""
+	/// @DnDSaveInfo : "objectid" "o_joker"
+	newJoker = instance_create_layer(x + 80, y + 64 * (i +1), "Inventory", o_joker);
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 12179321
+	/// @DnDInput : 7
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "expr" "true"
+	/// @DnDArgument : "expr_1" "global.shopInventory[i].name"
+	/// @DnDArgument : "expr_2" "global.shopInventory[i].description"
+	/// @DnDArgument : "expr_3" "global.shopInventory[i].buyValue"
+	/// @DnDArgument : "expr_4" "global.shopInventory[i].sellValue"
+	/// @DnDArgument : "expr_5" "global.shopInventory[i].icon"
+	/// @DnDArgument : "expr_6" "newJoker.icon"
+	/// @DnDArgument : "var" "newJoker.inShop"
+	/// @DnDArgument : "var_1" "newJoker.name"
+	/// @DnDArgument : "var_2" "newJoker.description"
+	/// @DnDArgument : "var_3" "newJoker.buyValue"
+	/// @DnDArgument : "var_4" "newJoker.sellValue"
+	/// @DnDArgument : "var_5" "newJoker.icon"
+	/// @DnDArgument : "var_6" "newJoker.sprite_index"
+	newJoker.inShop = true;
+	newJoker.name = global.shopInventory[i].name;
+	newJoker.description = global.shopInventory[i].description;
+	newJoker.buyValue = global.shopInventory[i].buyValue;
+	newJoker.sellValue = global.shopInventory[i].sellValue;
+	newJoker.icon = global.shopInventory[i].icon;
+	newJoker.sprite_index = newJoker.icon;
+
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 4EDB8DB2
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "xpos" "16"
+	/// @DnDArgument : "xpos_relative" "1"
+	/// @DnDArgument : "ypos" "64 * (i +1)"
+	/// @DnDArgument : "ypos_relative" "1"
+	/// @DnDArgument : "var" "newJokerButton"
+	/// @DnDArgument : "objectid" "o_buyJokerButton"
+	/// @DnDArgument : "layer" ""Buttons""
+	/// @DnDSaveInfo : "objectid" "o_buyJokerButton"
+	newJokerButton = instance_create_layer(x + 16, y + 64 * (i +1), "Buttons", o_buyJokerButton);
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 61B8065A
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "expr" "i"
+	/// @DnDArgument : "var" "newJokerButton.index"
+	newJokerButton.index = i;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 352E2AF3
+	/// @DnDInput : 2
+	/// @DnDParent : 03A72545
+	/// @DnDArgument : "expr" "newJoker.buyValue"
+	/// @DnDArgument : "expr_1" "newJoker"
+	/// @DnDArgument : "var" "newJokerButton.price"
+	/// @DnDArgument : "var_1" "newJokerButton.jokerReference"
+	newJokerButton.price = newJoker.buyValue;
+	newJokerButton.jokerReference = newJoker;}
