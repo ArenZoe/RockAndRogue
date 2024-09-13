@@ -49,6 +49,8 @@
   },
   "name":"RockAndRogue",
   "resources":[
+    {"id":{"name":"anim_swell","path":"animcurves/anim_swell/anim_swell.yy",},},
+    {"id":{"name":"anim_swell2","path":"animcurves/anim_swell2/anim_swell2.yy",},},
     {"id":{"name":"f_ssFont","path":"fonts/f_ssFont/f_ssFont.yy",},},
     {"id":{"name":"f_ssFontBig","path":"fonts/f_ssFontBig/f_ssFontBig.yy",},},
     {"id":{"name":"f_ssFontBigger","path":"fonts/f_ssFontBigger/f_ssFontBigger.yy",},},
@@ -114,6 +116,7 @@
     {"id":{"name":"sp_scrollArrow","path":"sprites/sp_scrollArrow/sp_scrollArrow.yy",},},
     {"id":{"name":"sp_sellButton","path":"sprites/sp_sellButton/sp_sellButton.yy",},},
     {"id":{"name":"sp_sellButton1","path":"sprites/sp_sellButton1/sp_sellButton1.yy",},},
+    {"id":{"name":"sp_shine","path":"sprites/sp_shine/sp_shine.yy",},},
     {"id":{"name":"sp_square","path":"sprites/sp_square/sp_square.yy",},},
     {"id":{"name":"sp_square32","path":"sprites/sp_square32/sp_square32.yy",},},
     {"id":{"name":"sp_square40","path":"sprites/sp_square40/sp_square40.yy",},},

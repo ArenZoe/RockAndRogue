@@ -118,7 +118,7 @@ for(i = 0; i < array_length(global.itemInventory); i += 1) {	/// @DnDAction : Y
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 50A086D8
-	/// @DnDInput : 8
+	/// @DnDInput : 9
 	/// @DnDParent : 4FEEB990
 	/// @DnDArgument : "expr" "false"
 	/// @DnDArgument : "expr_1" "global.itemInventory[i].name"
@@ -128,6 +128,7 @@ for(i = 0; i < array_length(global.itemInventory); i += 1) {	/// @DnDAction : Y
 	/// @DnDArgument : "expr_5" "global.itemInventory[i].icon"
 	/// @DnDArgument : "expr_6" "newItem.icon"
 	/// @DnDArgument : "expr_7" "i"
+	/// @DnDArgument : "expr_8" "global.itemsActive[newItem.index]"
 	/// @DnDArgument : "var" "newItem.inShop"
 	/// @DnDArgument : "var_1" "newItem.name"
 	/// @DnDArgument : "var_2" "newItem.description"
@@ -136,6 +137,7 @@ for(i = 0; i < array_length(global.itemInventory); i += 1) {	/// @DnDAction : Y
 	/// @DnDArgument : "var_5" "newItem.icon"
 	/// @DnDArgument : "var_6" "newItem.sprite_index"
 	/// @DnDArgument : "var_7" "newItem.index"
+	/// @DnDArgument : "var_8" "newItem.isActive"
 	newItem.inShop = false;
 	newItem.name = global.itemInventory[i].name;
 	newItem.description = global.itemInventory[i].description;
@@ -144,6 +146,7 @@ for(i = 0; i < array_length(global.itemInventory); i += 1) {	/// @DnDAction : Y
 	newItem.icon = global.itemInventory[i].icon;
 	newItem.sprite_index = newItem.icon;
 	newItem.index = i;
+	newItem.isActive = global.itemsActive[newItem.index];
 
 	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 	/// @DnDVersion : 1

@@ -62,14 +62,17 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 392F60D5
-	/// @DnDInput : 2
+	/// @DnDInput : 3
 	/// @DnDParent : 0E53B639
 	/// @DnDArgument : "value" "[]"
 	/// @DnDArgument : "value_1" "[]"
+	/// @DnDArgument : "value_2" "[false,false,false,false]"
 	/// @DnDArgument : "var" "jokerInventory"
 	/// @DnDArgument : "var_1" "itemInventory"
+	/// @DnDArgument : "var_2" "itemsActive"
 	global.jokerInventory = [];
 	global.itemInventory = [];
+	global.itemsActive = [false,false,false,false];
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
