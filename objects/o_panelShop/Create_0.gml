@@ -77,15 +77,15 @@ for(i = 0; i < array_length(global.shopInventoryItems); i += 1) {	/// @DnDActio
 	/// @DnDVersion : 1
 	/// @DnDHash : 4859E763
 	/// @DnDParent : 02514183
-	/// @DnDArgument : "xpos" "32 + (i * 96)"
+	/// @DnDArgument : "xpos" "56 + (i * 96)"
 	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "320"
+	/// @DnDArgument : "ypos" "344"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "var" "newItem"
 	/// @DnDArgument : "objectid" "o_consumable"
 	/// @DnDArgument : "layer" ""Inventory""
 	/// @DnDSaveInfo : "objectid" "o_consumable"
-	newItem = instance_create_layer(x + 32 + (i * 96), y + 320, "Inventory", o_consumable);
+	newItem = instance_create_layer(x + 56 + (i * 96), y + 344, "Inventory", o_consumable);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -156,15 +156,15 @@ for(i = 0; i < array_length(global.shopInventory); i += 1) {	/// @DnDAction : Y
 	/// @DnDVersion : 1
 	/// @DnDHash : 509D548E
 	/// @DnDParent : 03A72545
-	/// @DnDArgument : "xpos" "80"
+	/// @DnDArgument : "xpos" "184"
 	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "64 * (i +1)"
+	/// @DnDArgument : "ypos" "64 * (i +1) + 24"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "var" "newJoker"
 	/// @DnDArgument : "objectid" "o_joker"
 	/// @DnDArgument : "layer" ""Inventory""
 	/// @DnDSaveInfo : "objectid" "o_joker"
-	newJoker = instance_create_layer(x + 80, y + 64 * (i +1), "Inventory", o_joker);
+	newJoker = instance_create_layer(x + 184, y + 64 * (i +1) + 24, "Inventory", o_joker);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
