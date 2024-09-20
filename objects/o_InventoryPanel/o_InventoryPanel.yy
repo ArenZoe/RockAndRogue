@@ -10,8 +10,8 @@
   "name":"o_InventoryPanel",
   "overriddenProperties":[],
   "parent":{
-    "name":"Common Panels",
-    "path":"folders/Objects/Common Panels.yy",
+    "name":"Inventory",
+    "path":"folders/Objects/Inventory.yy",
   },
   "parentObjectId":null,
   "persistent":false,

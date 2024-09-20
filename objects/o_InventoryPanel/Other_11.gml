@@ -4,6 +4,34 @@
 /// @DnDArgument : "msg" ""inventory updated""
 show_debug_message(string("inventory updated"));
 
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 2F472502
+/// @DnDArgument : "function" "instance_deactivate_object"
+/// @DnDArgument : "arg" "o_useButton"
+instance_deactivate_object(o_useButton);
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 410C6DF3
+/// @DnDArgument : "function" "instance_deactivate_object"
+/// @DnDArgument : "arg" "o_sellButton"
+instance_deactivate_object(o_sellButton);
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 75D8C7D0
+/// @DnDArgument : "function" "instance_deactivate_object"
+/// @DnDArgument : "arg" "o_sortDown"
+instance_deactivate_object(o_sortDown);
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 53173DF7
+/// @DnDArgument : "function" "instance_deactivate_object"
+/// @DnDArgument : "arg" "o_sortUp"
+instance_deactivate_object(o_sortUp);
+
 /// @DnDAction : YoYo Games.Common.Apply_To
 /// @DnDVersion : 1
 /// @DnDHash : 2D4CB67B

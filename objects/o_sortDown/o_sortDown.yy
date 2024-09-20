@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"o_sellButton",
+  "%Name":"o_sortDown",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -11,7 +11,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_sellButton",
+  "name":"o_sortDown",
   "overriddenProperties":[],
   "parent":{
     "name":"Inventory",
@@ -32,15 +32,15 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"renderColour","filters":[],"listItems":[],"multiselect":false,"name":"renderColour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF7FFF7F","varType":7,},
-    {"$GMObjectProperty":"v1","%Name":"songIndex","filters":[],"listItems":[],"multiselect":false,"name":"songIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"renderColour","filters":[],"listItems":[],"multiselect":false,"name":"renderColour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF999999","varType":7,},
+    {"$GMObjectProperty":"v1","%Name":"selectedIndex","filters":[],"listItems":[],"multiselect":false,"name":"selectedIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sp_sellButton1",
-    "path":"sprites/sp_sellButton1/sp_sellButton1.yy",
+    "name":"sp_sortArrow",
+    "path":"sprites/sp_sortArrow/sp_sortArrow.yy",
   },
   "spriteMaskId":null,
   "visible":true,
