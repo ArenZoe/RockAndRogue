@@ -4,6 +4,15 @@
 /// @DnDArgument : "msg" ""Now playing " + global.pack.songs[songIndex].name"
 show_debug_message(string("Now playing " + global.pack.songs[songIndex].name));
 
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 2E0463D4
+/// @DnDInput : 2
+/// @DnDArgument : "function" "array_push"
+/// @DnDArgument : "arg" "global.playedSongs"
+/// @DnDArgument : "arg_1" "songIndex"
+array_push(global.playedSongs, songIndex);
+
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 45129D69

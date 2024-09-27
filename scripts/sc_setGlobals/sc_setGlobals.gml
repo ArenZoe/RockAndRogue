@@ -77,10 +77,14 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 15DBA926
+	/// @DnDInput : 2
 	/// @DnDParent : 0E53B639
 	/// @DnDArgument : "value" "[]"
+	/// @DnDArgument : "value_1" "[]"
 	/// @DnDArgument : "var" "seenSongs"
+	/// @DnDArgument : "var_1" "playedSongs"
 	global.seenSongs = [];
+	global.playedSongs = [];
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
