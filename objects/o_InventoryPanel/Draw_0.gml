@@ -67,3 +67,10 @@ draw_set_alpha(l4FF2D3F6_0 / $ff);
 /// @DnDArgument : "y2" "384"
 /// @DnDArgument : "y2_relative" "1"
 draw_line(x + 16, y + 384, x + 226, y + 384);
+
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 17387CCE
+draw_set_colour($FFFFFFFF & $ffffff);
+var l17387CCE_0=($FFFFFFFF >> 24);
+draw_set_alpha(l17387CCE_0 / $ff);

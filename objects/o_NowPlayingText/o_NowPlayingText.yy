@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"o_tempSquare",
+  "%Name":"o_NowPlayingText",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_tempSquare",
+  "name":"o_NowPlayingText",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Now Playing",
+    "path":"folders/Objects/Now Playing.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sp_square32",
-    "path":"sprites/sp_square32/sp_square32.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

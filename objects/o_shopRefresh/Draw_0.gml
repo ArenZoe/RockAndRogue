@@ -20,8 +20,9 @@
 /// @DnDHash : 0C7C6070
 /// @DnDParent : 1D1BFEEF
 /// @DnDArgument : "color" "$FF000000"
-/// @DnDArgument : "alpha" "false"
-draw_set_colour($FF000000 & $ffffff);draw_set_alpha(1);
+draw_set_colour($FF000000 & $ffffff);
+var l0C7C6070_0=($FF000000 >> 24);
+draw_set_alpha(l0C7C6070_0 / $ff);
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
@@ -35,8 +36,9 @@ draw_roundrect_ext(x,y,x+128,y+64,5,5,false)
 /// @DnDHash : 6034A1AC
 /// @DnDParent : 1D1BFEEF
 /// @DnDArgument : "color" "renderColour"
-/// @DnDArgument : "alpha" "false"
-draw_set_colour(renderColour & $ffffff);draw_set_alpha(1);
+draw_set_colour(renderColour & $ffffff);
+var l6034A1AC_0=(renderColour >> 24);
+draw_set_alpha(l6034A1AC_0 / $ff);
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1

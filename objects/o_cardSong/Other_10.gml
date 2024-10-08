@@ -14,14 +14,17 @@ thisPlayButton = instance_create_layer(x + 448, y + 48, "Buttons", o_songPlayBut
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 1670FE0F
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "expr" "songIndex"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "expr_1" "songMoney"
+/// @DnDArgument : "expr_2" "modifiers"
 /// @DnDArgument : "var" "thisPlayButton.songIndex"
 /// @DnDArgument : "var_1" "thisPlayButton.songMoney"
+/// @DnDArgument : "var_2" "thisPlayButton.modifiers"
 thisPlayButton.songIndex += songIndex;
 thisPlayButton.songMoney = songMoney;
+thisPlayButton.modifiers = modifiers;
 
 /// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1

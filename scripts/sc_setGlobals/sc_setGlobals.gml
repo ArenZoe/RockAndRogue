@@ -15,9 +15,9 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 327D792B
 	/// @DnDParent : 0E53B639
-	/// @DnDArgument : "value" "1"
+	/// @DnDArgument : "value" "22"
 	/// @DnDArgument : "var" "gameRound"
-	global.gameRound = 1;
+	global.gameRound = 22;
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
@@ -96,4 +96,26 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDArgument : "var" "shopInventory"
 	/// @DnDArgument : "var_1" "shopInventoryItems"
 	global.shopInventory = [];
-	global.shopInventoryItems = [];}
+	global.shopInventoryItems = [];
+
+	/// @DnDAction : YoYo Games.Common.Set_Global
+	/// @DnDVersion : 1
+	/// @DnDHash : 1ECC28E2
+	/// @DnDParent : 0E53B639
+	/// @DnDArgument : "value" "[]"
+	/// @DnDArgument : "var" "playedSongsData"
+	global.playedSongsData = [];
+
+	/// @DnDAction : YoYo Games.Common.Execute_Code
+	/// @DnDVersion : 1
+	/// @DnDHash : 2EB3F9FB
+	/// @DnDParent : 0E53B639
+	/// @DnDArgument : "code" "var playData = {$(13_10)	money: 0,$(13_10)	index: 0,$(13_10)	modifiers: [],$(13_10)	scoreData: {$(13_10)		//fill in with CH's score file$(13_10)	}$(13_10)}"
+	var playData = {
+		money: 0,
+		index: 0,
+		modifiers: [],
+		scoreData: {
+			//fill in with CH's score file
+		}
+	}}
