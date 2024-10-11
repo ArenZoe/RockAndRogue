@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Jokers",
-    "path":"folders/Sprites/Jokers.yy",
+    "name":"Test Jokers",
+    "path":"folders/Sprites/Jokers/Test Jokers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
