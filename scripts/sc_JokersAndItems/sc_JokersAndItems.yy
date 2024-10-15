@@ -2,7 +2,7 @@
   "$GMScript":"v1",
   "%Name":"sc_JokersAndItems",
   "isCompatibility":false,
-  "isDnD":true,
+  "isDnD":false,
   "name":"sc_JokersAndItems",
   "parent":{
     "name":"Scripts",
