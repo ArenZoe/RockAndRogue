@@ -53,6 +53,21 @@ if(array_length(global.jokerInventory) >= 5){	/// @DnDAction : YoYo Games.Draw
 	/// @DnDArgument : "alpha" "false"
 	draw_set_colour($FF333333 & $ffffff);draw_set_alpha(1);}
 
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 12083984
+/// @DnDParent : 1D1BFEEF
+/// @DnDArgument : "var" "price"
+/// @DnDArgument : "op" "2"
+/// @DnDArgument : "value" "global.gameMoney"
+if(price > global.gameMoney){	/// @DnDAction : YoYo Games.Drawing.Set_Color
+	/// @DnDVersion : 1
+	/// @DnDHash : 22092492
+	/// @DnDParent : 12083984
+	/// @DnDArgument : "color" "$FF333333"
+	/// @DnDArgument : "alpha" "false"
+	draw_set_colour($FF333333 & $ffffff);draw_set_alpha(1);}
+
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2DDD99D5

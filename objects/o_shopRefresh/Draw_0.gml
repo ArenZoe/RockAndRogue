@@ -6,15 +6,31 @@
 /// @DnDArgument : "not" "1"
 /// @DnDArgument : "op" "1"
 /// @DnDArgument : "value" "100"
+
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 1D1BFEEF
 /// @DnDDisabled : 1
-/// @DnDParent : 6CA051F9
 /// @DnDArgument : "var" "x"
 /// @DnDArgument : "not" "1"
 /// @DnDArgument : "op" "2"
 /// @DnDArgument : "value" "1000"
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 579D1A5E
+/// @DnDParent : 1D1BFEEF
+/// @DnDArgument : "var" "global.shopRefreshCost"
+/// @DnDArgument : "op" "2"
+/// @DnDArgument : "value" "global.gameMoney"
+if(global.shopRefreshCost > global.gameMoney){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 229F0792
+	/// @DnDParent : 579D1A5E
+	/// @DnDArgument : "expr" "$FF333333"
+	/// @DnDArgument : "var" "renderColour"
+	renderColour = $FF333333;}
+
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
 /// @DnDHash : 0C7C6070

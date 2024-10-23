@@ -15,6 +15,21 @@
 /// @DnDArgument : "not" "1"
 /// @DnDArgument : "op" "2"
 /// @DnDArgument : "value" "1000"
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 40E1493C
+/// @DnDParent : 1D1BFEEF
+/// @DnDArgument : "var" "global.setlistRefreshCost"
+/// @DnDArgument : "op" "2"
+/// @DnDArgument : "value" "global.gameMoney"
+if(global.setlistRefreshCost > global.gameMoney){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 2E4CA2F7
+	/// @DnDParent : 40E1493C
+	/// @DnDArgument : "expr" "$FF333333"
+	/// @DnDArgument : "var" "renderColour"
+	renderColour = $FF333333;}
+
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
 /// @DnDHash : 0C7C6070

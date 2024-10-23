@@ -53,6 +53,21 @@ if(array_length(global.itemInventory) >= 3){	/// @DnDAction : YoYo Games.Drawi
 	/// @DnDArgument : "alpha" "false"
 	draw_set_colour($FF333333 & $ffffff);draw_set_alpha(1);}
 
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 0D5DF5FC
+/// @DnDParent : 1D1BFEEF
+/// @DnDArgument : "var" "price"
+/// @DnDArgument : "op" "2"
+/// @DnDArgument : "value" "global.gameMoney"
+if(price > global.gameMoney){	/// @DnDAction : YoYo Games.Drawing.Set_Color
+	/// @DnDVersion : 1
+	/// @DnDHash : 4B1CE6D2
+	/// @DnDParent : 0D5DF5FC
+	/// @DnDArgument : "color" "$FF333333"
+	/// @DnDArgument : "alpha" "false"
+	draw_set_colour($FF333333 & $ffffff);draw_set_alpha(1);}
+
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2DDD99D5
