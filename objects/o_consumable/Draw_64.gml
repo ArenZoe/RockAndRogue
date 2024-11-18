@@ -105,4 +105,48 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDArgument : "arg_2" "description"
 	/// @DnDArgument : "arg_3" "15"
 	/// @DnDArgument : "arg_4" "280"
-	draw_text_ext(mouse_x + 150, mouse_y + 35, description, 15, 280);}
+	draw_text_ext(mouse_x + 150, mouse_y + 35, description, 15, 280);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Line
+	/// @DnDVersion : 1
+	/// @DnDHash : 0AAF1DE3
+	/// @DnDParent : 23717231
+	/// @DnDArgument : "x1" "mouse_x + 8"
+	/// @DnDArgument : "y1" "mouse_y + 98"
+	/// @DnDArgument : "x2" "mouse_x + 292"
+	/// @DnDArgument : "y2" "mouse_y + 98"
+	draw_line(mouse_x + 8, mouse_y + 98, mouse_x + 292, mouse_y + 98);
+
+	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 3B5B2B8D
+	/// @DnDParent : 23717231
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 7D622161
+	/// @DnDParent : 23717231
+	/// @DnDArgument : "x" "mouse_x + 8"
+	/// @DnDArgument : "y" "mouse_y + 100"
+	/// @DnDArgument : "caption" ""Consumable""
+	draw_text(mouse_x + 8, mouse_y + 100, string("Consumable") + "");
+
+	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 59080C53
+	/// @DnDParent : 23717231
+	/// @DnDArgument : "halign" "fa_right"
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_top);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 762B7DBC
+	/// @DnDParent : 23717231
+	/// @DnDArgument : "x" "mouse_x + 292"
+	/// @DnDArgument : "y" "mouse_y + 100"
+	/// @DnDArgument : "caption" ""$""
+	/// @DnDArgument : "var" "sellValue"
+	draw_text(mouse_x + 292, mouse_y + 100, string("$") + string(sellValue));}
