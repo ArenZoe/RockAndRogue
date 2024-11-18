@@ -451,7 +451,7 @@ function initJokers(){
 		instantReplay: {
 			name: "Instant Replay",
 			count: 0,
-			description: "Becomes a copy of the most recently acquired Joker",
+			description: "Becomes a copy of the most recently acquired Item",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 5,
@@ -461,7 +461,7 @@ function initJokers(){
 		copycat: {
 			name: "Copycat",
 			count: 0,
-			description: "Becomes a copy of the next acquired Joker",
+			description: "Becomes a copy of the next acquired Item",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
@@ -531,7 +531,7 @@ function initJokers(){
 		growthSpurt: {
 			name: "Growth Spurt",
 			count: 0,
-			description: "Growing Jokers grow twice",
+			description: "Growing Items grow twice",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
@@ -541,7 +541,7 @@ function initJokers(){
 		highEndurance: {
 			name: "High Endurance",
 			count: 0,
-			description: "Decaying Jokers decay half as much",
+			description: "Decaying Items decay half as much",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 5,
