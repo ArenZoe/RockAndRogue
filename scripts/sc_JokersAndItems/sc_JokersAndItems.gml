@@ -928,14 +928,14 @@ function initItems(){
 		},
 		hard:{
 			name: "High Grade",
-			description: "Double your money, next song's Star requirement increased by 20%",
+			description: "Double your money, next Star requirement increased by 20%",
 			buyValue: 5,
 			sellValue: 5,
 			icon: sp_hard
 		},
 		easy:{
 			name: "Shortcut",
-			description: "Lose all your money, next song's Star requirement decreased by 20%",
+			description: "Lose all your money, next Star requirement decreased by 20%",
 			buyValue: 7,
 			sellValue: 7,
 			icon: sp_easy
