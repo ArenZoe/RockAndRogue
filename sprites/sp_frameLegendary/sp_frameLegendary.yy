@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Frames",
-    "path":"folders/Sprites/Jokers/Frames.yy",
+    "path":"folders/Sprites/Items/Frames.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

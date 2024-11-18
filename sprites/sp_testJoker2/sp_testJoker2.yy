@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Test Jokers",
-    "path":"folders/Sprites/Jokers/Test Jokers.yy",
+    "path":"folders/Sprites/Items/Test Jokers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

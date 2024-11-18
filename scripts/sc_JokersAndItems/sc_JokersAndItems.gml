@@ -835,54 +835,110 @@ function initJokers(){
 function initItems(){
 	
 	global.items = {
-		testItem1:{
-			name: "Test Item 1",
-			description: "Test Item 1",
-			buyValue: 1,
-			sellValue: 1,
-			icon: sp_testItem1,
-			rarity: 0
-		},
-		testItem2:{
-			name: "Test Item 2",
-			description: "Test Item 2",
-			buyValue: 2,
-			sellValue: 2,
-			icon: sp_testItem2,
-			rarity: 0
-		},
-		testItem3:{
-			name: "Test Item 3",
-			description: "Test Item 3",
-			buyValue: 3,
-			sellValue: 3,
-			icon: sp_testItem3,
-			rarity: 0
-		},
-		testItem4:{
-			name: "Test Item 4",
-			description: "Test Item 4",
-			buyValue: 4,
-			sellValue: 4,
-			icon: sp_testItem4,
-			rarity: 0
-		},
-		testItem5:{
-			name: "Test Item 5",
-			description: "Test Item 5",
-			buyValue: 5,
-			sellValue: 5,
-			icon: sp_testItem5,
-			rarity: 0
-		},
-		testItem6:{
-			name: "Test Item 6",
-			description: "Test Item 6",
+		more:{
+			name: "MORE!!!!!!1!",
+			description: "Create up to two random consumables",
 			buyValue: 6,
 			sellValue: 6,
-			icon: sp_testItem6,
-			rarity: 0
+			icon: sp_more
+		},
+		picky:{
+			name: "Picky",
+			description: "Ignore any one (1) modifier on the next song",
+			buyValue: 10,
+			sellValue: 10,
+			icon: sp_picky
+		},
+		drunk:{
+			name: "Alcomohol,",
+			description: "Enable [Drunk Mode] on the next song",
+			buyValue: 15,
+			sellValue: 15,
+			icon: sp_drunk
+		},
+		hopos:{
+			name: "Hop-O's",
+			description: "Enable [All HOPOs] on the next song",
+			buyValue: 7,
+			sellValue: 7,
+			icon: sp_hopos
+		},
+		taps:{
+			name: "Tippity Taps",
+			description: "Enable [All Taps] on the next song",
+			buyValue: 10,
+			sellValue: 10,
+			icon: sp_taps 
+		},
+		opens:{
+			name: "Open Sesame",
+			description: "Enable [All Opens] on the next song",
+			buyValue: 6,
+			sellValue: 6,
+			icon: sp_opens
+		},
+		hoposToTaps:{
+			name: "Tapped Out",
+			description: "Enable [HOPOs to Taps] on the next song",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_hoposToTaps
+		},
+		autoStrum:{
+			name: "Strummer? I Har-",
+			description: "Enable [Auto Strum] on the next song",
+			buyValue: 18,
+			sellValue: 18,
+			icon: sp_autoStrum
+		},
+		slow:{
+			name: "Slow Ride",
+			description: "Take it easy. Reduce the next song's play speed by 10%",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_slow
+		},
+		freeMoney:{
+			name: "Finder's Keepers",
+			description: "Get $5",
+			buyValue: 2,
+			sellValue: 2,
+			icon: sp_freeMoney
+		},
+		gamble:{
+			name: "Gamba",
+			description: "Random prize from -$5 to +$20",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_gamble
+		},
+		setlist:{
+			name: "New Release",
+			description: "Refresh the Setlist",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_setlist
+		},
+		shop:{
+			name: "Secret Menu",
+			description: "Refresh the Shop",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_shop
+		},
+		hard:{
+			name: "High Grade",
+			description: "Double your money, next song's Star requirement increased by 20%",
+			buyValue: 5,
+			sellValue: 5,
+			icon: sp_hard
+		},
+		easy:{
+			name: "Shortcut",
+			description: "Lose all your money, next song's Star requirement decreased by 20%",
+			buyValue: 7,
+			sellValue: 7,
+			icon: sp_easy
 		}
-		
 	};	
 }
