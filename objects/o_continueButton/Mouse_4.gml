@@ -1,9 +1,3 @@
-/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
-/// @DnDVersion : 1
-/// @DnDHash : 5014A67E
-/// @DnDArgument : "msg" ""CONTINUE""
-show_debug_message(string("CONTINUE"));
-
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 3CA5256E
@@ -116,3 +110,42 @@ for (var j = 0; j < array_length(scoreData.players[0].section_stats); j++;){
 
 array_push(global.playedSongsData,scoreData);
 global.playData = scoreData;
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 3682A81B
+/// @DnDApplyTo : {o_NowPlayingText}
+with(o_NowPlayingText) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 5BB80989
+/// @DnDApplyTo : {o_cardSongBig}
+with(o_cardSongBig) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 6366544A
+/// @DnDApplyTo : {o_songModifierBig}
+with(o_songModifierBig) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 385524E6
+/// @DnDApplyTo : {o_continueButton}
+with(o_continueButton) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 73E31E5F
+/// @DnDArgument : "xpos" "960"
+/// @DnDArgument : "ypos" "75"
+/// @DnDArgument : "objectid" "o_resultsText"
+/// @DnDSaveInfo : "objectid" "o_resultsText"
+instance_create_layer(960, 75, "Instances", o_resultsText);
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 04E4835D
+/// @DnDArgument : "function" "starCalculation"
+starCalculation();
