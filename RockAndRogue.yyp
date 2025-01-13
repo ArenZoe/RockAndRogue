@@ -44,13 +44,11 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"defaultEDM.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultEDM.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"test.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"test.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"test2.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"test2.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"RockAndRogue",
   "resources":[
