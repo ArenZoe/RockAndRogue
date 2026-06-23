@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -16,10 +16,10 @@
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Common Panels","folderPath":"folders/Objects/Common Panels.yy","name":"Common Panels","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Results","folderPath":"folders/Objects/Results.yy","name":"Results","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Inventory","folderPath":"folders/Objects/Inventory.yy","name":"Inventory","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Main Menu","folderPath":"folders/Objects/Main Menu.yy","name":"Main Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Now Playing","folderPath":"folders/Objects/Now Playing.yy","name":"Now Playing","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Results","folderPath":"folders/Objects/Results.yy","name":"Results","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shop","folderPath":"folders/Objects/Shop.yy","name":"Shop","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -43,13 +43,20 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.gm_filter_tintfilter-1.0.0","name":"io.gamemaker.gm_filter_tintfilter-1.0.0","path":"io.gamemaker.gm_filter_tintfilter-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_recursive_blur-1.0.0","name":"io.gamemaker.gm_effect_recursive_blur-1.0.0","path":"io.gamemaker.gm_effect_recursive_blur-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_dots-1.0.0","name":"io.gamemaker.gm_filter_dots-1.0.0","path":"io.gamemaker.gm_filter_dots-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_gaussian_blur-1.0.0","name":"io.gamemaker.gm_effect_gaussian_blur-1.0.0","path":"io.gamemaker.gm_effect_gaussian_blur-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_windblown_particles-1.0.0","name":"io.gamemaker.gm_effect_windblown_particles-1.0.0","path":"io.gamemaker.gm_effect_windblown_particles-1.0.0.yyp",},
+  ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"defaultEDM.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultEDM.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"RockAndRogue",
   "resources":[
@@ -79,6 +86,7 @@
     {"id":{"name":"o_InventoryPanel","path":"objects/o_InventoryPanel/o_InventoryPanel.yy",},},
     {"id":{"name":"o_invisibleLoader","path":"objects/o_invisibleLoader/o_invisibleLoader.yy",},},
     {"id":{"name":"o_joker","path":"objects/o_joker/o_joker.yy",},},
+    {"id":{"name":"o_loadPacks","path":"objects/o_loadPacks/o_loadPacks.yy",},},
     {"id":{"name":"o_NowPlayingText","path":"objects/o_NowPlayingText/o_NowPlayingText.yy",},},
     {"id":{"name":"o_panelSetlist","path":"objects/o_panelSetlist/o_panelSetlist.yy",},},
     {"id":{"name":"o_panelShop","path":"objects/o_panelShop/o_panelShop.yy",},},
@@ -101,6 +109,7 @@
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
     {"id":{"name":"sc_JokersAndItems","path":"scripts/sc_JokersAndItems/sc_JokersAndItems.yy",},},
     {"id":{"name":"sc_Load","path":"scripts/sc_Load/sc_Load.yy",},},
+    {"id":{"name":"sc_loadPacks","path":"scripts/sc_loadPacks/sc_loadPacks.yy",},},
     {"id":{"name":"sc_msToTimestamp","path":"scripts/sc_msToTimestamp/sc_msToTimestamp.yy",},},
     {"id":{"name":"sc_selectModifiers","path":"scripts/sc_selectModifiers/sc_selectModifiers.yy",},},
     {"id":{"name":"sc_selectSong","path":"scripts/sc_selectSong/sc_selectSong.yy",},},

@@ -31,8 +31,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"renderColour","filters":[],"listItems":[],"multiselect":false,"name":"renderColour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFCCCCCC","varType":7,},
-    {"$GMObjectProperty":"v1","%Name":"buttonPackID","filters":[],"listItems":[],"multiselect":false,"name":"buttonPackID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"renderColour","filters":[],"listItems":[],"multiselect":false,"name":"renderColour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFCCCCCC","varType":7,},
+    {"$GMObjectProperty":"v2","%Name":"buttonPackID","filters":[],"listItems":[],"multiselect":false,"name":"buttonPackID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
