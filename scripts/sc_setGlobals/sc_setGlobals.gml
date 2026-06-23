@@ -15,17 +15,17 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 327D792B
 	/// @DnDParent : 0E53B639
-	/// @DnDArgument : "value" "22"
+	/// @DnDArgument : "value" "1"
 	/// @DnDArgument : "var" "gameRound"
-	global.gameRound = 22;
+	global.gameRound = 1;
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 7A011334
 	/// @DnDParent : 0E53B639
-	/// @DnDArgument : "value" "120"
+	/// @DnDArgument : "value" "3"
 	/// @DnDArgument : "var" "nextStars"
-	global.nextStars = 120;
+	global.nextStars = 3;
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1

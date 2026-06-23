@@ -66,9 +66,9 @@ draw_sprite_ext(songAlbum, 0, x + 18, y + 18, 76 / (sprite_get_width(songAlbum))
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
 /// @DnDHash : 0C75E335
-/// @DnDArgument : "font" "f_ssFontBig"
-/// @DnDSaveInfo : "font" "f_ssFontBig"
-draw_set_font(f_ssFontBig);
+/// @DnDArgument : "font" "f_latoBig"
+/// @DnDSaveInfo : "font" "f_latoBig"
+draw_set_font(f_latoBig);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1
@@ -79,15 +79,15 @@ draw_set_valign(fa_top);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2D9AA288
-/// @DnDArgument : "code" "draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,38),18,400)"
-draw_text_ext(x+112,y+14,string_copy(global.pack.songs[songIndex].name,0,38),18,400)
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,64),19,400)"
+draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,64),19,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
 /// @DnDHash : 28D69AAE
-/// @DnDArgument : "font" "f_ssFont"
-/// @DnDSaveInfo : "font" "f_ssFont"
-draw_set_font(f_ssFont);
+/// @DnDArgument : "font" "f_lato"
+/// @DnDSaveInfo : "font" "f_lato"
+draw_set_font(f_lato);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -100,15 +100,15 @@ draw_set_alpha(l123D7617_0 / $ff);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 7811E556
-/// @DnDArgument : "code" "draw_text_ext(x+112,y+54,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)"
-draw_text_ext(x+112,y+54,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+52,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)"
+draw_text_ext(x+112,y+52,string_copy(global.pack.songs[songIndex].artist,0,20),18,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
 /// @DnDHash : 349CF1BD
-/// @DnDArgument : "font" "f_ssFontTiny"
-/// @DnDSaveInfo : "font" "f_ssFontTiny"
-draw_set_font(f_ssFontTiny);
+/// @DnDArgument : "font" "f_latoMinier"
+/// @DnDSaveInfo : "font" "f_latoMinier"
+draw_set_font(f_latoMinier);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -121,15 +121,15 @@ draw_set_alpha(l3B0C3482_0 / $ff);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 134D9D95
-/// @DnDArgument : "code" "draw_text_ext(x+112,y+70,string_copy(global.pack.songs[songIndex].charter,0,20),18,400)"
-draw_text_ext(x+112,y+70,string_copy(global.pack.songs[songIndex].charter,0,20),18,400)
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+72,string_copy(global.pack.songs[songIndex].charter,0,20),18,400)"
+draw_text_ext(x+112,y+72,string_copy(global.pack.songs[songIndex].charter,0,20),18,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
 /// @DnDHash : 1A729F8A
-/// @DnDArgument : "font" "f_ssFont"
-/// @DnDSaveInfo : "font" "f_ssFont"
-draw_set_font(f_ssFont);
+/// @DnDArgument : "font" "f_lato"
+/// @DnDSaveInfo : "font" "f_lato"
+draw_set_font(f_lato);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -153,9 +153,9 @@ draw_text(x + 112, y + 82,  + string(msToTimestamp(global.pack.songs[songIndex].
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
 /// @DnDHash : 2A487550
-/// @DnDArgument : "font" "f_ssFontSmall"
-/// @DnDSaveInfo : "font" "f_ssFontSmall"
-draw_set_font(f_ssFontSmall);
+/// @DnDArgument : "font" "f_latoMini"
+/// @DnDSaveInfo : "font" "f_latoMini"
+draw_set_font(f_latoMini);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1

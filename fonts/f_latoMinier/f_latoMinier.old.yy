@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"f_latoMini",
+  "%Name":"f_latoMinier",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":16,
   "maintainGms1Font":false,
-  "name":"f_latoMini",
+  "name":"f_latoMinier",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

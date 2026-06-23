@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -65,6 +65,7 @@
     {"id":{"name":"f_lato","path":"fonts/f_lato/f_lato.yy",},},
     {"id":{"name":"f_latoBig","path":"fonts/f_latoBig/f_latoBig.yy",},},
     {"id":{"name":"f_latoMini","path":"fonts/f_latoMini/f_latoMini.yy",},},
+    {"id":{"name":"f_latoMinier","path":"fonts/f_latoMinier/f_latoMinier.yy",},},
     {"id":{"name":"f_ssFont","path":"fonts/f_ssFont/f_ssFont.yy",},},
     {"id":{"name":"f_ssFontBig","path":"fonts/f_ssFontBig/f_ssFontBig.yy",},},
     {"id":{"name":"f_ssFontBigger","path":"fonts/f_ssFontBigger/f_ssFontBigger.yy",},},
