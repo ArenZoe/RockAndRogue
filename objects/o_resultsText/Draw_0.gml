@@ -52,11 +52,17 @@ string("SP Ticks Accumulated: ") + string(global.playData.players[0].sp_ticks_ac
 string("Star Power Bar Ticks: ") + string(global.playData.players[0].sp_bar_ticks)
 ];
 
-/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDAction : YoYo Games.Loops.For_Loop
 /// @DnDVersion : 1
-/// @DnDHash : 27140141
-/// @DnDArgument : "code" "for (var i=0; i < (array_length(resultsTextArray)-1); i+=1)$(13_10){$(13_10)	draw_text(x + 0, y + (i*15), resultsTextArray[i]);$(13_10)}"
-for (var i=0; i < (array_length(resultsTextArray)-1); i+=1)
-{
-	draw_text(x + 0, y + (i*15), resultsTextArray[i]);
-}
+/// @DnDHash : 13E26A28
+/// @DnDArgument : "cond" "i < (array_length(resultsTextArray)-1)"
+for(i = 0; i < (array_length(resultsTextArray)-1); i += 1) {	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 47E237CC
+	/// @DnDParent : 13E26A28
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y" "i*15"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "caption" ""
+	/// @DnDArgument : "var" "resultsTextArray[i]"
+	draw_text(x + 0, y + i*15,  + string(resultsTextArray[i]));}

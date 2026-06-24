@@ -6,6 +6,12 @@ with(o_resultsTitle) instance_destroy();
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1
+/// @DnDHash : 7B3B914E
+/// @DnDApplyTo : {o_resultsText}
+with(o_resultsText) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
 /// @DnDHash : 2B8646DB
 /// @DnDApplyTo : {o_continueResultsButton}
 with(o_continueResultsButton) instance_destroy();
