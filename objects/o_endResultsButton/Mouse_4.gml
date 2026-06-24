@@ -2,7 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 06EBA248
 /// @DnDApplyTo : {o_resultsText}
-with(o_resultsText) instance_destroy();
+with(o_resultsTitle) instance_destroy();
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1

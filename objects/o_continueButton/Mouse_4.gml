@@ -137,9 +137,18 @@ with(o_continueButton) instance_destroy();
 /// @DnDHash : 73E31E5F
 /// @DnDArgument : "xpos" "960"
 /// @DnDArgument : "ypos" "75"
+/// @DnDArgument : "objectid" "o_resultsTitle"
+/// @DnDSaveInfo : "objectid" "o_resultsTitle"
+instance_create_layer(960, 75, "Instances", o_resultsTitle);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 69141F00
+/// @DnDArgument : "xpos" "302"
+/// @DnDArgument : "ypos" "160"
 /// @DnDArgument : "objectid" "o_resultsText"
 /// @DnDSaveInfo : "objectid" "o_resultsText"
-instance_create_layer(960, 75, "Instances", o_resultsText);
+instance_create_layer(302, 160, "Instances", o_resultsText);
 
 /// @DnDAction : YoYo Games.Common.Function_Call
 /// @DnDVersion : 1
