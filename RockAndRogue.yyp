@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -96,6 +96,7 @@
     {"id":{"name":"o_poolScrollRight","path":"objects/o_poolScrollRight/o_poolScrollRight.yy",},},
     {"id":{"name":"o_poolSelect","path":"objects/o_poolSelect/o_poolSelect.yy",},},
     {"id":{"name":"o_resultsText","path":"objects/o_resultsText/o_resultsText.yy",},},
+    {"id":{"name":"o_resultsTitle","path":"objects/o_resultsTitle/o_resultsTitle.yy",},},
     {"id":{"name":"o_sellButton","path":"objects/o_sellButton/o_sellButton.yy",},},
     {"id":{"name":"o_setlistRefresh","path":"objects/o_setlistRefresh/o_setlistRefresh.yy",},},
     {"id":{"name":"o_shopRefresh","path":"objects/o_shopRefresh/o_shopRefresh.yy",},},

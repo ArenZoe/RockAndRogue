@@ -23,9 +23,9 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 7A011334
 	/// @DnDParent : 0E53B639
-	/// @DnDArgument : "value" "3"
+	/// @DnDArgument : "value" "5"
 	/// @DnDArgument : "var" "nextStars"
-	global.nextStars = 3;
+	global.nextStars = 5;
 
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
