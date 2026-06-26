@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"f_ssFontBiggest",
+  "%Name":"f_ssFontGiant",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":80,
@@ -923,7 +923,7 @@
   "last":0,
   "lineHeight":97,
   "maintainGms1Font":false,
-  "name":"f_ssFontBiggest",
+  "name":"f_ssFontGiant",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

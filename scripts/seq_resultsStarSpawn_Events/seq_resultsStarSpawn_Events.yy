@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_resultsStarSpawn_Events",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"seq_resultsStarSpawn_Events",
+  "parent":{
+    "name":"RockAndRogue",
+    "path":"RockAndRogue.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

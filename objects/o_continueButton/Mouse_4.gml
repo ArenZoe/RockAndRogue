@@ -150,6 +150,17 @@ instance_create_layer(960, 75, "Instances", o_resultsTitle);
 /// @DnDSaveInfo : "objectid" "o_resultsText"
 instance_create_layer(302, 160, "Instances", o_resultsText);
 
+/// @DnDAction : YoYo Games.Sequences.Sequence_Create
+/// @DnDVersion : 1
+/// @DnDHash : 22459D47
+/// @DnDArgument : "xpos" "990"
+/// @DnDArgument : "ypos" "365"
+/// @DnDArgument : "var" ""
+/// @DnDArgument : "sequenceid" "Sequence1"
+/// @DnDArgument : "layer" ""Instances""
+/// @DnDSaveInfo : "sequenceid" "Sequence1"
+layer_sequence_create("Instances", 990, 365, Sequence1);
+
 /// @DnDAction : YoYo Games.Common.Function_Call
 /// @DnDVersion : 1
 /// @DnDHash : 04E4835D
