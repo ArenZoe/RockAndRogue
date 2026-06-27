@@ -33,7 +33,9 @@ draw_set_colour(c_yellow);
 draw_set_font(f_ssFontGiant);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-if (starsAchieved > 1) {draw_text(375,380,starsAchieved)};
+//show the star count in red when it's not enough to get to the next level
+if (starsAchieved < global.nextStars) {draw_set_colour(c_red);} 
+if (starsAchieved > 1) {draw_text(375,380,starsAchieved);}
 
 surface_reset_target();
     
@@ -46,7 +48,7 @@ if jokerCheck >0
 	draw_sprite(sp_jokerGlow,0,48,154+(64*jokerCheck));
 	}
 
-//check if there are jokers to evaluate
+//check if there are jokers to evaluate, and if so, evaluate the next one
 if (avgMultCurve = avgMult and jokerCheck != -1)
 {
 	
@@ -57,7 +59,7 @@ if (avgMultCurve = avgMult and jokerCheck != -1)
 
 		jokerEval(jokerCheck-1);
 	}
-	
+	//when the jokers are done evaluating, prevent more checks and spawn the continue / end button
 	else
 	{
 		show_debug_message("done checking jokers!");
