@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -112,6 +112,7 @@
     {"id":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
     {"id":{"name":"sc_draw_pie","path":"scripts/sc_draw_pie/sc_draw_pie.yy",},},
+    {"id":{"name":"sc_jokerEval","path":"scripts/sc_jokerEval/sc_jokerEval.yy",},},
     {"id":{"name":"sc_JokersAndItems","path":"scripts/sc_JokersAndItems/sc_JokersAndItems.yy",},},
     {"id":{"name":"sc_Load","path":"scripts/sc_Load/sc_Load.yy",},},
     {"id":{"name":"sc_loadPacks","path":"scripts/sc_loadPacks/sc_loadPacks.yy",},},
@@ -200,6 +201,7 @@
     {"id":{"name":"sp_inconsistent","path":"sprites/sp_inconsistent/sp_inconsistent.yy",},},
     {"id":{"name":"sp_intensity","path":"sprites/sp_intensity/sp_intensity.yy",},},
     {"id":{"name":"sp_jack","path":"sprites/sp_jack/sp_jack.yy",},},
+    {"id":{"name":"sp_jokerGlow","path":"sprites/sp_jokerGlow/sp_jokerGlow.yy",},},
     {"id":{"name":"sp_jug","path":"sprites/sp_jug/sp_jug.yy",},},
     {"id":{"name":"sp_kickingAss","path":"sprites/sp_kickingAss/sp_kickingAss.yy",},},
     {"id":{"name":"sp_livewire","path":"sprites/sp_livewire/sp_livewire.yy",},},

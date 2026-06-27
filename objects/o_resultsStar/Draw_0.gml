@@ -1,5 +1,16 @@
 avgMult = global.playData.players[0].avg_multiplier;
-avgMultCurve = lerp(avgMultCurve,avgMult,0.05);
+
+//make the curved avg mult value "zoop" up to the real value instead of instantly jumping
+
+if (avgMultCurve < 0.999*avgMult)
+{
+	avgMultCurve = lerp(avgMultCurve,avgMult,0.05);
+}
+//speed up the zoop when it's almost done
+if (avgMultCurve >= 0.999*avgMult)
+{
+	avgMultCurve = lerp(avgMultCurve,avgMult,0.2);
+}
 starCount = sqrt(avgMultCurve)*3.337;
 starsAchieved = floor(starCount);
 progressOffset = power((starsAchieved) / 3.337,2);
@@ -28,3 +39,31 @@ surface_reset_target();
     
 // Draw surface to screen
 draw_surface(surf, 600, 0);
+
+//if there is a joker being evaluated, draw the glow sprite
+if jokerCheck >0 
+	{
+	draw_sprite(sp_jokerGlow,0,48,154+(64*jokerCheck));
+	}
+
+//check if there are jokers to evaluate
+if (avgMultCurve = avgMult and jokerCheck != -1)
+{
+	
+	if (array_length(global.jokerInventory) > jokerCheck)
+	{
+		jokerCheck +=1;
+		show_debug_message("Checking joker " + string(jokerCheck));
+
+		jokerEval(jokerCheck-1);
+	}
+	
+	else
+	{
+		show_debug_message("done checking jokers!");
+		jokerCheck = -1;
+		starCalculation();
+	}
+	
+
+}

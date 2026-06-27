@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v2","%Name":"multToNextStar","filters":[],"listItems":[],"multiselect":false,"name":"multToNextStar","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"progressOffset","filters":[],"listItems":[],"multiselect":false,"name":"progressOffset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"avgMultCurve","filters":[],"listItems":[],"multiselect":false,"name":"avgMultCurve","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"jokerCheck","filters":[],"listItems":[],"multiselect":false,"name":"jokerCheck","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

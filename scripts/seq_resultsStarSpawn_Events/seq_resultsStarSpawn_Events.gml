@@ -9,8 +9,9 @@ function moment_starSpawnComplete() {	/// @DnDAction : YoYo Games.Instances.Cr
 	/// @DnDArgument : "xpos" "990"
 	/// @DnDArgument : "ypos" "365"
 	/// @DnDArgument : "objectid" "o_resultsStar"
+	/// @DnDArgument : "layer" ""StarLayer""
 	/// @DnDSaveInfo : "objectid" "o_resultsStar"
-	instance_create_layer(990, 365, "Instances", o_resultsStar);
+	instance_create_layer(990, 365, "StarLayer", o_resultsStar);
 
 	/// @DnDAction : YoYo Games.Sequences.Sequence_Destroy
 	/// @DnDVersion : 1
