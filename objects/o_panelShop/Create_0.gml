@@ -242,3 +242,23 @@ for(i = 0; i < array_length(global.shopInventory); i += 1) {	/// @DnDAction : Y
 	/// @DnDArgument : "var_1" "newJokerButton.jokerReference"
 	newJokerButton.price = newJoker.buyValue;
 	newJokerButton.jokerReference = newJoker;}
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 30774230
+/// @DnDArgument : "xpos" "464"
+/// @DnDArgument : "ypos" "608"
+/// @DnDArgument : "objectid" "o_setlistRefresh"
+/// @DnDArgument : "layer" ""Buttons""
+/// @DnDSaveInfo : "objectid" "o_setlistRefresh"
+instance_create_layer(464, 608, "Buttons", o_setlistRefresh);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 61F96919
+/// @DnDArgument : "xpos" "320"
+/// @DnDArgument : "ypos" "608"
+/// @DnDArgument : "objectid" "o_shopRefresh"
+/// @DnDArgument : "layer" ""Buttons""
+/// @DnDSaveInfo : "objectid" "o_shopRefresh"
+instance_create_layer(320, 608, "Buttons", o_shopRefresh);

@@ -10,6 +10,18 @@ with(o_buyConsumableButton) instance_destroy();
 /// @DnDApplyTo : {o_buyJokerButton}
 with(o_buyJokerButton) instance_destroy();
 
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 360A65A7
+/// @DnDApplyTo : {o_shopRefresh}
+with(o_shopRefresh) instance_destroy();
+
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 47D9AC94
+/// @DnDApplyTo : {o_setlistRefresh}
+with(o_setlistRefresh) instance_destroy();
+
 /// @DnDAction : YoYo Games.Common.Apply_To
 /// @DnDVersion : 1
 /// @DnDHash : 4A2E5E27

@@ -39,20 +39,6 @@ with(o_panelShop) instance_destroy();
 /// @DnDApplyTo : {o_panelSetlist}
 with(o_panelSetlist) instance_destroy();
 
-/// @DnDAction : YoYo Games.Common.Function_Call
-/// @DnDVersion : 1
-/// @DnDHash : 7647685F
-/// @DnDArgument : "function" "instance_deactivate_object"
-/// @DnDArgument : "arg" "o_setlistRefresh"
-instance_deactivate_object(o_setlistRefresh);
-
-/// @DnDAction : YoYo Games.Common.Function_Call
-/// @DnDVersion : 1
-/// @DnDHash : 22B3CAC3
-/// @DnDArgument : "function" "instance_deactivate_object"
-/// @DnDArgument : "arg" "o_shopRefresh"
-instance_deactivate_object(o_shopRefresh);
-
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 3F843B9C
