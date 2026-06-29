@@ -4,12 +4,12 @@ avgMult = global.playData.players[0].avg_multiplier;
 
 if (avgMultCurve < 0.999*avgMult)
 {
-	avgMultCurve = lerp(avgMultCurve,avgMult,0.05);
+	avgMultCurve = lerp(avgMultCurve,avgMult,(0.05 * animSpeedScale));
 }
 //speed up the zoop when it's almost done
 if (avgMultCurve >= 0.999*avgMult)
 {
-	avgMultCurve = lerp(avgMultCurve,avgMult,0.2);
+	avgMultCurve = lerp(avgMultCurve,avgMult,(0.2 * animSpeedScale));
 }
 starCount = sqrt(avgMultCurve)*3.337;
 starsAchieved = floor(starCount);
@@ -64,6 +64,7 @@ if (avgMultCurve = avgMult and jokerCheck != -1)
 	{
 		show_debug_message("done checking jokers!");
 		jokerCheck = -1;
+		global.playData.players[0].stars = starsAchieved;
 		starCalculation();
 	}
 	

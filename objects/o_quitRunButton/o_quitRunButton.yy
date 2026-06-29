@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"o_endResultsButton",
+  "%Name":"o_quitRunButton",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -10,11 +10,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_endResultsButton",
+  "name":"o_quitRunButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"Results",
-    "path":"folders/Objects/Results.yy",
+    "name":"EndStats",
+    "path":"folders/Objects/EndStats.yy",
   },
   "parentObjectId":null,
   "persistent":false,
