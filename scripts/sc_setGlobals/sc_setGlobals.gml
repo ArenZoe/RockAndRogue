@@ -101,21 +101,14 @@ function setGlobals() {	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 1ECC28E2
+	/// @DnDInput : 3
 	/// @DnDParent : 0E53B639
 	/// @DnDArgument : "value" "[]"
+	/// @DnDArgument : "value_1" "[]"
+	/// @DnDArgument : "value_2" "[]"
 	/// @DnDArgument : "var" "playedSongsData"
+	/// @DnDArgument : "var_1" "playData"
+	/// @DnDArgument : "var_2" "runStats"
 	global.playedSongsData = [];
-
-	/// @DnDAction : YoYo Games.Common.Execute_Code
-	/// @DnDVersion : 1
-	/// @DnDHash : 2EB3F9FB
-	/// @DnDParent : 0E53B639
-	/// @DnDArgument : "code" "var playData = {$(13_10)	money: 0,$(13_10)	index: 0,$(13_10)	modifiers: [],$(13_10)	scoreData: {$(13_10)		//fill in with CH's score file$(13_10)	}$(13_10)}"
-	var playData = {
-		money: 0,
-		index: 0,
-		modifiers: [],
-		scoreData: {
-			//fill in with CH's score file
-		}
-	}}
+	global.playData = [];
+	global.runStats = [];}
