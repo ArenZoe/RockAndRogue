@@ -3,6 +3,7 @@ function initJokers(){
 	global.jokers = {
 		shroedinger:{
 			name: "Shroedinger's Combo",
+			count: 0,
 			description: "[Notes Missed] and [Notes Hit] stats are treated as equal to [Total Notes]",
 			rarity: 2,
 			buyValue: 7,
@@ -12,6 +13,7 @@ function initJokers(){
 		},
 		wip:{
 			name: "Work In Progress",
+			count: 0,
 			description: "The first Setlist Reroll in each shop is free",
 			rarity: 1,
 			buyValue: 5,
@@ -21,6 +23,7 @@ function initJokers(){
 		},
 		crowd:{
 			name: "Crowd Pleaser",
+			count: 0,
 			description: "X1.5 Avg Mult, Setlist Rerolls cost double",
 			rarity: 1,
 			buyValue: 5,
@@ -30,6 +33,7 @@ function initJokers(){
 		},
 		vip:{
 			name: "VIP Ticket",
+			count: 0,
 			description: "$2 extra per song",
 			rarity: 0,
 			buyValue: 4,
@@ -39,6 +43,7 @@ function initJokers(){
 		},
 		noteworthy:{
 			name: "Noteworthy",
+			count: 0,
 			description: "+0.01 Avg Mult per 100 [Notes Hit]",
 			rarity: 0,
 			buyValue: 4,
@@ -48,6 +53,7 @@ function initJokers(){
 		},
 		aPlus:{
 			name: "A+",
+			count: 0,
 			description: "+0.1 Avg Mult for every percentage above 90% [Accuracy]",
 			rarity: 0,
 			buyValue: 4,
@@ -57,6 +63,7 @@ function initJokers(){
 		},
 		serial:{
 			name: "Serial",
+			count: 0,
 			description: "+0.005 Avg Mult x [Best Streak]",
 			rarity: 1,
 			buyValue: 5,
@@ -66,6 +73,7 @@ function initJokers(){
 		},
 		plugged:{
 			name: "Plugged In",
+			count: 0,
 			description: "+0.1 Avg Mult x [SP Phrases Earned]",
 			rarity: 0,
 			buyValue: 4,
@@ -75,6 +83,7 @@ function initJokers(){
 		},
 		discharged:{
 			name: "Discharged",
+			count: 0,
 			description: "+0.2 Avg Mult x [SP Activations]",
 			rarity: 0,
 			buyValue: 4,
@@ -84,6 +93,7 @@ function initJokers(){
 		},
 		adrenaline:{
 			name: "Adrenaline Junkie",
+			count: 0,
 			description: "+0.01 Avg Mult per second of [Time in SP]",
 			rarity: 1,
 			buyValue: 5,
@@ -93,6 +103,7 @@ function initJokers(){
 		},
 		sustain:{
 			name: "Sustained",
+			count: 0,
 			description: "+0.1 Avg Mult per 100 [Sustain Score]",
 			rarity: 0,
 			buyValue: 4,
@@ -102,6 +113,7 @@ function initJokers(){
 		},
 		sharpshooter:{
 			name: "Sharpshooter",
+			count: 0,
 			description: "+0.1 Avg Mult per Section FC",
 			rarity: 0,
 			buyValue: 4,
