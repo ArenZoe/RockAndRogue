@@ -38,6 +38,14 @@ global.gameRound += +1;
 /// @DnDArgument : "var" "nextStars"
 global.nextStars += +1;
 
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 60161CDC
+/// @DnDArgument : "value" "global.playedSongsData[(array_length(global.playedSongsData)-1)].money"
+/// @DnDArgument : "value_relative" "1"
+/// @DnDArgument : "var" "gameMoney"
+global.gameMoney += global.playedSongsData[(array_length(global.playedSongsData)-1)].money;
+
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 14F0C3A1

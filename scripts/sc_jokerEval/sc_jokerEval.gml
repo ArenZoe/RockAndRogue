@@ -4,7 +4,8 @@ function jokerEval(jokerToEval)
 	{
 		case global.jokers.shroedinger:        
 			//[Notes Hit] and [Notes Missed] are set to [Total Notes]
-
+			global.playData.players[0].notes_hit = global.playData.players[0].total_notes;
+			global.playData.players[0].notes_missed = global.playData.players[0].total_notes;
 		break;
 		
 		case global.jokers.wip:                
@@ -19,47 +20,58 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.vip:                
 			//+2 Currency per song
-			
+			global.gameMoney += 2;
 		break;
 		
 		case global.jokers.noteworthy:         
 			//+0.1 Avg Mult per 100 Notes Hit
+			global.playData.players[0].avg_multiplier += (0.1 * floor(global.playData.players[0].notes_hit / 100));
 			
 		break;
 		
 		case global.jokers.aPlus:              
 			//+0.1 Avg Mult per Notes Hit % above 90%
-		
+			var percentage = floor((global.playData.players[0].notes_hit / global.playData.players[0].total_notes)*100);
+			var above90 = min(percentage-90,0);
+			global.playData.players[0].avg_multiplier += (0.1 * above90);
 		break;
 		
 		case global.jokers.serial:             
 			//+0.005 Avg Mult per note in Best Streak
-		
+			global.playData.players[0].avg_multiplier += (0.005 * global.playData.players[0].max_streak);
 		break;
 		
 		case global.jokers.plugged:            
 			//+0.1 Avg Mult per SP Phrase
-		
+			global.playData.players[0].avg_multiplier += (0.1 * global.playData.players[0].sp_phrases_earned);
 		break;
 		
 		case global.jokers.discharged:         
 			//+0.2 Avg Mult per Activation
-		
+			global.playData.players[0].avg_multiplier += (0.2 * global.playData.players[0].sp_activations);
 		break;
 		
 		case global.jokers.adrenaline:         
 			//+0.01 Avg Mult per second of SP Time Active (rounded down)
-		
+			global.playData.players[0].avg_multiplier += (0.01 * floor(global.playData.players[0].time_in_sp));
 		break;
 		
 		case global.jokers.sustain:            
 			//+0.01 Avg Mult per 100 sustain points
-		
+			global.playData.players[0].avg_multiplier += (0.01 * (global.playData.players[0].sustain_score / 100));
 		break;
 		
 		case global.jokers.sharpshooter:       
 			//+0.1 Avg Mult per 100% Section 
-		
+			var perfectSec = 0
+			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+			{
+				if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
+				{
+					perfectSec +=1;
+				}
+			}
+			global.playData.players[0].avg_multiplier += (0.1 * perfectSec);
 		break;
 		
 		case global.jokers.cent:               
