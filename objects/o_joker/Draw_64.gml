@@ -183,8 +183,8 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			/// @DnDParent : 1137A5BD
 			/// @DnDArgument : "x" "mouse_x + 8"
 			/// @DnDArgument : "y" "mouse_y + 112"
-			/// @DnDArgument : "caption" ""Common Item""
-			draw_text(mouse_x + 8, mouse_y + 112, string("Common Item") + "");	break;
+			/// @DnDArgument : "caption" ""Common""
+			draw_text(mouse_x + 8, mouse_y + 112, string("Common") + "");	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -206,8 +206,8 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			/// @DnDParent : 28C3DFD2
 			/// @DnDArgument : "x" "mouse_x + 8"
 			/// @DnDArgument : "y" "mouse_y + 112"
-			/// @DnDArgument : "caption" ""Uncommon Item""
-			draw_text(mouse_x + 8, mouse_y + 112, string("Uncommon Item") + "");	break;
+			/// @DnDArgument : "caption" ""Uncommon""
+			draw_text(mouse_x + 8, mouse_y + 112, string("Uncommon") + "");	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -229,8 +229,8 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			/// @DnDParent : 4E6BA28F
 			/// @DnDArgument : "x" "mouse_x + 8"
 			/// @DnDArgument : "y" "mouse_y + 112"
-			/// @DnDArgument : "caption" ""Rare Item""
-			draw_text(mouse_x + 8, mouse_y + 112, string("Rare Item") + "");	break;
+			/// @DnDArgument : "caption" ""Rare""
+			draw_text(mouse_x + 8, mouse_y + 112, string("Rare") + "");	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -252,8 +252,8 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			/// @DnDParent : 75FE1BA1
 			/// @DnDArgument : "x" "mouse_x + 8"
 			/// @DnDArgument : "y" "mouse_y + 112"
-			/// @DnDArgument : "caption" ""Epic Item""
-			draw_text(mouse_x + 8, mouse_y + 112, string("Epic Item") + "");	break;
+			/// @DnDArgument : "caption" ""Epic""
+			draw_text(mouse_x + 8, mouse_y + 112, string("Epic") + "");	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -275,8 +275,8 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			/// @DnDParent : 23CE21FC
 			/// @DnDArgument : "x" "mouse_x + 8"
 			/// @DnDArgument : "y" "mouse_y + 112"
-			/// @DnDArgument : "caption" ""Legendary Item""
-			draw_text(mouse_x + 8, mouse_y + 112, string("Legendary Item") + "");	break;}
+			/// @DnDArgument : "caption" ""Legendary""
+			draw_text(mouse_x + 8, mouse_y + 112, string("Legendary") + "");	break;}
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1

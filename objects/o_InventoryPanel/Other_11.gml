@@ -90,7 +90,7 @@ for(i = 0; i < array_length(global.jokerInventory); i += 1) {	/// @DnDAction : 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 783A5065
-	/// @DnDInput : 10
+	/// @DnDInput : 11
 	/// @DnDParent : 1E25A7FF
 	/// @DnDArgument : "expr" "false"
 	/// @DnDArgument : "expr_1" "global.jokerInventory[i].name"
@@ -101,6 +101,8 @@ for(i = 0; i < array_length(global.jokerInventory); i += 1) {	/// @DnDAction : 
 	/// @DnDArgument : "expr_6" "global.jokerInventory[i].icon"
 	/// @DnDArgument : "expr_7" "i"
 	/// @DnDArgument : "expr_8" "global.jokerInventory[i].type"
+	/// @DnDArgument : "expr_9" "global.jokerInventory[i].rarity"
+	/// @DnDArgument : "expr_10" "global.jokerInventory[i].count"
 	/// @DnDArgument : "var" "newJoker.inShop"
 	/// @DnDArgument : "var_1" "newJoker.name"
 	/// @DnDArgument : "var_2" "newJoker.description"
@@ -111,6 +113,7 @@ for(i = 0; i < array_length(global.jokerInventory); i += 1) {	/// @DnDAction : 
 	/// @DnDArgument : "var_7" "newJoker.index"
 	/// @DnDArgument : "var_8" "newJoker.type"
 	/// @DnDArgument : "var_9" "newJoker.rarity"
+	/// @DnDArgument : "var_10" "newJoker.count"
 	newJoker.inShop = false;
 	newJoker.name = global.jokerInventory[i].name;
 	newJoker.description = global.jokerInventory[i].description;
@@ -120,7 +123,8 @@ for(i = 0; i < array_length(global.jokerInventory); i += 1) {	/// @DnDAction : 
 	newJoker.sprite_index = global.jokerInventory[i].icon;
 	newJoker.index = i;
 	newJoker.type = global.jokerInventory[i].type;
-	newJoker.rarity = 0;
+	newJoker.rarity = global.jokerInventory[i].rarity;
+	newJoker.count = global.jokerInventory[i].count;
 
 	/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 	/// @DnDVersion : 1
