@@ -1,9 +1,48 @@
+function playerOwnsGrowthSpurt()
+{
+	for (var i=0;i<array_length(global.jokerInventory)-1;i++)
+	{
+		if (global.jokerInventory[i] = global.jokers.growthSpurt)
+		{
+			return true;	
+		}
+	}
+	return false;
+}
+
+function playerOwnsHighEndurance()
+{
+	for (var i=0;i<array_length(global.jokerInventory)-1;i++)
+	{
+		if (global.jokerInventory[i] = global.jokers.highEndurance)
+		{
+			return true;	
+		}
+	}
+	return false;
+}
+
 function jokerEval(jokerToEval) 
 {
+	var increase = 0;
+	var decay = 0;
+	var percentage = floor((global.playData.players[0].notes_hit / global.playData.players[0].total_notes)*100);
+	var perfectSec = 0
+			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+			{
+				if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
+				{
+					perfectSec +=1;
+				}
+			}
+	
+	show_debug_message("This joker is " + string(global.jokerInventory[jokerToEval].name));
+	
 	switch(global.jokerInventory[jokerToEval])
 	{
 		case global.jokers.shroedinger:        
 			//[Notes Hit] and [Notes Missed] are set to [Total Notes]
+			show_debug_message("setting notes hit and missed to total")
 			global.playData.players[0].notes_hit = global.playData.players[0].total_notes;
 			global.playData.players[0].notes_missed = global.playData.players[0].total_notes;
 		break;
@@ -20,103 +59,141 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.vip:                
 			//+2 Currency per song
+			show_debug_message("adding 2 money")
 			global.gameMoney += 2;
 		break;
 		
 		case global.jokers.noteworthy:         
 			//+0.1 Avg Mult per 100 Notes Hit
+			show_debug_message("avg mult +" + string(0.1 * floor(global.playData.players[0].notes_hit / 100)));
 			global.playData.players[0].avg_multiplier += (0.1 * floor(global.playData.players[0].notes_hit / 100));
 			
 		break;
 		
 		case global.jokers.aPlus:              
 			//+0.1 Avg Mult per Notes Hit % above 90%
-			var percentage = floor((global.playData.players[0].notes_hit / global.playData.players[0].total_notes)*100);
 			var above90 = min(percentage-90,0);
+			show_debug_message("avg mult +" + string(0.1 * above90));
 			global.playData.players[0].avg_multiplier += (0.1 * above90);
 		break;
 		
 		case global.jokers.serial:             
 			//+0.005 Avg Mult per note in Best Streak
+			show_debug_message("avg mult +" + string(0.005 * global.playData.players[0].max_streak));
 			global.playData.players[0].avg_multiplier += (0.005 * global.playData.players[0].max_streak);
 		break;
 		
 		case global.jokers.plugged:            
 			//+0.1 Avg Mult per SP Phrase
+			show_debug_message("avg mult +" + string(0.1 * global.playData.players[0].sp_phrases_earned));
 			global.playData.players[0].avg_multiplier += (0.1 * global.playData.players[0].sp_phrases_earned);
 		break;
 		
 		case global.jokers.discharged:         
 			//+0.2 Avg Mult per Activation
+			show_debug_message("avg mult +" + string(0.2 * global.playData.players[0].sp_activations));
 			global.playData.players[0].avg_multiplier += (0.2 * global.playData.players[0].sp_activations);
 		break;
 		
 		case global.jokers.adrenaline:         
 			//+0.01 Avg Mult per second of SP Time Active (rounded down)
+			show_debug_message("avg mult +" + string(0.01 * floor(global.playData.players[0].time_in_sp)));
 			global.playData.players[0].avg_multiplier += (0.01 * floor(global.playData.players[0].time_in_sp));
 		break;
 		
 		case global.jokers.sustain:            
 			//+0.01 Avg Mult per 100 sustain points
-			global.playData.players[0].avg_multiplier += (0.01 * (global.playData.players[0].sustain_score / 100));
+			show_debug_message("avg mult +" + string(0.01 * (floor(global.playData.players[0].sustain_score / 100))));
+			global.playData.players[0].avg_multiplier += (0.01 * (floor(global.playData.players[0].sustain_score / 100)));
 		break;
 		
 		case global.jokers.sharpshooter:       
 			//+0.1 Avg Mult per 100% Section 
-			var perfectSec = 0
-			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
-			{
-				if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
-				{
-					perfectSec +=1;
-				}
-			}
+			show_debug_message("avg mult +" + string((0.1 * perfectSec)));
 			global.playData.players[0].avg_multiplier += (0.1 * perfectSec);
 		break;
 		
 		case global.jokers.cent:               
 			//x1.00 Avg Mult, increases by x0.001 per 100 Notes Hit
-		
+			increase = floor(global.playData.players[0].notes_hit / 100);
+			global.jokers.cent.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.cent.count += increase;}
+			show_debug_message("avg mult x" + string(1 + (0.001 * global.jokers.cent.count)));
+			global.playData.players[0].avg_multiplier *= (1 + (0.001 * global.jokers.cent.count));
 		break;
 		
 		case global.jokers.constellation:      
 			//+0.00 Avg Mult, increases by +0.05 per Base Star
-		
+			increase = global.playData.base.players[0].stars;
+			global.jokers.constellation.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.constellation.count += increase;}
+			show_debug_message("avg mult +" + string(0.05 * global.jokers.constellation.count));
+			global.playData.players[0].avg_multiplier += 0.05 * global.jokers.constellation.count;
 		break;
 		
 		case global.jokers.flawless:           
 			//+0.0 Avg Mult, increases by +0.8 per FC
-		
+			if global.playData.players[0].is_fc {increase = 1;}
+			else {increase = 0;}
+			global.jokers.flawless.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.flawless.count += increase;}
+			show_debug_message("avg mult +" + string(0.8 * global.jokers.flawless.count));
+			global.playData.players[0].avg_multiplier += 0.8 * global.jokers.flawless.count;
 		break;
 		
 		case global.jokers.meticulous:         
 			//+0.0 Avg Mult, increases +0.2 per song over 90%
-		
+			if percentage >= 90 {increase = 1;}
+			else {increase=0;}
+			global.jokers.meticulous.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.meticulous.count+=increase;}
+			show_debug_message("avg mult +" + string(0.2 * global.jokers.meticulous.count));
+			global.playData.players[0].avg_multiplier += (0.2 * global.jokers.meticulous.count);
 		break;
 		
 		case global.jokers.kickingAss:         
 			//+0.2 Avg Mult, increases 0.1 per Best Streak over 500
-		
+			if global.playData.players[0].max_streak >= 500 {increase=1;}
+			else {increase=0;}
+			global.jokers.kickingAss.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.kickingAss.count += increase;}
+			show_debug_message("avg mult +" + string((0.2 + (0.1*global.jokers.kickingAss.count))));
+			global.playData.players[0].avg_multiplier += (0.2 + (0.1*global.jokers.kickingAss.count));
 		break;
 		
 		case global.jokers.takingNames:        
 			//x1.2 Avg Mult, increases 0.1 per Best Streak over 1000
-		
+			if global.playData.players[0].max_streak >=1000 {increase=1;}
+			else {increase=0;}
+			global.jokers.takingNames.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.takingNames.count += increase;}
+			show_debug_message("avg mult x") + string (1.2 + (0.1*global.jokers.takingNames.count));
+			global.playData.players[0].avg_multiplier *= (1.2 + (0.1*global.jokers.takingNames.count));
 		break;
 		
 		case global.jokers.livewire:           
 			// +0.1 Avg Multiplier per [SP Bars Filled]
-		
+			var spBars = floor(global.playData.players[0].sp_ticks_accumulated / global.playData.players[0].sp_bar_ticks);
+			show_debug_message("avg mult +" + string(0.1*spBars));
+			global.playData.players[0].avg_multiplier += (0.1 * spBars);
 		break;
 		
 		case global.jokers.zoning:             
 			//+0.0 Avg Mult, increases 0.1 per 100% Section
-		
+			increase = perfectSec;
+			global.jokers.zoning.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.zoning.count += increase;}
+			show_debug_message("avg mult +" + string (0.1 * global.jokers.zoning.count));
+			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.zoning.count);
 		break;
 		
 		case global.jokers.allYourBase:        
 			//+0.00 Avg Mult, increases by +0.01 per 1000 Base Note Points
-		
+			increase = floor(global.playData.base.players[0].note_score / 1000);
+			global.jokers.allYourBase.count += increase;
+			if playerOwnsGrowthSpurt(){global.jokers.allYourBase.count += increase;}
+			show_debug_message("avg mult +" + string(0.01 * global.jokers.allYourBase.count));
+			global.playData.players[0].avg_multiplier += (0.01 * global.jokers.allYourBase.count);
 		break;
 		
 		case global.jokers.extraCredit:        
