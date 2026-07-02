@@ -27,7 +27,7 @@ function jokerEval(jokerToEval)
 	var increase = 0;
 	var decay = 0;
 	var percentage = floor((global.playData.players[0].notes_hit / global.playData.players[0].total_notes)*100);
-	var perfectSec = 0
+	var perfectSec = 0;
 		for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
 		{
 			if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
@@ -167,7 +167,7 @@ function jokerEval(jokerToEval)
 			else {increase=0;}
 			global.jokers.takingNames.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.takingNames.count += increase;}
-			show_debug_message("avg mult x") + string (1.2 + (0.1*global.jokers.takingNames.count));
+			show_debug_message("avg mult x" + string(1.2 + (0.1*global.jokers.takingNames.count)));
 			global.playData.players[0].avg_multiplier *= (1.2 + (0.1*global.jokers.takingNames.count));
 		break;
 		
@@ -183,7 +183,7 @@ function jokerEval(jokerToEval)
 			increase = perfectSec;
 			global.jokers.zoning.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.zoning.count += increase;}
-			show_debug_message("avg mult +" + string (0.1 * global.jokers.zoning.count));
+			show_debug_message("avg mult +" + string(0.1 * global.jokers.zoning.count));
 			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.zoning.count);
 		break;
 		
@@ -218,9 +218,9 @@ function jokerEval(jokerToEval)
 			//+2.0 Avg Mult, reduces by -0.2 per Song
 			decay = 2
 			if playerOwnsHighEndurance(){decay=1;}
-			global.jokers.borrowedTime.count += decay;
 			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.borrowedTime.count)));
 			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.borrowedTime.count)); //this one is -0.1 since we're decaying it by 2 (so that the half decay still works if the player has high endurance)
+			global.jokers.borrowedTime.count += decay; //we want this one to decay after it applies the bonus since it decays per song
 		break;
 		
 		case global.jokers.aberration:         
