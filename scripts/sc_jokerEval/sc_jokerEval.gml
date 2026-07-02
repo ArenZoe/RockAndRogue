@@ -28,13 +28,13 @@ function jokerEval(jokerToEval)
 	var decay = 0;
 	var percentage = floor((global.playData.players[0].notes_hit / global.playData.players[0].total_notes)*100);
 	var perfectSec = 0
-			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+		for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+		{
+			if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
 			{
-				if (global.playData.players[0].section_stats[i].notes_hit = global.playData.players[0].section_stats[i].notes_count)
-				{
-					perfectSec +=1;
-				}
+				perfectSec +=1;
 			}
+		}
 	
 	show_debug_message("This joker is " + string(global.jokerInventory[jokerToEval].name));
 	
@@ -198,112 +198,213 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.extraCredit:        
 			//x1.5 Avg Mult, reduces by x0.01 per Percentage under 100%
-		
+			decay = 100 - percentage;
+			if playerOwnsHighEndurance(){decay = floor(decay/2);}
+			global.jokers.extraCredit.count += decay;
+			show_debug_message("avg mult x" + string(1.5 - (0.01 * global.jokers.extraCredit.count)));
+			global.playData.players[0].avg_multiplier *= (1.5 - (0.01 * global.jokers.extraCredit.count));
 		break;
 		
 		case global.jokers.evaporation:        
 			//+2.0 Avg Mult, reduces by -0.01 per Note Missed
-		
+			decay = global.playData.players[0].notes_missed;
+			if playerOwnsHighEndurance(){decay = floor(decay/2);}
+			global.jokers.evaporation.count += decay;
+			show_debug_message("avg mult +" + string(2.0 - (0.01*global.jokers.evaporation.count)));
+			global.playData.players[0].avg_multiplier += (2.0 - (0.01*global.jokers.evaporation.count));
 		break;
 		
 		case global.jokers.borrowedTime:       
 			//+2.0 Avg Mult, reduces by -0.2 per Song
-		
+			decay = 2
+			if playerOwnsHighEndurance(){decay=1;}
+			global.jokers.borrowedTime.count += decay;
+			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.borrowedTime.count)));
+			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.borrowedTime.count)); //this one is -0.1 since we're decaying it by 2 (so that the half decay still works if the player has high endurance)
 		break;
 		
 		case global.jokers.aberration:         
 			//+2.0 Avg Mult, reduces by -0.1 per Overstrum
-		
+			decay = global.playData.players[0].excess_hits;
+			if playerOwnsHighEndurance(){decay = floor(decay/2);}
+			global.jokers.aberration.count += decay;
+			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.aberration.count)));
+			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.aberration.count));
 		break;
 		
 		case global.jokers.idiomatic:          
 			//x2.0 Avg Mult, reduces by -0.1 per missed Phrase
-		
+			decay = global.playData.players[0].sp_phrases_missed;
+			if playerOwnsHighEndurance(){decay=floor(decay/2);}
+			global.jokers.idiomatic.count += decay;
+			show_debug_message("avg mult x" + string(2.0 - (0.1*global.jokers.idiomatic.count)));
+			global.playData.players[0].avg_multiplier *= (2.0 - (0.1*global.jokers.idiomatic.count));
 		break;
 		
 		case global.jokers.spiritJar:          
 			//+2.0 Avg Mult, reduces by -0.1 per 10 Ghost Inputs
-		
+			decay = floor(global.playData.players[0].frets_ghosted / 10);
+			if playerOwnsHighEndurance(){decay=floor(decay/2);}
+			global.jokers.spiritJar.count += decay;
+			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.spiritJar.count)));
+			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.spiritJar.count));		
 		break;
 		
 		case global.jokers.bigTipper:          
 			//+4 Currency per song, reduces by 1 per Section under 90%
-		
+			var secUnder90 = 0
+			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+			{
+				if (global.playData.players[0].section_stats[i].notes_hit < (0.9 * global.playData.players[0].section_stats[i].notes_count))
+				{
+					secUnder90 +=1;
+				}
+			}
+			decay = secUnder90;
+			if playerOwnsHighEndurance(){decay=floor(decay/2);}
+			global.jokers.bigTipper.count += decay;
+			show_debug_message("money +" + string(max(0,(4 - global.jokers.bigTipper.count))));
+			global.gameMoney += max(0,(4 - global.jokers.bigTipper.count));
 		break;
 		
 		case global.jokers.satisfying:         
 			//+5.0 Avg Mult if Best Streak is divisible by 100
-		
+			if (global.playData.players[0].max_streak mod 100 = 0)
+			{
+				show_debug_message("avg mult +5.0");
+				global.playData.players[0].avg_multiplier += 5.0;
+			}
 		break;
 		
 		case global.jokers.friedChicken:       
 			//x2.0 Avg Mult if FC
-		
+			if (global.playData.players[0].is_fc = true)
+			{
+				show_debug_message("avg mult x2.0");
+				global.playData.players[0].avg_multiplier *= 2.0;
+			}
 		break;
 		
 		case global.jokers.bullseye:           
 			//+4.4 Avg Mult if Base Avg Mult is between 4.400 - 4.450
-		
+			if (global.playData.base.players[0].avg_multiplier >=4.40 and global.playData.base.players[0].avg_multiplier <= 4.45)
+				{
+					show_debug_message("avg mult +4.4");
+					global.playData.players[0].avg_multiplier += 4.4;
+				}
 		break;
 		
 		case global.jokers.rhythmic:           
 			//x1.5 Avg Mult if Overstrums is 0
-		
+			if (global.playData.players[0].excess_hits = 0)
+			{
+				show_debug_message("avg mult x1.5");
+				global.playData.players[0].avg_multiplier *= 1.5;
+			}
 		break;
 		
 		case global.jokers.fameAndFortune:     
 			//x1.5 Avg Mult if all SP Phrases hit
-		
+			if (global.playData.players[0].sp_phrases_missed = 0)
+			{
+				show_debug_message("avg mult x1.5");
+				global.playData.players[0].avg_multiplier *= 1.5;
+			}
 		break;
 		
 		case global.jokers.exorcism:           
 			//x1.5 Avg Mult if Ghost Inputs is <10
-		
+			if (global.playData.players[0].frets_ghosted < 10)
+			{
+				show_debug_message("avg mult x1.5");
+				global.playData.players[0].avg_multiplier *= 1.5;
+			}
 		break;
 		
 		case global.jokers.hotStreak:          
 			//x1.2 Avg Mult if Best Streak > 500
-		
+			if (global.playData.players[0].max_streak > 500)
+			{
+				show_debug_message("avg mult x1.2");
+				global.playData.players[0].avg_multiplier *= 1.2;
+			}
 		break;
 		
 		case global.jokers.studied:            
 			//+1.0 Avg Mult if Percentage > 90%
-		
+			if (percentage > 90)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.waterHole:          
 			//+1.0 Avg Mult if Notes Missed < 50
-		
+			if (global.playData.players[0].notes_missed < 50)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.discipline:         
 			//+1.0 Avg Mult if Overstrums < 25
-		
+			if (global.playData.players[0].excess_hits < 25)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.pyrotechnic:        
 			//+1.0 Avg Mult if Activations > 4
-		
+			if (global.playData.players[0].sp_activations > 4)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.hesitant:           
 			//+1.0 Avg Mult if Activations < 4
-		
+			if (global.playData.players[0].sp_activations < 4)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.ghostbuster:        
 			//+1.0 Avg Mult if Ghost Inputs < 20
-		
+			if (global.playData.players[0].frets_ghosted < 20)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.jackOfAllTrades:    
 			//+1.0 Avg Mult if weakest Section > 80%
-		
+			var weakestSec = 0
+			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+			{
+				if ((global.playData.players[0].section_stats[i].notes_hit / global.playData.players[0].section_stats[i].notes_count)*100 < weakestSec)
+				{
+					weakestSec = (global.playData.players[0].section_stats[i].notes_hit / global.playData.players[0].section_stats[i].notes_count)*100;
+				}
+			}
+			if (weakestSec > 80)
+			{
+				show_debug_message("avg mult +1.0");
+				global.playData.players[0].avg_multiplier += 1.0;
+			}
 		break;
 		
 		case global.jokers.booster:            
 			//+1.0 Avg Mult
-		
+			show_debug_message("avg mult +1.0");
+			global.playData.players[0].avg_multiplier += 1.0;
 		break;
 		
 		case global.jokers.oneUp:              
@@ -313,12 +414,14 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.turboPower:         
 			//x1.5 Avg Mult
-		
+			show_debug_message("avg mult x1.5");
+			global.playData.players[0].avg_multiplier *= 1.5;
 		break;
 		
 		case global.jokers.superPower:         
 			//x2.0 Avg Mult
-		
+			show_debug_message("avg mult x2.0");
+			global.playData.players[0].avg_multiplier *= 2.0;
 		break;
 		
 		case global.jokers.instantReplay:      
@@ -333,32 +436,38 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.optionalNotes:      
 			//x0.5 [Notes Missed]
-		
+			show_debug_message("notes missed x0.5");
+			global.playData.players[0].notes_missed *= 0.5
 		break;
 		
 		case global.jokers.astigmatism:        
 			//x1.5 [Best Streak]
-		
+			show_debug_message("best streak x1.5");
+			global.playData.players[0].max_streak *= 1.5;
 		break;
 		
 		case global.jokers.juggernaut:         
 			//-20 [Overstrums]
-		
+			show_debug_message("overstrums -20");
+			global.playData.players[0].excess_hits = max(0, global.playData.players[0].excess_hits-20);
 		break;
 		
 		case global.jokers.phrasing:           
 			//+5 [Phrases Hit]
-		
+			show_debug_message("SP phrases hit +5");
+			global.playData.players[0].sp_phrases_earned += 5;
 		break;
 		
 		case global.jokers.doubleTime:         
 			//x2.0 [SP Active Time]
-		
+			show_debug_message("time in SP x2");
+			global.playData.players[0].time_in_sp *= 2;
 		break;
 		
 		case global.jokers.elusiveSpirit:      
 			//x0.5 [Ghost Inputs]
-		
+			show_debug_message("ghost inputs x0.5");
+			global.playData.players[0].frets_ghosted *= 0.5;		
 		break;
 		
 		case global.jokers.growthSpurt:        
@@ -393,22 +502,44 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.overkill:           
 			//x3.0 Avg Mult. Activates after 5 FCs
-		
+			if !variable_global_exists("global.jokers.overkill.subCount"){global.jokers.overkill.subCount = 0;}
+			if (global.playData.players[0].is_fc = true){global.jokers.overkill.subCount += 1;}
+			if (global.jokers.overkill.subCount >=5) {global.jokers.overkill.count = 1;}
+			if (global.jokers.overkill.count = 1){
+				show_debug_message("avg mult x3");
+				global.playData.players[0].avg_multiplier *= 3.0;
+			}
 		break;
 		
 		case global.jokers.blackHole:          
 			//x10.0 Avg Mult. Activates after 1000 Notes Missed
-		
+			if !variable_global_exists("global.jokers.blackHole.subCount"){global.jokers.blackHole.subCount=0;}
+			global.jokers.blackHole.subCount += global.playData.players[0].notes_missed;
+			if (global.jokers.blackHole.subCount > 1000){global.jokers.blackHole.count = 1;}
+			if (global.jokers.blackHole.count = 1)
+			{
+				show_debug_message("avg mult x10");
+				global.playData.players[0].avg_multiplier *= 10.0;
+			}
 		break;
 		
 		case global.jokers.collector:          
-			//+10 Stars. Activates after 100 Stars acquired
-		
+			//+10 Stars. Activates after 100 base Stars acquired
+			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
 		case global.jokers.magicEraser:        
 			//[Overstrums] and [Ghost Inputs] are set to 0. Activates after either are greater than [Total Notes]
-		
+			if ((global.playData.players[0].excess_hits>global.playData.players[0].total_notes) or (global.playData.players[0].frets_ghosted>global.playData.players[0].total_notes))
+			{
+				global.jokers.magicEraser.count = 1;
+			}
+			if (global.jokers.magicEraser.count = 1)
+			{
+				show_debug_message("overstrums and ghost inputs set to 0");
+				global.playData.players[0].excess_hits = 0;
+				global.playData.players[0].frets_ghosted = 0;
+			}
 		break;
 		
 		case global.jokers.sleightOfHand:      
@@ -453,7 +584,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.surplus:            
 			//Gain one random consumable after each Song
-		
+			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
 		case global.jokers.nullCombo:          
