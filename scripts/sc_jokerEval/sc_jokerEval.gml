@@ -544,12 +544,16 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.sleightOfHand:      
 			//Adds x0.1 Avg Mult for every 5% song speed above 100
-		
+			var speedAbove100 = max(0,((global.playData.playback_speed / 5) - 20));
+			show_debug_message("avg mult x" + string(1.0 + (0.1*speedAbove100)));
+			global.playData.players[0].avg_multiplier *= (1.0 + (0.1*speedAbove100));
 		break;
 		
 		case global.jokers.challenger:         
 			//Adds x0.2 Avg Mult for every active challenge modifier
-		
+			var numberOfMods = array_length(global.playedSongsData[(array_length(global.playedSongsData)-1)].modifiers);
+			show_debug_message("avg mult x" + string((1.0 + (0.2*numberOfMods))));
+			global.playData.players[0].avg_multiplier *= (1.0 + (0.2*numberOfMods));
 		break;
 		
 		case global.jokers.setInStone:         
@@ -559,22 +563,30 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.stonks:             
 			//+0.05 Avg Mult for every Currency
-		
+			show_debug_message("avg mult +" + string(0.05*global.gameMoney));
+			global.playData.players[0].avg_multiplier += (0.05 * global.gameMoney);
 		break;
 		
 		case global.jokers.rngesus:            
 			//Random range from -2.0 to +5.0 Avg Mult
-		
+			randomize();
+			var randomVal = random_range(-2.0,5.0);
+			show_debug_message("avg mult +" + string(randomVal));
+			global.playData.players[0].avg_multiplier += randomVal;
 		break;
 		
 		case global.jokers.staminup:           
 			//+0.0 Avg Mult, increases by +0.5 per Song
-		
+			global.jokers.staminup.count += 1;
+			if playerOwnsGrowthSpurt(){global.jokers.staminup.count +=1;}
+			show_debug_message("avg mult +" + string(0.5*global.jokers.staminup.count));
+			global.playData.players[0].avg_multiplier += (0.5*global.jokers.staminup.count);		
 		break;
 		
 		case global.jokers.powerHungry:        
 			//+1.0 Avg Mult to next Song per Consumable used, resets afterwards.
-		
+			//TODO:rework this one
+			show_debug_message("this joker needs to be reworked lol");
 		break;
 		
 		case global.jokers.revive:             
@@ -589,32 +601,44 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.nullCombo:          
 			//All Songs are considered FCs, but your notes hit/missed/streak are unchanged.
-		
+			show_debug_message("fc stat set to true");
+			global.playData.players[0].is_fc = true;
 		break;
 		
 		case global.jokers.gluttony:           
 			//+0.0 Avg Mult, increases by +0.1 per Consumable used
-		
+			//TODO:needs stats to be counted first
+			show_debug_message("this joker needs another module to be implemented first");
 		break;
 		
 		case global.jokers.bassGrooved:        
 			//Each note in [Best Streak] is worth an extra 100 points
-		
+			//TODO:rework this one
+			show_debug_message("this joker needs to be reworked lol");
 		break;
 		
 		case global.jokers.soloSuite:          
 			//[Solo Bonus] Now contributes to Avg Mult
-		
+			//TODO:rework this one
+			show_debug_message("this joker needs to be reworked lol");
 		break;
 		
 		case global.jokers.calculated:         
 			//x2.0 Avg Mult if [Overstrums] = 10
-		
+			if (global.playData.players[0].excess_hits = 10)
+			{
+				show_debug_message("avg mult x2");
+				global.playData.players[0].avg_multiplier *= 2;
+			}
 		break;
 		
 		case global.jokers.inconsistent:       
 			//x3.0 Avg Mult if [Best Streak] < 50
-		
+			if (global.playData.players[0].max_streak < 50)
+			{
+				show_debug_message("avg mult x3");	
+				global.playData.players[0].avg_multiplier *= 3;
+			}
 		break;
 		
 		case global.jokers.starPower:          
@@ -624,17 +648,21 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.backHeavy:          
 			//x1.5 Avg Mult if [Final Streak] = [Best Streak]
-		
+			if (global.playData.players[0].max_streak = global.playData.players[0].end_streak)
+			{
+				show_debug_message("avg mult x1.5");	
+				global.playData.players[0].avg_multiplier *= 1.5;
+			}
 		break;
 		
 		case global.jokers.reverseChoke:       
 			//x2 Stars. Activates after missing only one note in the first section of the song.
-		
+			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
 		case global.jokers.awesomeChoke:       
 			//x2 Stars. Activates after missing only one note in the final section of the song.
-		
+			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
 		default:

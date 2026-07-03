@@ -703,7 +703,7 @@ function initJokers(){
 		powerHungry: {
 			name: "Power Hungry",
 			count: 0,
-			description: "+0.5 Avg Mult, +1.0 per Consumable used, resets after each Song",
+			description: "This joker needs to be reworked lol",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
@@ -753,7 +753,7 @@ function initJokers(){
 		bassGrooved: {
 			name: "Bass Grooved",
 			count: 0,
-			description: "Notes in your Best Streak are recalculated to have a 6x combo multiplier",
+			description: "This joker needs to be reworked lol",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
@@ -763,7 +763,7 @@ function initJokers(){
 		soloSuite: {
 			name: "Solo Suite",
 			count: 0,
-			description: "[Solo Bonus] now contributes to Avg Mult",
+			description: "This joker needs to be reworked lol",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 5,
