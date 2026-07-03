@@ -603,6 +603,7 @@ function initJokers(){
 		overkill: {
 			name: "Overkill",
 			count: 0,
+			subCount: 0,
 			description: "x3.0 Avg Mult. Activates after 5 FCs",
 			rarity: 2,
 			buyValue: 7,
@@ -613,6 +614,7 @@ function initJokers(){
 		blackHole: {
 			name: "Black Hole",
 			count: 0,
+			subCount: 0,
 			description: "x10.0 Avg Mult. Activates after 1000 [Notes Missed]",
 			rarity: 3,
 			buyValue: 10,
@@ -623,6 +625,7 @@ function initJokers(){
 		collector: {
 			name: "Collector",
 			count: 0,
+			subCount: 0,
 			description: "+10 Stars. Activates after 100 Stars acquired",
 			rarity: 3,
 			buyValue: 10,

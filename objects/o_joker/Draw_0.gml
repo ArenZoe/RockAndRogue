@@ -53,8 +53,8 @@ if(type == jType.toggle){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6EC05568
 	/// @DnDParent : 6EDCCC73
-	/// @DnDArgument : "var" "count"
-	if(count == 0){	/// @DnDAction : YoYo Games.Drawing.Set_Alpha
+	/// @DnDArgument : "var" "global.jokerInventory[index].count"
+	if(global.jokerInventory[index].count == 0){	/// @DnDAction : YoYo Games.Drawing.Set_Alpha
 		/// @DnDVersion : 1
 		/// @DnDHash : 45BF69EE
 		/// @DnDParent : 6EC05568

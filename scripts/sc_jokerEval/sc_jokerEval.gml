@@ -502,7 +502,6 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.overkill:           
 			//x3.0 Avg Mult. Activates after 5 FCs
-			if !variable_global_exists("global.jokers.overkill.subCount"){global.jokers.overkill.subCount = 0;}
 			if (global.playData.players[0].is_fc = true){global.jokers.overkill.subCount += 1;}
 			if (global.jokers.overkill.subCount >=5) {global.jokers.overkill.count = 1;}
 			if (global.jokers.overkill.count = 1){
@@ -513,7 +512,6 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.blackHole:          
 			//x10.0 Avg Mult. Activates after 1000 Notes Missed
-			if !variable_global_exists("global.jokers.blackHole.subCount"){global.jokers.blackHole.subCount=0;}
 			global.jokers.blackHole.subCount += global.playData.players[0].notes_missed;
 			if (global.jokers.blackHole.subCount > 1000){global.jokers.blackHole.count = 1;}
 			if (global.jokers.blackHole.count = 1)
