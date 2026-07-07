@@ -31,7 +31,7 @@ function starCalculation()
 				if (global.jokerInventory[i] = global.jokers.revive)
 				{
 					array_delete(global.jokerInventory,i,1);
-					event_perform_object(o_InventoryPanel,ev_other,ev_user1);
+					with (o_InventoryPanel){event_user(1);}
 				}
 			}
 			exit;

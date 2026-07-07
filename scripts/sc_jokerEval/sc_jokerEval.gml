@@ -597,7 +597,23 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.surplus:            
 			//Gain one random consumable after each Song
-			show_debug_message("this joker is triggered elsewhere");
+			if (array_length(global.itemInventory) < 3)
+			{
+				//delete inventory items from available list
+				var availableItems = struct_get_names(global.items);
+				for (var i = 0; i < array_length(availableItems); i++){
+					if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){
+						array_delete(availableItems, i, 1);
+						i--;
+					}
+				}
+				//choose random item from available list
+				var randomItem = irandom(array_length(availableItems)-1);
+				
+				//then add to shop inv and remove from available
+				array_push(global.itemInventory,global.items[$ availableItems[randomItem]]);
+				with (o_InventoryPanel){event_user(1);}
+			}
 		break;
 		
 		case global.jokers.nullCombo:          
@@ -701,25 +717,6 @@ function jokerEvalEnd(jokerToEvalEnd)
 				resultsScreen.starBonusAdd += 10;
 			}
 		break;	
-
-		case global.jokers.surplus:            
-			//Gain one random consumable after each Song
-			if (array_length(global.itemInventory) < 3)
-			{
-				//delete inventory items from available list
-				for (var i = 0; i < array_length(availableItems); i++){
-					if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){
-						array_delete(availableItems, i, 1);
-						i--;
-					}
-				}
-				//choose random item from available list
-				var randomItem = irandom(array_length(availableItems)-1);
-				
-				//then add to shop inv and remove from available
-				array_push(global.itemInventory,global.items[$ availableItems[randomItem]]);
-			}
-		break;
 
 		case global.jokers.reverseChoke:       
 			//x2 Stars. Activates after missing only one note in the first section of the song.
