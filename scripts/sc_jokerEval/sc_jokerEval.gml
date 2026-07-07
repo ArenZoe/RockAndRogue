@@ -46,7 +46,7 @@ function jokerEval(jokerToEval)
 			global.playData.players[0].notes_hit = global.playData.players[0].total_notes;
 			global.playData.players[0].notes_missed = global.playData.players[0].total_notes;
 		break;
-		
+				
 		case global.jokers.wip:                
 			//First setlist reroll is free
 			show_debug_message("this joker is triggered elsewhere");
@@ -54,7 +54,9 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.crowd:              
 			//Setlist rerolls cost double, x1.5 Avg Mult
-			show_debug_message("this joker is triggered elsewhere");
+			show_debug_message("avg mult x1.5");
+			global.playData.players[0].avg_multiplier *= 1.5;
+			show_debug_message("this joker is also triggered elsewhere");
 		break;
 		
 		case global.jokers.vip:                
@@ -406,7 +408,7 @@ function jokerEval(jokerToEval)
 			show_debug_message("avg mult +1.0");
 			global.playData.players[0].avg_multiplier += 1.0;
 		break;
-		
+				
 		case global.jokers.oneUp:              
 			//+1 Star
 			show_debug_message("this joker is triggered elsewhere");
@@ -423,7 +425,7 @@ function jokerEval(jokerToEval)
 			show_debug_message("avg mult x2.0");
 			global.playData.players[0].avg_multiplier *= 2.0;
 		break;
-		
+				
 		case global.jokers.instantReplay:      
 			//Becomes a copy of the most recently acquired Buff
 			show_debug_message("this joker is triggered elsewhere");
@@ -469,7 +471,7 @@ function jokerEval(jokerToEval)
 			show_debug_message("ghost inputs x0.5");
 			global.playData.players[0].frets_ghosted *= 0.5;		
 		break;
-		
+				
 		case global.jokers.growthSpurt:        
 			//<Growing> Buffs grow twice
 			show_debug_message("this joker is triggered elsewhere");
@@ -499,7 +501,7 @@ function jokerEval(jokerToEval)
 			//Consumables duplicate when used. Activates after using 10 Consumables
 			show_debug_message("this joker is triggered elsewhere");
 		break;
-		
+
 		case global.jokers.overkill:           
 			//x3.0 Avg Mult. Activates after 5 FCs
 			if (global.playData.players[0].is_fc = true){global.jokers.overkill.subCount += 1;}
@@ -520,7 +522,7 @@ function jokerEval(jokerToEval)
 				global.playData.players[0].avg_multiplier *= 10.0;
 			}
 		break;
-		
+				
 		case global.jokers.collector:          
 			//+10 Stars. Activates after 100 base Stars acquired
 			show_debug_message("this joker is triggered elsewhere");
@@ -553,7 +555,7 @@ function jokerEval(jokerToEval)
 			show_debug_message("avg mult x" + string((1.0 + (0.2*numberOfMods))));
 			global.playData.players[0].avg_multiplier *= (1.0 + (0.2*numberOfMods));
 		break;
-		
+				
 		case global.jokers.setInStone:         
 			//Setlist rerolls locked, shop items are free
 			show_debug_message("this joker is triggered elsewhere");
@@ -582,9 +584,10 @@ function jokerEval(jokerToEval)
 		break;
 		
 		case global.jokers.powerHungry:        
-			//+1.0 Avg Mult to next Song per Consumable used, resets afterwards.
-			//TODO:rework this one
-			show_debug_message("this joker needs to be reworked lol");
+			//+1.0 Avg Mult for every SP bar filled
+			var barsFilled = floor(global.playData.players[0].sp_ticks_accumulated / global.playData.players[0].sp_bar_ticks);
+			show_debug_message("avg mult +" + string(barsFilled));
+			global.playData.players[0].avg_multiplier += barsFilled;
 		break;
 		
 		case global.jokers.revive:             
@@ -610,15 +613,23 @@ function jokerEval(jokerToEval)
 		break;
 		
 		case global.jokers.bassGrooved:        
-			//Each note in [Best Streak] is worth an extra 100 points
-			//TODO:rework this one
-			show_debug_message("this joker needs to be reworked lol");
+			//+0.005 avg mult per note in end streak
+			show_debug_message("avg mult +" + string(0.005 * global.playData.players[0].end_streak));
+			global.playData.players[0].avg_multiplier += (0.005 * global.playData.players[0].end_streak);
 		break;
 		
 		case global.jokers.soloSuite:          
-			//[Solo Bonus] Now contributes to Avg Mult
-			//TODO:rework this one
-			show_debug_message("this joker needs to be reworked lol");
+			//+0.005 Avg Mult per note hit in a Solo section
+			var soloNotes = 0;
+			for (var i=0;i<(global.playData.players[0].section_count-1);i++;)
+			{
+				if ((string_pos("solo", string_lower(global.playData.players[0].section_stats[i].section_name)) != 0))
+				{
+					soloNotes += global.playData.players[0].section_stats[i].notes_hit;	
+				}
+			}
+			show_debug_message("avg mult +" + string(0.005*soloNotes));
+			global.playData.players[0].avg_multiplier += (0.005 * soloNotes);
 		break;
 		
 		case global.jokers.calculated:         
@@ -652,7 +663,7 @@ function jokerEval(jokerToEval)
 				global.playData.players[0].avg_multiplier *= 1.5;
 			}
 		break;
-		
+				
 		case global.jokers.reverseChoke:       
 			//x2 Stars. Activates after missing only one note in the first section of the song.
 			show_debug_message("this joker is triggered elsewhere");
@@ -665,7 +676,77 @@ function jokerEval(jokerToEval)
 		
 		default:
 			show_debug_message("unimplemented joker. uh oh !");
-
 		break;
+	}
+}
+
+function jokerEvalEnd(jokerToEvalEnd)
+{
+	resultsScreen = instance_find(o_resultsStar,0);
+	switch(global.jokerInventory[jokerToEval])
+	{
+		case global.jokers.oneUp:              
+			//+1 Star
+			show_debug_message("+1 star");
+			resultsScreen.starBonusAdd += 1;
+		break;	
+		
+		case global.jokers.collector:          
+			//+10 Stars. Activates after 100 base Stars acquired
+			global.jokers.collector.subCount+= global.playData.base.players[0].stars;
+			if (global.jokers.collector.subCount >=100){global.jokers.collector.count = 1;}
+			if (global.jokers.collector.count = 1)
+			{
+				show_debug_message("+10 stars");
+				resultsScreen.starBonusAdd += 10;
+			}
+		break;	
+
+		case global.jokers.surplus:            
+			//Gain one random consumable after each Song
+			if (array_length(global.itemInventory) < 3)
+			{
+				//delete inventory items from available list
+				for (var i = 0; i < array_length(availableItems); i++){
+					if (array_contains(global.itemInventory,global.items[$ availableItems[i]])){
+						array_delete(availableItems, i, 1);
+						i--;
+					}
+				}
+				//choose random item from available list
+				var randomItem = irandom(array_length(availableItems)-1);
+				
+				//then add to shop inv and remove from available
+				array_push(global.itemInventory,global.items[$ availableItems[randomItem]]);
+			}
+		break;
+
+		case global.jokers.reverseChoke:       
+			//x2 Stars. Activates after missing only one note in the first section of the song.
+			if ((global.playData.players[0].notes_missed = 1) and (global.playData.players[0].section_stats[0].notes_missed = 1))
+			{
+				global.jokers.reverseChoke.count=1;
+			}
+			if global.jokers.reverseChoke.count = 1
+			{
+				show_debug_message("x2 stars");
+				resultsScreen.starBonusMultiplier += 1; //only adding one to the bonus multiplier since it starts at 1
+			}		
+		break;
+		
+		case global.jokers.awesomeChoke:       
+			//x2 Stars. Activates after missing only one note in the final section of the song.
+			var finalSec = array_length(global.playData.players[0].section_count) - 1;
+			if ((global.playData.players[0].notes_missed = 1) and (global.playData.players[0].section_stats[finalSec].notes_missed = 1))
+			{
+				global.jokers.awesomeChoke.count=1;
+			}
+			if global.jokers.awesomeChoke.count = 1
+			{
+				show_debug_message("x2 stars");
+				resultsScreen.starBonusMultiplier += 1; //only adding one to the bonus multiplier since it starts at 1
+			}	
+		break;
+
 	}
 }

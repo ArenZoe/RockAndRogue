@@ -2,7 +2,7 @@
   "$GMScript":"v1",
   "%Name":"sc_starCalculation",
   "isCompatibility":false,
-  "isDnD":true,
+  "isDnD":false,
   "name":"sc_starCalculation",
   "parent":{
     "name":"Scripts",

@@ -12,7 +12,7 @@ if (avgMultCurve >= 0.999*avgMult)
 	avgMultCurve = lerp(avgMultCurve,avgMult,(0.2 * animSpeedScale));
 }
 starCount = sqrt(avgMultCurve)*3.337;
-starsAchieved = floor(starCount);
+starsAchieved = floor((starCount+starBonusAdd)*(1+starBonusMultiplier));
 progressOffset = power((starsAchieved) / 3.337,2);
 multToNextStar = power((starsAchieved+1) / 3.337,2);
 
@@ -36,7 +36,7 @@ draw_set_valign(fa_middle);
 //show the star count in red when it's not enough to get to the next level
 if (starsAchieved < global.nextStars) {draw_set_colour(c_red);} 
 if (starsAchieved > 1) {draw_text(375,380,starsAchieved);}
-
+draw_set_colour(c_black);
 surface_reset_target();
     
 // Draw surface to screen
@@ -59,12 +59,20 @@ if (avgMultCurve = avgMult and jokerCheck != -1)
 
 		jokerEval(jokerCheck-1);
 	}
-	//when the jokers are done evaluating, prevent more checks and spawn the continue / end button
+	//when the jokers are done evaluating, prevent more checks
+	//then check end jokers
+	//spawn the continue / end button
 	else
 	{
 		show_debug_message("done checking jokers!");
-		jokerCheck = -1;
+		jokerCheck = -1;		
+		for (var i=0;i<array_length(global.jokerInventory) -1;i++)
+		{
+			jokerEvalEnd(i);
+		}
+		
 		global.playData.players[0].stars = starsAchieved;
+
 		starCalculation();
 	}
 	

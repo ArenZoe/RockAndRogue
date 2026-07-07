@@ -50,6 +50,6 @@ draw_set_alpha(l17A7F5DC_0 / $ff);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 06FE1F84
-/// @DnDArgument : "code" "draw_text_ext(x+152,y+40,"Continue",20,290);$(13_10)draw_text_ext(x+152,y+60,("+$" + string(global.playedSongsData[(array_length(global.playedSongsData)-1)].money)),20,290);$(13_10)"
-draw_text_ext(x+152,y+40,"Continue",20,290);
+/// @DnDArgument : "code" "draw_text_ext(x+152,y+40,label,20,290);$(13_10)draw_text_ext(x+152,y+60,("+$" + string(global.playedSongsData[(array_length(global.playedSongsData)-1)].money)),20,290);$(13_10)"
+draw_text_ext(x+152,y+40,label,20,290);
 draw_text_ext(x+152,y+60,("+$" + string(global.playedSongsData[(array_length(global.playedSongsData)-1)].money)),20,290);

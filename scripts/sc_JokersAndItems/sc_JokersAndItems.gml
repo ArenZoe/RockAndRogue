@@ -706,17 +706,17 @@ function initJokers(){
 		powerHungry: {
 			name: "Power Hungry",
 			count: 0,
-			description: "This joker needs to be reworked lol",
+			description: "+1.0 Avg Mult for every SP bar filled",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
-			type: jType.special,
+			type: jType.linearScaler,
 			icon: sp_powerHungry
 		},
 		revive: {
 			name: "Revive",
 			count: 0,
-			description: "Prevents death, destroyed when used",
+			description: "Saves you, once",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 5,
@@ -756,7 +756,7 @@ function initJokers(){
 		bassGrooved: {
 			name: "Bass Grooved",
 			count: 0,
-			description: "This joker needs to be reworked lol",
+			description: "+0.005 Avg Mult x [End Streak]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 7,
@@ -766,11 +766,11 @@ function initJokers(){
 		soloSuite: {
 			name: "Solo Suite",
 			count: 0,
-			description: "This joker needs to be reworked lol",
-			rarity: 1,
-			buyValue: 5,
-			sellValue: 5,
-			type: jType.statChanger,
+			description: "+0.005 Avg Mult per note hit in a Solo section",
+			rarity: 4,
+			buyValue: 15,
+			sellValue: 15,
+			type: jType.linearScaler,
 			icon: sp_soloSuite
 		},
 		calculated: {
