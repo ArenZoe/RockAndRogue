@@ -3,15 +3,15 @@
 /// @DnDHash : 53914766
 /// @DnDArgument : "var" "global.gameMoney"
 /// @DnDArgument : "op" "4"
-/// @DnDArgument : "value" "global.shopRefreshCost"
-if(global.gameMoney >= global.shopRefreshCost){	/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDArgument : "value" "modifiedShopRefreshCost"
+if(global.gameMoney >= modifiedShopRefreshCost){	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 4C39B199
 	/// @DnDParent : 53914766
-	/// @DnDArgument : "value" "-global.shopRefreshCost"
+	/// @DnDArgument : "value" "-modifiedShopRefreshCost"
 	/// @DnDArgument : "value_relative" "1"
 	/// @DnDArgument : "var" "global.gameMoney"
-	global.gameMoney += -global.shopRefreshCost;
+	global.gameMoney += -modifiedShopRefreshCost;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

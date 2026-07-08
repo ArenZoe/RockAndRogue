@@ -699,7 +699,7 @@ function jokerEval(jokerToEval)
 function jokerEvalEnd(jokerToEvalEnd)
 {
 	resultsScreen = instance_find(o_resultsStar,0);
-	switch(global.jokerInventory[jokerToEval])
+	switch(global.jokerInventory[jokerToEvalEnd])
 	{
 		case global.jokers.oneUp:              
 			//+1 Star

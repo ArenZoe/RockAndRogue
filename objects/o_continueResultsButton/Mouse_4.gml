@@ -46,6 +46,12 @@ global.nextStars += +1;
 /// @DnDArgument : "var" "gameMoney"
 global.gameMoney += global.playedSongsData[(array_length(global.playedSongsData)-1)].money;
 
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 419FE876
+/// @DnDArgument : "var" "jokers.wip.count"
+global.jokers.wip.count = 0;
+
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 14F0C3A1

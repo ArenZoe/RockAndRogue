@@ -44,6 +44,7 @@
     {"$GMObjectProperty":"v2","%Name":"isActive","filters":[],"listItems":[],"multiselect":false,"name":"isActive","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"shineAngle1","filters":[],"listItems":[],"multiselect":false,"name":"shineAngle1","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"shineAngle2","filters":[],"listItems":[],"multiselect":false,"name":"shineAngle2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"isDuplicate","filters":[],"listItems":[],"multiselect":false,"name":"isDuplicate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

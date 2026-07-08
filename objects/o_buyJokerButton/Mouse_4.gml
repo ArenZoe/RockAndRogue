@@ -1,4 +1,4 @@
-if(global.gameMoney >= price)
+if(global.gameMoney >= modifiedPrice)
 {
 	if(!(array_length(global.jokerInventory) >= 5))
 	{
@@ -31,7 +31,7 @@ if(global.gameMoney >= price)
 		
 		with(o_InventoryPanel){event_user(1);}
 		
-		global.gameMoney += -price;
+		global.gameMoney -= modifiedPrice;
 		
 		with(jokerReference) instance_destroy();
 		
