@@ -463,7 +463,7 @@ function initJokers(){
 		instantReplay: {
 			name: "Instant Replay",
 			count: 0,
-			description: "Becomes a copy of the most recently acquired Item",
+			description: "Becomes a copy of your bottom-most Item",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 5,
