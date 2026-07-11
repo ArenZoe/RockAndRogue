@@ -30,7 +30,8 @@ function itemEval(itemToEval)
 		break;
 		
 		case global.items.gamble:
-			var gamba = random_range(-5, 20);
+			var gamba = irandom_range(-5, 20);
+			global.gameMoney += gamba;
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
 		break;
