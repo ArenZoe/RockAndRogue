@@ -113,7 +113,7 @@ for (var isec = 0; isec < array_length(scoreData.players[0].section_stats) -1; i
 
 
 global.playData = scoreData;
-global.playData.base = global.playData;
+global.playDataBase = variable_clone(global.playData);
 
 with(o_NowPlayingText) instance_destroy();
 
@@ -130,6 +130,7 @@ for (var i=2;i>-1;i--)
 		global.itemsActive[i] = !global.itemsActive[i];
 		array_delete(global.itemInventory,i,1);
 		with(o_InventoryPanel){event_user(1);}
+		global.runStats.consumablesUsed += 1;
 	}
 }
 
@@ -138,3 +139,5 @@ instance_create_layer(960, 75, "Instances", o_resultsTitle);
 instance_create_layer(302, 160, "Instances", o_resultsText);
 
 layer_sequence_create("StarLayer", 990, 365, Sequence1);
+
+global.runStats.songsPlayed += 1;

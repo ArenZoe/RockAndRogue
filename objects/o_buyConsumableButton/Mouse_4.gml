@@ -49,11 +49,16 @@ if(global.gameMoney >= modifiedPrice){	/// @DnDAction : YoYo Games.Common.If_V
 		/// @DnDAction : YoYo Games.Common.Set_Global
 		/// @DnDVersion : 1
 		/// @DnDHash : 21C11B1C
+		/// @DnDInput : 2
 		/// @DnDParent : 6FD9EDE2
 		/// @DnDArgument : "value" "-modifiedPrice"
 		/// @DnDArgument : "value_relative" "1"
+		/// @DnDArgument : "value_1" "+1"
+		/// @DnDArgument : "value_relative_1" "1"
 		/// @DnDArgument : "var" "global.gameMoney"
+		/// @DnDArgument : "var_1" "global.runStats.itemsPurchased"
 		global.gameMoney += -modifiedPrice;
+		global.runStats.itemsPurchased += +1;
 	
 		/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 		/// @DnDVersion : 1

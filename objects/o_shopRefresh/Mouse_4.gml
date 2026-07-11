@@ -7,11 +7,16 @@
 if(global.gameMoney >= modifiedShopRefreshCost){	/// @DnDAction : YoYo Games.Common.Set_Global
 	/// @DnDVersion : 1
 	/// @DnDHash : 4C39B199
+	/// @DnDInput : 2
 	/// @DnDParent : 53914766
 	/// @DnDArgument : "value" "-modifiedShopRefreshCost"
 	/// @DnDArgument : "value_relative" "1"
+	/// @DnDArgument : "value_1" "+1"
+	/// @DnDArgument : "value_relative_1" "1"
 	/// @DnDArgument : "var" "global.gameMoney"
+	/// @DnDArgument : "var_1" "global.runStats.shopRerolls"
 	global.gameMoney += -modifiedShopRefreshCost;
+	global.runStats.shopRerolls += +1;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

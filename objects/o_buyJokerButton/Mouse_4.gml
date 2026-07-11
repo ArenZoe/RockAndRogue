@@ -19,7 +19,7 @@ if(global.gameMoney >= modifiedPrice)
 			
 			
 			//copycat logic
-			for (var i=0;i<array_length(global.jokerInventory)-2;i++)
+			for (var i=0;i<array_length(global.jokerInventory);i++)
 			{
 				if (global.jokerInventory[i] = global.jokers.copycat)
 				{
@@ -32,6 +32,7 @@ if(global.gameMoney >= modifiedPrice)
 		with(o_InventoryPanel){event_user(1);}
 		
 		global.gameMoney -= modifiedPrice;
+		global.runStats.itemsPurchased += 1;
 		
 		with(jokerReference) instance_destroy();
 		

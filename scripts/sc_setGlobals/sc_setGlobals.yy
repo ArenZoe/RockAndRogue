@@ -2,7 +2,7 @@
   "$GMScript":"v1",
   "%Name":"sc_setGlobals",
   "isCompatibility":false,
-  "isDnD":true,
+  "isDnD":false,
   "name":"sc_setGlobals",
   "parent":{
     "name":"Scripts",

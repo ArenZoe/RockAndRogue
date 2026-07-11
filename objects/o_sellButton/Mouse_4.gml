@@ -26,11 +26,16 @@ for(var i = 0; i < instance_number(o_joker); i += 1) {	/// @DnDAction : YoYo Ga
 	if(joker.selected == true){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 3E655968
+		/// @DnDInput : 2
 		/// @DnDParent : 0E6E4761
 		/// @DnDArgument : "expr" "joker.sellValue"
 		/// @DnDArgument : "expr_relative" "1"
+		/// @DnDArgument : "expr_1" "+1"
+		/// @DnDArgument : "expr_relative_1" "1"
 		/// @DnDArgument : "var" "global.gameMoney"
+		/// @DnDArgument : "var_1" "global.runStats.itemsSold"
 		global.gameMoney += joker.sellValue;
+		global.runStats.itemsSold += +1;
 	
 		/// @DnDAction : YoYo Games.Common.Function_Call
 		/// @DnDVersion : 1

@@ -126,7 +126,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.constellation:      
 			//+0.00 Avg Mult, increases by +0.05 per Base Star
-			increase = global.playData.base.players[0].stars;
+			increase = global.playDataBase.players[0].stars;
 			global.jokers.constellation.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.constellation.count += increase;}
 			show_debug_message("avg mult +" + string(0.05 * global.jokers.constellation.count));
@@ -191,7 +191,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.allYourBase:        
 			//+0.00 Avg Mult, increases by +0.01 per 1000 Base Note Points
-			increase = floor(global.playData.base.players[0].note_score / 1000);
+			increase = floor(global.playDataBase.players[0].note_score / 1000);
 			global.jokers.allYourBase.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.allYourBase.count += increase;}
 			show_debug_message("avg mult +" + string(0.01 * global.jokers.allYourBase.count));
@@ -289,7 +289,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.bullseye:           
 			//+4.4 Avg Mult if Base Avg Mult is between 4.400 - 4.450
-			if (global.playData.base.players[0].avg_multiplier >=4.40 and global.playData.base.players[0].avg_multiplier <= 4.45)
+			if (global.playDataBase.players[0].avg_multiplier >=4.40 and global.playDataBase.players[0].avg_multiplier <= 4.45)
 				{
 					show_debug_message("avg mult +4.4");
 					global.playData.players[0].avg_multiplier += 4.4;
@@ -715,7 +715,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 		
 		case global.jokers.collector:          
 			//+10 Stars. Activates after 100 base Stars acquired
-			global.jokers.collector.subCount+= global.playData.base.players[0].stars;
+			global.jokers.collector.subCount+= global.playDataBase.players[0].stars;
 			if (global.jokers.collector.subCount >=100){global.jokers.collector.count = 1;}
 			if (global.jokers.collector.count = 1)
 			{

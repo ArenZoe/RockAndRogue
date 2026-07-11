@@ -21,12 +21,14 @@ function itemEval(itemToEval)
 			global.nextStars = ceil(global.nextStars * 0.8);
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.freeMoney:
 			global.gameMoney += 5;
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.gamble:
@@ -34,13 +36,16 @@ function itemEval(itemToEval)
 			global.gameMoney += gamba;
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
 		break;
+		
 		
 		case global.items.hard:
 			global.gameMoney *= 2;
 			global.nextStars = ceil(global.nextStars * 1.2);
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.hopos:
@@ -66,6 +71,7 @@ function itemEval(itemToEval)
 				array_push(global.itemInventory,global.items[$ availableItems[randomItem]]);
 			}
 			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.opens:
@@ -85,6 +91,8 @@ function itemEval(itemToEval)
 			with(o_InventoryPanel){event_user(1);}
 			with(o_panelSetlist) instance_destroy();
 			instance_create_layer(640, 32, "Instances", o_panelSetlist);
+			global.runStats.setlistRerolls += 1;
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.shop:
@@ -94,6 +102,8 @@ function itemEval(itemToEval)
 			with(o_InventoryPanel){event_user(1);}
 			with(o_panelShop) instance_destroy();
 			instance_create_layer(304, 160, "Instances", o_panelShop);
+			global.runStats.shopRerolls += 1;
+			global.runStats.consumablesUsed += 1;
 		break;
 		
 		case global.items.slow:

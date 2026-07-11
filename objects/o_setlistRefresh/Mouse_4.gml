@@ -33,16 +33,20 @@ if(global.gameMoney >= modifiedSetlistRefreshCost){	/// @DnDAction : YoYo Game
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 27A67D23
-	/// @DnDInput : 2
+	/// @DnDInput : 3
 	/// @DnDParent : 0E3F3195
 	/// @DnDArgument : "expr" "+1"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "expr_1" "+1"
 	/// @DnDArgument : "expr_relative_1" "1"
+	/// @DnDArgument : "expr_2" "+1"
+	/// @DnDArgument : "expr_relative_2" "1"
 	/// @DnDArgument : "var" "global.setlistRefreshCost"
 	/// @DnDArgument : "var_1" "global.jokers.wip.count"
+	/// @DnDArgument : "var_2" "global.runStats.setlistRerolls"
 	global.setlistRefreshCost += +1;
-	global.jokers.wip.count += +1;}
+	global.jokers.wip.count += +1;
+	global.runStats.setlistRerolls += +1;}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
