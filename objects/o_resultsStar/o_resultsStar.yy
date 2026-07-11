@@ -37,7 +37,7 @@
     {"$GMObjectProperty":"v2","%Name":"jokerCheck","filters":[],"listItems":[],"multiselect":false,"name":"jokerCheck","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"animSpeedScale","filters":[],"listItems":[],"multiselect":false,"name":"animSpeedScale","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"starBonusAdd","filters":[],"listItems":[],"multiselect":false,"name":"starBonusAdd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"starBonusMultiplier","filters":[],"listItems":[],"multiselect":false,"name":"starBonusMultiplier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"starBonusMultiplier","filters":[],"listItems":[],"multiselect":false,"name":"starBonusMultiplier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

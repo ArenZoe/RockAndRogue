@@ -12,7 +12,7 @@ if (avgMultCurve >= 0.999*avgMult)
 	avgMultCurve = lerp(avgMultCurve,avgMult,(0.2 * animSpeedScale));
 }
 starCount = sqrt(avgMultCurve)*3.337;
-starsAchieved = floor((starCount+starBonusAdd)*(1+starBonusMultiplier));
+starsAchieved = floor((starCount+starBonusAdd)*(starBonusMultiplier));
 progressOffset = power((starsAchieved) / 3.337,2);
 multToNextStar = power((starsAchieved+1) / 3.337,2);
 
@@ -66,7 +66,7 @@ if (avgMultCurve = avgMult and jokerCheck != -1)
 	{
 		show_debug_message("done checking jokers!");
 		jokerCheck = -1;		
-		for (var i=0;i<array_length(global.jokerInventory) -1;i++)
+		for (var i=0;i<array_length(global.jokerInventory);i++)
 		{
 			jokerEvalEnd(i);
 		}
