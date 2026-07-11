@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -115,6 +115,7 @@
     {"id":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
     {"id":{"name":"sc_draw_pie","path":"scripts/sc_draw_pie/sc_draw_pie.yy",},},
+    {"id":{"name":"sc_itemEval","path":"scripts/sc_itemEval/sc_itemEval.yy",},},
     {"id":{"name":"sc_jokerEval","path":"scripts/sc_jokerEval/sc_jokerEval.yy",},},
     {"id":{"name":"sc_JokersAndItems","path":"scripts/sc_JokersAndItems/sc_JokersAndItems.yy",},},
     {"id":{"name":"sc_Load","path":"scripts/sc_Load/sc_Load.yy",},},

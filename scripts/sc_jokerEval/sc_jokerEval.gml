@@ -42,7 +42,7 @@ function jokerEval(jokerToEval)
 	{
 		case global.jokers.shroedinger:        
 			//[Notes Hit] and [Notes Missed] are set to [Total Notes]
-			show_debug_message("setting notes hit and missed to total")
+			show_debug_message("setting notes hit and missed to total");
 			global.playData.players[0].notes_hit = global.playData.players[0].total_notes;
 			global.playData.players[0].notes_missed = global.playData.players[0].total_notes;
 		break;
