@@ -593,11 +593,11 @@ function initJokers(){
 		doubleTap: {
 			name: "Double Tap",
 			count: 0,
-			description: "Consumables duplicate when used. Activates after using 10 Consumables",
-			rarity: 2,
-			buyValue: 7,
-			sellValue: 3,
-			type: jType.toggle,
+			description: "+1.0 Avg Mult x [Notes Squeezed]",
+			rarity: 3,
+			buyValue: 10,
+			sellValue: 4,
+			type: jType.linearScaler,
 			icon: sp_doubleTap
 		},
 		overkill: {
@@ -832,6 +832,16 @@ function initJokers(){
 			sellValue: 5,
 			type: jType.toggle,
 			icon: sp_awesomeChoke
+		},
+		unstable: {
+			name: "Unstable",
+			count: 0,
+			description: "x2 Stars. Self destructs if you overstrum.",
+			rarity: 4,
+			buyValue: 15,
+			sellValue: 5,
+			type: jType.special,
+			icon: sp_unstable
 		}
 		//
 		//:{

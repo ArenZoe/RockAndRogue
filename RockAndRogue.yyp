@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -282,6 +282,7 @@
     {"id":{"name":"sp_testJoker9","path":"sprites/sp_testJoker9/sp_testJoker9.yy",},},
     {"id":{"name":"sp_titleText","path":"sprites/sp_titleText/sp_titleText.yy",},},
     {"id":{"name":"sp_turbo","path":"sprites/sp_turbo/sp_turbo.yy",},},
+    {"id":{"name":"sp_unstable","path":"sprites/sp_unstable/sp_unstable.yy",},},
     {"id":{"name":"sp_useButton","path":"sprites/sp_useButton/sp_useButton.yy",},},
     {"id":{"name":"sp_useButton1","path":"sprites/sp_useButton1/sp_useButton1.yy",},},
     {"id":{"name":"sp_vipTicket","path":"sprites/sp_vipTicket/sp_vipTicket.yy",},},

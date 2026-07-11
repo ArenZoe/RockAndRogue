@@ -498,8 +498,9 @@ function jokerEval(jokerToEval)
 		break;
 		
 		case global.jokers.doubleTap:          
-			//Consumables duplicate when used. Activates after using 10 Consumables
-			show_debug_message("this joker is triggered elsewhere");
+			//+1.0 avg mult per [Squeezed Note]
+			show_debug_message("avg mult +" + string(global.playData.players[0].squeezed_notes));
+			global.playData.players[0].avg_multiplier += global.playData.players[0].squeezed_notes;
 		break;
 
 		case global.jokers.overkill:           
@@ -690,6 +691,11 @@ function jokerEval(jokerToEval)
 			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
+		case global.jokers.unstable:
+			//x2 Stars. Self-destructs if you overstrum.
+			show_debug_message("this joker is triggered elsewhere");
+		break;
+		
 		default:
 			show_debug_message("unimplemented joker. uh oh !");
 		break;
@@ -727,7 +733,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if global.jokers.reverseChoke.count = 1
 			{
 				show_debug_message("x2 stars");
-				resultsScreen.starBonusMultiplier += 1; //only adding one to the bonus multiplier since it starts at 1
+				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}		
 		break;
 		
@@ -741,8 +747,23 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if global.jokers.awesomeChoke.count = 1
 			{
 				show_debug_message("x2 stars");
-				resultsScreen.starBonusMultiplier += 1; //only adding one to the bonus multiplier since it starts at 1
+				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}	
+		break;
+		
+		case global.jokers.unstable:
+			//x2 Stars. Self-destructs if you overstrum.
+			if (global.playData.players[0].excess_hits > 0)
+			{
+				show_debug_message("Unstable exploded lol");
+				array_delete(global.jokerInventory,jokerToEvalEnd,1);
+				with (o_InventoryPanel){event_user(1);}
+			}
+			else
+			{
+				show_debug_message("x2 stars");
+				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
+			}
 		break;
 
 	}
