@@ -625,8 +625,9 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.gluttony:           
 			//+0.0 Avg Mult, increases by +0.1 per Consumable used
-			//TODO:needs stats to be counted first
-			show_debug_message("this joker needs another module to be implemented first");
+			global.jokers.gluttony.count = global.runStats.consumablesUsed;
+			show_debug_message("avg mult +" + string(0.1 * global.jokers.gluttony.count));
+			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.gluttony.count);
 		break;
 		
 		case global.jokers.bassGrooved:        
