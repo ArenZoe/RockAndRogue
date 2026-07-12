@@ -124,7 +124,9 @@ function initJokers(){
 		cent:{
 			name: "Centennial",
 			count: 0,
-			description: "x1.000 Avg Mult, grows by 0.001 per 100 [Notes Hit]",
+			description: "x Avg Mult, grows by 0.001 per 100 [Notes Hit]", //x1.000 Avg Mult, grows by 0.001 per 100 [Notes Hit]
+			startVal: 1.000,
+			grow: 0.001,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -134,7 +136,9 @@ function initJokers(){
 		constellation:{
 			name: "Constellation",
 			count: 0,
-			description: "+0.00 Avg Mult, grows by 0.05 per [Base Star]",
+			description: "+ Avg Mult, grows by 0.05 per [Base Star]", //+0.00 Avg Mult, grows by 0.05 per [Base Star]
+			startVal: 0.00,
+			grow: 0.05,
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 4,
@@ -144,7 +148,9 @@ function initJokers(){
 		flawless:{
 			name: "Flawless",
 			count: 0,
-			description: "+0.0 Avg Mult, grows by 0.8 per Song FC",
+			description: "+ Avg Mult, grows by 0.8 per Song FC", //+0.0 Avg Mult, grows by 0.8 per Song FC
+			startVal: 0.0,
+			grow: 0.8,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -154,7 +160,9 @@ function initJokers(){
 		meticulous:{
 			name: "Meticulous",
 			count: 0,
-			description: "+0.0 Avg Mult, grows by 0.2 when [Accuracy] > 90%",
+			description: "+ Avg Mult, grows by 0.2 when [Accuracy] > 90%", //+0.0 Avg Mult, grows by 0.2 when [Accuracy] > 90%
+			startVal: 0.0,
+			grow: 0.2,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -164,7 +172,9 @@ function initJokers(){
 		kickingAss:{
 			name: "Kicking Ass",
 			count: 0,
-			description: "+0.2 Avg Mult, grows by 0.1 when [Best Streak] > 500",
+			description: "+ Avg Mult, grows by 0.1 when [Best Streak] > 500", //+0.2 Avg Mult, grows by 0.1 when [Best Streak] > 500
+			startVal: 0.2,
+			grow: 0.1,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -174,7 +184,9 @@ function initJokers(){
 		takingNames:{
 			name: "Taking Names",
 			count: 0,
-			description: "x1.2 Avg Mult, grows by 0.1 when [Best Streak] > 1000",
+			description: "x Avg Mult, grows by 0.1 when [Best Streak] > 1000", //x1.2 Avg Mult, grows by 0.1 when [Best Streak] > 1000
+			startVal: 1.2,
+			grow: 0.1,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -183,6 +195,7 @@ function initJokers(){
 		},
 		livewire:{
 			name: "Livewire",
+			count: 0,
 			description: "+0.1 Avg Mult x [SP Bars Filled]",
 			rarity: 1,
 			buyValue: 5,
@@ -193,7 +206,9 @@ function initJokers(){
 		zoning:{
 			name: "Zoning",
 			count: 0,
-			description: "+0.0 Avg Mult, grows by 0.1 per Section FC",
+			description: "+ Avg Mult, grows by 0.1 per Section FC", //"+0.0 Avg Mult, grows by 0.1 per Section FC
+			startVal: 0.0,
+			grow: 0.1,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -203,7 +218,9 @@ function initJokers(){
 		allYourBase:{
 			name: "All Your Base",
 			count: 0,
-			description: "+0.00 Avg Mult, grows by 0.01 per 1000 [Base Note Score]",
+			description: "+ Avg Mult, grows by 0.01 per 1000 [Base Note Score]", //+0.00 Avg Mult, grows by 0.01 per 1000 [Base Note Score]
+			startVal: 0.00,
+			grow: 0.01,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -213,7 +230,9 @@ function initJokers(){
 		extraCredit:{
 			name: "Extra Credit",
 			count: 0,
-			description: "x1.5 Avg Mult, decays by 0.01 for every percentage below 100% [Accuracy]",
+			description: "x Avg Mult, decays by 0.01 for every percentage below 100% [Accuracy]", //x1.5 Avg Mult, decays by 0.01 for every percentage below 100% [Accuracy]
+			startVal: 1.50,
+			grow: -0.01,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -223,7 +242,9 @@ function initJokers(){
 		evaporation:{
 			name: "Evaporation",
 			count: 0,
-			description: "+2.0 Avg Mult, decays by 0.01 x [Notes Missed]",
+			description: "+ Avg Mult, decays by 0.01 x [Notes Missed]", //+2.0 Avg Mult, decays by 0.01 x [Notes Missed]
+			startVal: 2.00,
+			grow: -0.01,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -233,7 +254,9 @@ function initJokers(){
 		borrowedTime:{
 			name: "Borrowed Time",
 			count: 0,
-			description: "+2.0 Avg Mult, decays by 0.2 per Song",
+			description: "+ Avg Mult, decays by 0.2 per Song", //+2.0 Avg Mult, decays by 0.2 per Song
+			startVal: 2.0,
+			grow: -0.2,
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -243,7 +266,9 @@ function initJokers(){
 		aberration:{
 			name: "Aberration",
 			count: 0,
-			description: "+2.0 Avg Mult, decays by 0.1 x [Overstrums]",
+			description: "+ Avg Mult, decays by 0.1 x [Overstrums]", //+2.0 Avg Mult, decays by 0.1 x [Overstrums]
+			startVal: 2.0,
+			grow: -0.1,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -253,7 +278,9 @@ function initJokers(){
 		idiomatic:{
 			name: "Idiomatic",
 			count: 0,
-			description: "x2.0 Avg Mult, decays by 0.1 x [SP Phrases Missed]",
+			description: "x Avg Mult, decays by 0.1 x [SP Phrases Missed]", //x2.0 Avg Mult, decays by 0.1 x [SP Phrases Missed]
+			startVal: 2.0,
+			grow: -0.1,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -263,7 +290,9 @@ function initJokers(){
 		spiritJar:{
 			name: "Spirit Jar",
 			count: 0,
-			description: "+2.0 Avg Mult, decays by 0.1 per 10 [Ghost Inputs]",
+			description: "+ Avg Mult, decays by 0.1 per 10 [Ghost Inputs]", //+2.0 Avg Mult, decays by 0.1 per 10 [Ghost Inputs]
+			startVal: 2.0,
+			grow: -0.1,
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -273,7 +302,9 @@ function initJokers(){
 		bigTipper:{
 			name: "Big Tipper",
 			count: 0,
-			description: "$4 extra per Song, decays per Section under 90% Accuracy",
+			description: "$ extra per Song, decays per Section under 90% Accuracy", //$4 extra per Song, decays per Section under 90% Accuracy
+			startVal: 4,
+			grow: -1,
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -696,7 +727,9 @@ function initJokers(){
 		staminup: {
 			name: "Staminup",
 			count: 0,
-			description: "+0.0 Avg Mult, grows by 0.5 per Song",
+			description: "+ Avg Mult, grows by 0.5 per Song", //+0.0 Avg Mult, grows by 0.5 per Song
+			startVal: 0.0,
+			grow: 0.5,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -746,7 +779,9 @@ function initJokers(){
 		gluttony: {
 			name: "Gluttony",
 			count: 0,
-			description: "+0.0 Avg Mult, grows by 0.1 per Consumable used",
+			description: "+ Avg Mult, grows by 0.1 per Consumable used", //+0.0 Avg Mult, grows by 0.1 per Consumable used
+			startVal: 0.0,
+			grow: 0.1,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,

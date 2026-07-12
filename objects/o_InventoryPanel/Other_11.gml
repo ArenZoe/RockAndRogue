@@ -9,14 +9,21 @@ instance_deactivate_object(o_sortDown);
 instance_deactivate_object(o_sortUp);
 
 with(o_joker) {
-	if(self.inShop == false){	instance_destroy();}
+	if(self.inShop == false)
+{
+	instance_destroy();
+}
 }
 
 with(o_consumable) {
-	if(self.inShop == false){	instance_destroy();}
+	if(self.inShop == false)
+{
+	instance_destroy();
+}
 }
 
-for(i = 0; i < array_length(global.jokerInventory); i += 1) {	var newJoker = instance_create_layer(x + 120, y + 64 * (i+1) + 24, "Inventory", o_joker);
+for(i = 0; i < array_length(global.jokerInventory); i += 1) {
+	var newJoker = instance_create_layer(x + 120, y + 64 * (i+1) + 24, "Inventory", o_joker);
 
 	newJoker.inShop = false;
 	newJoker.name = global.jokerInventory[i].name;
@@ -29,10 +36,13 @@ for(i = 0; i < array_length(global.jokerInventory); i += 1) {	var newJoker = in
 	newJoker.type = global.jokerInventory[i].type;
 	newJoker.rarity = global.jokerInventory[i].rarity;
 	newJoker.count = global.jokerInventory[i].count;
+	newJoker.jokerID = global.jokerInventory[i];
 
-	show_debug_message(string("respawned joker"));}
+	show_debug_message(string("respawned joker"));
+}
 
-for(i = 0; i < array_length(global.itemInventory); i += 1) {	var newItem = instance_create_layer(x + 40 + (80 * i), y + 424, "Inventory", o_consumable);
+for(i = 0; i < array_length(global.itemInventory); i += 1) {
+	var newItem = instance_create_layer(x + 40 + (80 * i), y + 424, "Inventory", o_consumable);
 
 	newItem.inShop = false;
 	newItem.name = global.itemInventory[i].name;
@@ -44,4 +54,5 @@ for(i = 0; i < array_length(global.itemInventory); i += 1) {	var newItem = inst
 	newItem.index = i;
 	newItem.isActive = global.itemsActive[newItem.index];
 
-	show_debug_message(string("respawned item"));}
+	show_debug_message(string("respawned item"));
+}
