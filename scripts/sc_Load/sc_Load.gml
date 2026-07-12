@@ -29,7 +29,6 @@ enum Modifiers
 	doubleNotes,
 	leftyFlip,
 	framerate60,
-	framerate30,
 	precisionMode,
 }
 enum jType
