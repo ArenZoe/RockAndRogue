@@ -145,7 +145,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.meticulous:         
 			//+0.0 Avg Mult, increases +0.2 per song over 90%
-			if percentage >= 90 {increase = 1;}
+			if (percentage >= 90){increase = 1;}
 			else {increase=0;}
 			global.jokers.meticulous.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.meticulous.count+=increase;}
@@ -155,7 +155,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.kickingAss:         
 			//+0.2 Avg Mult, increases 0.1 per Best Streak over 500
-			if global.playData.players[0].max_streak >= 500 {increase=1;}
+			if (global.playData.players[0].max_streak >= 500){increase=1;}
 			else {increase=0;}
 			global.jokers.kickingAss.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.kickingAss.count += increase;}
@@ -165,7 +165,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.takingNames:        
 			//x1.2 Avg Mult, increases 0.1 per Best Streak over 1000
-			if global.playData.players[0].max_streak >=1000 {increase=1;}
+			if (global.playData.players[0].max_streak >=1000){increase=1;}
 			else {increase=0;}
 			global.jokers.takingNames.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.takingNames.count += increase;}

@@ -64,7 +64,7 @@ function initJokers(){
 		serial:{
 			name: "Serial",
 			count: 0,
-			description: "+0.005 Avg Mult x [Best Streak]",
+			description: "+0.005 Avg Mult x [Max Streak]",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
@@ -172,7 +172,7 @@ function initJokers(){
 		kickingAss:{
 			name: "Kicking Ass",
 			count: 0,
-			description: "+ Avg Mult, grows by 0.1 when [Best Streak] > 500", //+0.2 Avg Mult, grows by 0.1 when [Best Streak] > 500
+			description: "+ Avg Mult, grows by 0.1 when [Max Streak] > 500", //+0.2 Avg Mult, grows by 0.1 when [Max Streak] > 500
 			startVal: 0.2,
 			grow: 0.1,
 			rarity: 1,
@@ -184,7 +184,7 @@ function initJokers(){
 		takingNames:{
 			name: "Taking Names",
 			count: 0,
-			description: "x Avg Mult, grows by 0.1 when [Best Streak] > 1000", //x1.2 Avg Mult, grows by 0.1 when [Best Streak] > 1000
+			description: "x Avg Mult, grows by 0.1 when [Max Streak] > 1000", //x1.2 Avg Mult, grows by 0.1 when [Max Streak] > 1000
 			startVal: 1.2,
 			grow: 0.1,
 			rarity: 2,
@@ -314,7 +314,7 @@ function initJokers(){
 		satisfying: {
 			name: "Satisfying",
 			count: 0,
-			description: "+5.0 Avg Mult when [Best Streak] is evenly divisible by 100",
+			description: "+5.0 Avg Mult when [Max Streak] is evenly divisible by 100",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -374,7 +374,7 @@ function initJokers(){
 		hotStreak: {
 			name: "Hot Streak",
 			count: 0,
-			description: "x1.2 Avg Mult when [Best Streak] > 500",
+			description: "x1.2 Avg Mult when [Max Streak] > 500",
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -524,7 +524,7 @@ function initJokers(){
 		astigmatism: {
 			name: "Astigmatism",
 			count: 0,
-			description: "[Best Streak] x1.5",
+			description: "[Max Streak] x1.5",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
@@ -821,7 +821,7 @@ function initJokers(){
 		inconsistent: {
 			name: "(In)Consistent",
 			count: 0,
-			description: "x3.0 Avg Mult when [Best Streak] < 50",
+			description: "x3.0 Avg Mult when [Max Streak] < 50",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 4,
@@ -841,7 +841,7 @@ function initJokers(){
 		backHeavy: {
 			name: "Back Heavy",
 			count: 0,
-			description: "x1.5 Avg Mult when [Final Streak] = [Best Streak]",
+			description: "x1.5 Avg Mult when [Final Streak] = [Max Streak]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
