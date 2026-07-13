@@ -75,8 +75,7 @@ function selectRandomJoker(availableJokers)
 		else randomNumber = -1;	
 	}
 	if (randomNumber = -1){
-		show_message("error generating random joker, idk blame Aren for coding it bad");
-		game_end();
+		assignedJoker = selectRandomJoker(availableJokers);
 	}
 	
 	return assignedJoker;
