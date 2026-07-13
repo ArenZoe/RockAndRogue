@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"sc_selectModifiers",
+  "%Name":"sc_selectRandomJoker",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"sc_selectModifiers",
+  "name":"sc_selectRandomJoker",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

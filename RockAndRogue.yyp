@@ -124,6 +124,7 @@
     {"id":{"name":"sc_loadPacks","path":"scripts/sc_loadPacks/sc_loadPacks.yy",},},
     {"id":{"name":"sc_msToTimestamp","path":"scripts/sc_msToTimestamp/sc_msToTimestamp.yy",},},
     {"id":{"name":"sc_selectModifiers","path":"scripts/sc_selectModifiers/sc_selectModifiers.yy",},},
+    {"id":{"name":"sc_selectRandomJoker","path":"scripts/sc_selectRandomJoker/sc_selectRandomJoker.yy",},},
     {"id":{"name":"sc_selectSong","path":"scripts/sc_selectSong/sc_selectSong.yy",},},
     {"id":{"name":"sc_setGlobals","path":"scripts/sc_setGlobals/sc_setGlobals.yy",},},
     {"id":{"name":"sc_starCalculation","path":"scripts/sc_starCalculation/sc_starCalculation.yy",},},
