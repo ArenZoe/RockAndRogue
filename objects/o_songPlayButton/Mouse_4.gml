@@ -75,22 +75,35 @@ instance_create_layer(960, 75, "Instances", o_NowPlayingText);
 /// @DnDSaveInfo : "objectid" "o_cardSongBig"
 var newCardSong = instance_create_layer(302, 160, "SongCards", o_cardSongBig);
 
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 6999D754
+/// @DnDArgument : "xpos" "302"
+/// @DnDArgument : "ypos" "480"
+/// @DnDArgument : "var" "modifiersElaborate"
+/// @DnDArgument : "objectid" "o_modifiersElaborate"
+/// @DnDSaveInfo : "objectid" "o_modifiersElaborate"
+modifiersElaborate = instance_create_layer(302, 480, "Instances", o_modifiersElaborate);
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 6709C928
-/// @DnDInput : 4
+/// @DnDInput : 5
 /// @DnDArgument : "expr" "songIndex"
 /// @DnDArgument : "expr_1" "songMoney"
 /// @DnDArgument : "expr_2" "modifiers"
 /// @DnDArgument : "expr_3" "sprite_add(global.pack.songs[songIndex].albumArt, 1, false, true, 0, 0)"
+/// @DnDArgument : "expr_4" "modifiers"
 /// @DnDArgument : "var" "newCardSong.songIndex"
 /// @DnDArgument : "var_1" "newCardSong.songMoney"
 /// @DnDArgument : "var_2" "newCardSong.modifiers"
 /// @DnDArgument : "var_3" "newCardSong.songAlbum"
+/// @DnDArgument : "var_4" "modifiersElaborate.songModifier"
 newCardSong.songIndex = songIndex;
 newCardSong.songMoney = songMoney;
 newCardSong.modifiers = modifiers;
 newCardSong.songAlbum = sprite_add(global.pack.songs[songIndex].albumArt, 1, false, true, 0, 0);
+modifiersElaborate.songModifier = modifiers;
 
 /// @DnDAction : YoYo Games.Instances.Call_User_Event
 /// @DnDVersion : 1
