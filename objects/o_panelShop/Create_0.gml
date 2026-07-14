@@ -55,7 +55,7 @@ for (var i = 0; i < 3; i++){
 	
 }
 
-for(i = 0; i < array_length(global.shopInventoryItems); i += 1) {
+for(var i = 0; i < array_length(global.shopInventoryItems); i += 1) {
 	newItem = instance_create_layer(x + 56 + (i * 96), y + 344, "Inventory", o_consumable);
 
 	newItem.inShop = true;
@@ -74,7 +74,7 @@ for(i = 0; i < array_length(global.shopInventoryItems); i += 1) {
 	newItemButton.itemReference = newItem;
 }
 
-for(i = 0; i < array_length(global.shopInventory); i += 1) {
+for(var i = 0; i < array_length(global.shopInventory); i += 1) {
 	newJoker = instance_create_layer(x + 184, y + 64 * (i +1) + 24, "Inventory", o_joker);
 
 	newJoker.inShop = true;

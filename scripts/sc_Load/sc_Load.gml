@@ -87,6 +87,7 @@ for (var i = 0; i < array_length(songPackFilePaths); i++;){
 		data = json_parse(fileString);
 	} catch (err) {
 		// TODO: show error message to user for invalid pack file
+		show_message("Error loading " + string(file));
 		continue;
 	}
 	
@@ -123,7 +124,7 @@ for (var i = 0; i < array_length(songPackFilePaths); i++;){
 	}
 	if (invalidSongs)
 
-		{show_debug_message(poolFile);
+		{show_message(string(poolFile) + " has invalid song data, and can't be loaded.");
 			continue;}
 	
 	//copy the list of packs into a global variable

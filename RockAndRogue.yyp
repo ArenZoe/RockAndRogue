@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"RockAndRogue",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -52,7 +52,9 @@
     {"link":"io.gamemaker.gm_effect_windblown_particles-1.0.0","name":"io.gamemaker.gm_effect_windblown_particles-1.0.0","path":"io.gamemaker.gm_effect_windblown_particles-1.0.0.yyp",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"defaultEDM.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultEDM.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"defaultpack0_GH3Charts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack0_GH3Charts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"defaultpack1_CBFBCharts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack1_CBFBCharts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"defaultpack2_techCharts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack2_techCharts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
