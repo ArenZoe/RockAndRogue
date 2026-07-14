@@ -65,9 +65,6 @@
   "resources":[
     {"id":{"name":"anim_swell","path":"animcurves/anim_swell/anim_swell.yy",},},
     {"id":{"name":"anim_swell2","path":"animcurves/anim_swell2/anim_swell2.yy",},},
-    {"id":{"name":"libdisableclose","path":"extensions/libdisableclose/libdisableclose.yy",},},
-    {"id":{"name":"libfiledialogs","path":"extensions/libfiledialogs/libfiledialogs.yy",},},
-    {"id":{"name":"libfilesystem","path":"extensions/libfilesystem/libfilesystem.yy",},},
     {"id":{"name":"libxprocess","path":"extensions/libxprocess/libxprocess.yy",},},
     {"id":{"name":"f_lato","path":"fonts/f_lato/f_lato.yy",},},
     {"id":{"name":"f_latoBig","path":"fonts/f_latoBig/f_latoBig.yy",},},
