@@ -1,2 +1,2 @@
 var packsFolder = string("file:/" + working_directory + "songPacks");
-url_open(packsFolder);
+execute_shell("explorer.exe",packsFolder);
