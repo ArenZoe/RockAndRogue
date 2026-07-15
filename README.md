@@ -57,3 +57,64 @@
 - If you succeed in meeting the star target, you continue to the next round, where you visit the shop again and buy more items!
 - There are plenty of items and combinations to build, many of which are wildly unbalanced at this stage lol 
 - Go wild, and see how long you can make your run last! How many stars can you get?
+
+
+# Pack Management
+
+Rock & Rogue comes with some packs by default, but they are intentionally not hard-coded into the game. Packs can be changed, updated, and added, without the need for a new build of the game.
+
+Packs come in `.rrpack` files (more on them below), and can be added in the main menu via the <img width="141" height="40" alt="image" src="https://github.com/user-attachments/assets/f4d9854f-1aac-44cf-b329-18b32bf42aca" /> button.
+
+Should you run into any problems with packs, or just need to manage them, you can browse the packs folder by clicking the <img width="41" height="41" alt="image" src="https://github.com/user-attachments/assets/8b053e7a-455e-4b59-8d30-e7d93c940d16" /> button.
+
+# Pack Format
+
+Packs are distributed via `.rrpack` files, which are just plaintext JSON files, easily edited in your favourite flavour of text editor.
+
+The format template is as follows:
+
+```
+{
+	"id": "defaultPack1_CBFBCharts",
+	"icon": "https://clonehero.gitlab.io/sources/icons/fuse.png",
+	"title": "The AE Experience",
+	"description": "The default pack, using charts from Circuit Breaker and Fuse Box!",
+	"downloadLink": "https://drive.google.com/drive/folders/1FZp2hIpuB-wrz7Htl2ces6TCugzvas94",
+	"startingMoney": 10,
+	"difficulty": "Normal",
+	"songs":[]
+}
+```
+
+- `"id":` A string containing the packs internal ID. Doesn't need to follow the same format as the default packs, just needs to be different from any other pack that may be installed.
+- `"icon":` A string URL linking directly to a small icon image.
+- `"title":` A string for the in-game title of the pack.
+- `"description":` A string for the short blurb under the title on the packs screen.
+- `"downloadLink":` A string URL for the directory of charts needed to play the pack.
+- `"startingMoney":` A positive integer, recommended somewhere between 0 and 20.
+- `"difficulty":` A short string, ideally chosen from `Easy`, `Normal`, or `Hard`.
+- `"songs:"` An array of song objects, as shown below.
+
+```
+{
+  	"name": "Death Perception",
+  	"artist": "Æternity",
+  	"charter": "Aren Eternal & Jackie",
+	"genre": "Synthetic Metal",
+  	"length": 218134,
+	"albumArt": "https://files.enchor.us/69486abca6f6ba4045f4134c334a7024.jpg",
+	"instrument": "guitar",
+	"intensity": 6,
+	"bucket": 6
+},
+```
+
+- `"name":` A string for the song's title
+- `"artist":` A string for the song's artist
+- `"charter":` A string for the song's charter
+- `"genre":` A string for the song's genre
+- `"length":` An integer for the song's length in ms
+- `"albumArt":` A string URL linking directly to an image of the song's album art
+- `"instrument":` A string for the song's instrument track. Usually `guitar`, but also supports `rhythm`, `guitarcoop`, `bass`, and `keys` 
+- `"intensity":` An integer specifiying the track's difficulty level, usually equal to the chart's `guitar_diff` value.
+- `"bucket":` An integer ranging from 0 to 7, with higher values appearing in later rounds of the game, or -1 to appear at any round.
