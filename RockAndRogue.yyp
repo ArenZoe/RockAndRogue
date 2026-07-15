@@ -119,6 +119,7 @@
     {"id":{"name":"o_sortUp","path":"objects/o_sortUp/o_sortUp.yy",},},
     {"id":{"name":"o_tempSquare","path":"objects/o_tempSquare/o_tempSquare.yy",},},
     {"id":{"name":"o_useButton","path":"objects/o_useButton/o_useButton.yy",},},
+    {"id":{"name":"o_versionText","path":"objects/o_versionText/o_versionText.yy",},},
     {"id":{"name":"r_gameplay","path":"rooms/r_gameplay/r_gameplay.yy",},},
     {"id":{"name":"r_mainMenu","path":"rooms/r_mainMenu/r_mainMenu.yy",},},
     {"id":{"name":"sc_draw_pie","path":"scripts/sc_draw_pie/sc_draw_pie.yy",},},
