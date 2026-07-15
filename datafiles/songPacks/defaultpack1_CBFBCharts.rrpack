@@ -4,7 +4,7 @@
 	"title": "The AE Experience",
 	"description": "The default pack, using charts from Circuit Breaker and Fuse Box!",
 	"downloadLink": "https://drive.google.com/drive/folders/1FZp2hIpuB-wrz7Htl2ces6TCugzvas94",
-	"startingMoney": 5,
+	"startingMoney": 10,
 	"difficulty": "Normal",
 	"songs": [
 		{

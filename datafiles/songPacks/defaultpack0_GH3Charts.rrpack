@@ -4,7 +4,7 @@
 	"title": "Guitar Hero 3",
 	"description": "A more relaxed way to play, with familiar classics",
 	"downloadLink": "https://drive.google.com/file/d/1aDKHNashr-3jeikaJlwu9NfPvhs20Xgx/view",
-	"startingMoney": 10,
+	"startingMoney": 15,
 	"difficulty": "Easy",
 	"songs": [
 		{
