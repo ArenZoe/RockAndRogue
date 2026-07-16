@@ -34,6 +34,7 @@
     {"$GMObjectProperty":"v2","%Name":"renderColour","filters":[],"listItems":[],"multiselect":false,"name":"renderColour","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF1E991E","varType":7,},
     {"$GMObjectProperty":"v2","%Name":"songIndex","filters":[],"listItems":[],"multiselect":false,"name":"songIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"itemIndex","filters":[],"listItems":[],"multiselect":false,"name":"itemIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"waitCounter","filters":[],"listItems":[],"multiselect":false,"name":"waitCounter","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

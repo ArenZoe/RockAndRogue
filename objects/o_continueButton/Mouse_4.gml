@@ -1,3 +1,4 @@
+if (waitCounter < 1000){exit;}
 
 //build file path string using environment variables
 var scorePath = (environment_get_variable("userprofile")) + "\\Documents\\Clone Hero\\scorestats.json";
