@@ -46,9 +46,9 @@ for (var i=0;i<array_length(songModifier);i++)
 		case Modifiers.fixedNoteSpeed3:
 			modifierDescs = string_concat(modifierDescs,"\n• Set your note speed to 3");
 		break;
-		case Modifiers.modchartPrep:
-			modifierDescs = string_concat(modifierDescs,"\n• Enable the Modchart Prep modifier");
-		break;
+		//case Modifiers.modchartPrep:
+			//modifierDescs = string_concat(modifierDescs,"\n• Enable the Modchart Prep modifier");
+		//break;
 		case Modifiers.strumlessHOPOs:
 			modifierDescs = string_concat(modifierDescs,"\n• Enable the Strumless HOPOs modifier");
 		break;

@@ -31,7 +31,7 @@ function selectModifiers(roundNumber,setlistIndex){
 		Modifiers.fixedNoteSpeed7
 	];
 	var availableModifiersSCommon = [
-		Modifiers.modchartPrep,
+		//Modifiers.modchartPrep,
 		Modifiers.strumlessHOPOs
 	];
 	var availableModifiersCommon = [
@@ -152,17 +152,17 @@ function selectModifiers(roundNumber,setlistIndex){
 		
 		//remove duplicate modifier types
 		//modchart prep vs brutal
-		if (assignedModifier = Modifiers.modchartPrep){
-			if (array_get_index(availableModifiersCommon, Modifiers.brutalMode) != -1){
-				array_delete(availableModifiersCommon, array_get_index(availableModifiersCommon, Modifiers.brutalMode),1);
-			}
-		}
+		//if (assignedModifier = Modifiers.modchartPrep){
+			//if (array_get_index(availableModifiersCommon, Modifiers.brutalMode) != -1){
+				//array_delete(availableModifiersCommon, array_get_index(availableModifiersCommon, Modifiers.brutalMode),1);
+			//}
+		//}
 		//brutal vs modchart prep
-		if (assignedModifier = Modifiers.brutalMode){
-			if (array_get_index(availableModifiersSCommon, Modifiers.modchartPrep) != -1){
-				array_delete(availableModifiersSCommon, array_get_index(availableModifiersSCommon, Modifiers.modchartPrep),1);
-			}
-		}
+		//if (assignedModifier = Modifiers.brutalMode){
+			//if (array_get_index(availableModifiersSCommon, Modifiers.modchartPrep) != -1){
+				//array_delete(availableModifiersSCommon, array_get_index(availableModifiersSCommon, Modifiers.modchartPrep),1);
+			//}
+		//}
 		//all strums vs strumless hopos
 		if (assignedModifier = Modifiers.allStrums){
 			if (array_get_index(availableModifiersSCommon, Modifiers.strumlessHOPOs) != -1){
