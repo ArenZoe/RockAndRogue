@@ -24,7 +24,20 @@ draw_set_colour(renderColour & $ffffff);draw_set_alpha(1);
 /// @DnDArgument : "var" "waitCounter"
 /// @DnDArgument : "op" "1"
 /// @DnDArgument : "value" "1000"
-if(waitCounter < 1000){	/// @DnDAction : YoYo Games.Common.Variable
+if(waitCounter < 1000){	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 6B49CEFA
+	/// @DnDParent : 670AD36C
+	/// @DnDArgument : "expr" "debug_mode"
+	if(debug_mode){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 3885F9ED
+		/// @DnDParent : 6B49CEFA
+		/// @DnDArgument : "expr" "1000"
+		/// @DnDArgument : "var" "waitCounter"
+		waitCounter = 1000;}
+
+	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2D66EC83
 	/// @DnDParent : 670AD36C
