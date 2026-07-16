@@ -28,7 +28,7 @@ function starCalculation()
 	
 	if global.playDataBase.players[0].is_fc {global.runStats.baseFCs += 1;}
 	if global.playData.players[0].is_fc {global.runStats.modifiedFCs += 1;}
-	if (global.runStats.bestStreak > global.playData.players[0].max_streak){global.runStats.bestStreak = global.playData.players[0].max_streak;}
+	if (global.runStats.bestStreak < global.playData.players[0].max_streak){global.runStats.bestStreak = global.playData.players[0].max_streak;}
 	
 	if(global.playData.players[0].stars >= global.nextStars)
 	{
