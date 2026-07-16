@@ -256,7 +256,7 @@ function initJokers(){
 			count: 0,
 			description: "+ Avg Mult, decays by 0.2 per Song", //+2.0 Avg Mult, decays by 0.2 per Song
 			startVal: 2.0,
-			grow: -0.2,
+			grow: -0.1, //half of what the desc says since we increment its count by 2 most of the time
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -475,9 +475,9 @@ function initJokers(){
 			name: "Turbo Power",
 			count: 0,
 			description: "x1.5 Avg Mult",
-			rarity: 1,
-			buyValue: 5,
-			sellValue: 2,
+			rarity: 3,
+			buyValue: 10,
+			sellValue: 4,
 			type: jType.passive,
 			icon: sp_turbo
 		},
@@ -485,9 +485,9 @@ function initJokers(){
 			name: "Super Power",
 			count: 0,
 			description: "x2.0 Avg Mult",
-			rarity: 2,
-			buyValue: 7,
-			sellValue: 3,
+			rarity: 4,
+			buyValue: 15,
+			sellValue: 5,
 			type: jType.passive,
 			icon: sp_super
 		},
