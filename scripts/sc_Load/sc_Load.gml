@@ -14,7 +14,7 @@ enum Modifiers
 	fixedNoteSpeed7,
 	fixedNoteSpeed5,
 	fixedNoteSpeed3,
-	modchartPrep,
+	//modchartPrep, //broken in CH, doesn't give any score
 	strumlessHOPOs,
 	droplessSustains,
 	mirrorMode,
