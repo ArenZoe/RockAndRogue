@@ -1,6 +1,8 @@
 function setGlobals() 
 {
 	global.gameMoney = global.pack.startingMoney;
+	
+	if debug_mode {global.gameMoney = 999;}
 
 	global.gameRound = 1;
 
