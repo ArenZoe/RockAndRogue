@@ -9,11 +9,11 @@ else
 	fadeoutCount += -1;
 
 	draw_set_alpha(fadeoutCount / 100);
-	draw_set_font(f_ssFontBiggest);
+	draw_set_font(f_ssFontBigger);
 	draw_set_colour(c_grey);
 	
 	if (popupLabel > 0) {
-		draw_set_colour(c_green);
+		draw_set_colour(#00ff00);
 		labelWithPlus = "+" + string(popupLabel);
 	}
 	if (popupLabel < 0) {
