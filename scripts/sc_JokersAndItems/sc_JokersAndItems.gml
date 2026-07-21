@@ -124,9 +124,9 @@ function initJokers(){
 		cent:{
 			name: "Centennial",
 			count: 0,
-			description: "x Avg Mult, grows by 0.001 per 100 [Notes Hit]", //x1.000 Avg Mult, grows by 0.001 per 100 [Notes Hit]
+			description: "x Avg Mult, grows by 0.001 per 100 [Notes Hit]", //x1.000 Avg Mult, grows by 0.005 per 100 [Notes Hit]
 			startVal: 1.000,
-			grow: 0.001,
+			grow: 0.005,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 2,
