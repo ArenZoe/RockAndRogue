@@ -34,6 +34,9 @@ if(global.gameMoney >= modifiedPrice)
 		global.gameMoney -= modifiedPrice;
 		global.runStats.itemsPurchased += 1;
 		
+		var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+		notif.popupLabel = -modifiedPrice;
+		
 		with(jokerReference) instance_destroy();
 		
 		instance_destroy();

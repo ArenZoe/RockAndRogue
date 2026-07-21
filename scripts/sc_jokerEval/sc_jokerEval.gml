@@ -63,6 +63,8 @@ function jokerEval(jokerToEval)
 			//+2 Currency per song
 			show_debug_message("adding 2 money")
 			global.gameMoney += 2;
+			var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+			notif.popupLabel = 2;
 		break;
 		
 		case global.jokers.noteworthy:         
@@ -267,6 +269,8 @@ function jokerEval(jokerToEval)
 			global.jokers.bigTipper.count += decay;
 			show_debug_message("money +" + string(max(0,(4 - global.jokers.bigTipper.count))));
 			global.gameMoney += max(0,(4 - global.jokers.bigTipper.count));
+			var tipNotif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+			tipNotif.popupLabel = max(0,(4 - global.jokers.bigTipper.count));
 		break;
 		
 		case global.jokers.satisfying:         
