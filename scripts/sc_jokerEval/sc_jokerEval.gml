@@ -766,6 +766,12 @@ function jokerEvalEnd(jokerToEvalEnd)
 				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}
 		break;
+		
+		case global.jokers.starPower:
+			//+1 Star per [Base Star]
+			show_debug_message("stars +" + string(global.playDataBase.players[0].stars));
+			resultsScreen.starBonusAdd += global.playDataBase.players[0].stars;
+		break;
 
 	}
 }
