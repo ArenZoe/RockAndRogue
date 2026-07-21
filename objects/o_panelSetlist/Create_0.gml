@@ -76,9 +76,9 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 	/// @DnDVersion : 1
 	/// @DnDHash : 2A7542ED
 	/// @DnDParent : 24200B77
-	/// @DnDArgument : "expr" "i+1 + array_length(thisSong.modifiers) + max(0,global.pack.songs[thisSong.songIndex].intensity)"
+	/// @DnDArgument : "expr" "i+1 + array_length(thisSong.modifiers) + clamp(global.pack.songs[thisSong.songIndex].intensity,0,7)"
 	/// @DnDArgument : "var" "thisSong.songMoney"
-	thisSong.songMoney = i+1 + array_length(thisSong.modifiers) + max(0,global.pack.songs[thisSong.songIndex].intensity);
+	thisSong.songMoney = i+1 + array_length(thisSong.modifiers) + clamp(global.pack.songs[thisSong.songIndex].intensity,0,7);
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
