@@ -9,14 +9,12 @@ function setGlobals()
 	global.nextStars = 5;
 
 	global.shopRefreshCostDefault = 5;
-
-	global.shopRefreshCost = global.shopRefreshCostDefault;
-
 	global.setlistRefreshCostDefault = 5;
-
-	global.setlistRefreshCost = global.setlistRefreshCostDefault;
 	
-	if debug_mode {global.setlistRefreshCostDefault = 0;global.setlistRefreshCostDefault = 0;}
+	if debug_mode {global.shopRefreshCostDefault = 0;global.setlistRefreshCostDefault = 0;}
+	
+	global.shopRefreshCost = global.shopRefreshCostDefault;
+	global.setlistRefreshCost = global.setlistRefreshCostDefault;
 
 	global.jokerInventory = [];
 	global.itemInventory = [];
