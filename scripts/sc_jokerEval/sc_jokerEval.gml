@@ -185,8 +185,8 @@ function jokerEval(jokerToEval)
 			increase = perfectSec;
 			global.jokers.zoning.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.zoning.count += increase;}
-			show_debug_message("avg mult +" + string(0.1 * global.jokers.zoning.count));
-			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.zoning.count);
+			show_debug_message("avg mult +" + string(0.02 * global.jokers.zoning.count));
+			global.playData.players[0].avg_multiplier += (0.02 * global.jokers.zoning.count);
 		break;
 		
 		case global.jokers.allYourBase:        

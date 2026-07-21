@@ -206,9 +206,9 @@ function initJokers(){
 		zoning:{
 			name: "Zoning",
 			count: 0,
-			description: "+ Avg Mult, grows by 0.1 per Section FC", //"+0.0 Avg Mult, grows by 0.1 per Section FC
+			description: "+ Avg Mult, grows by 0.02 per Section FC", //"+0.0 Avg Mult, grows by 0.2 per Section FC
 			startVal: 0.0,
-			grow: 0.1,
+			grow: 0.02,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
