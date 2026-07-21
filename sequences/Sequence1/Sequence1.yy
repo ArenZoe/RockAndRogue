@@ -75,21 +75,21 @@
                   "0":{"$RealKeyframe":"","AnimCurveId":null,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Scale","channels":[
                         {"$GMAnimCurveChannel":"","%Name":"x","colour":4290799884,"name":"x","points":[
                             {"th0":-0.09999984,"th1":0.7999987,"tv0":0.0,"tv1":0.0,"x":0.0,"y":4.0,},
-                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":1.0,},
+                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                         {"$GMAnimCurveChannel":"","%Name":"y","colour":4281083598,"name":"y","points":[
                             {"th0":-0.09999984,"th1":0.7999987,"tv0":0.0,"tv1":0.0,"x":0.0,"y":4.0,},
-                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":1.0,},
+                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                       ],"function":2,"name":"Scale","resourceType":"GMAnimCurve","resourceVersion":"2.0",},"RealValue":0.0,"resourceType":"RealKeyframe","resourceVersion":"2.0",},
                   "1":{"$RealKeyframe":"","AnimCurveId":null,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Scale","channels":[
                         {"$GMAnimCurveChannel":"","%Name":"x","colour":4290799884,"name":"x","points":[
                             {"th0":-0.09999984,"th1":0.7999987,"tv0":0.0,"tv1":0.0,"x":0.0,"y":4.0,},
-                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":1.0,},
+                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                         {"$GMAnimCurveChannel":"","%Name":"y","colour":4281083598,"name":"y","points":[
                             {"th0":-0.09999984,"th1":0.7999987,"tv0":0.0,"tv1":0.0,"x":0.0,"y":4.0,},
-                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":1.0,},
+                            {"th0":0.0,"th1":0.09999984,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                       ],"function":2,"name":"Scale","resourceType":"GMAnimCurve","resourceVersion":"2.0",},"RealValue":0.0,"resourceType":"RealKeyframe","resourceVersion":"2.0",},
                 },"Disabled":false,"id":"b0fe2e00-5183-433d-a6b1-ee7f82495fdd","IsCreationKey":false,"Key":0.0,"Length":60.0,"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"2.0","Stretch":false,},
@@ -104,22 +104,22 @@
                       "0":{"$ColourKeyframe":"","AnimCurveId":null,"Colour":0,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Colour Multiply","channels":[
                             {"$GMAnimCurveChannel":"","%Name":"alpha","colour":4294967295,"name":"alpha","points":[
                                 {"th0":-0.1016665,"th1":0.813332,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
-                                {"th0":0.0,"th1":0.1016665,"tv0":0.0,"tv1":0.0,"x":1.016665,"y":255.0,},
+                                {"th0":0.0,"th1":0.1016665,"tv0":0.0,"tv1":0.0,"x":1.0,"y":255.0,},
                               ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                             {"$GMAnimCurveChannel":"","%Name":"red","colour":4278190335,"name":"red","points":[
                                 {"th0":0.0,"th1":0.19999968,"tv0":0.0,"tv1":0.0,"x":0.0,"y":255.0,},
                                 {"th0":-0.19999968,"th1":0.0033333302,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":255.0,},
-                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.016665,"y":255.0,},
+                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":255.0,},
                               ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                             {"$GMAnimCurveChannel":"","%Name":"green","colour":4278255360,"name":"green","points":[
                                 {"th0":0.0,"th1":0.19999968,"tv0":0.0,"tv1":0.0,"x":0.0,"y":255.0,},
                                 {"th0":-0.19999968,"th1":0.0033333302,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":255.0,},
-                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.016665,"y":255.0,},
+                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":255.0,},
                               ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                             {"$GMAnimCurveChannel":"","%Name":"blue","colour":4294901760,"name":"blue","points":[
                                 {"th0":0.0,"th1":0.19999968,"tv0":0.0,"tv1":0.0,"x":0.0,"y":255.0,},
                                 {"th0":-0.19999968,"th1":0.0033333302,"tv0":0.0,"tv1":0.0,"x":0.99999833,"y":255.0,},
-                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.016665,"y":255.0,},
+                                {"th0":-0.0033333302,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":255.0,},
                               ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                           ],"function":2,"name":"Colour Multiply","resourceType":"GMAnimCurve","resourceVersion":"2.0",},"resourceType":"ColourKeyframe","resourceVersion":"2.0",},
                     },"Disabled":false,"id":"db1c3c7e-215b-4cc8-b22f-ffbddd874648","IsCreationKey":false,"Key":0.0,"Length":60.0,"resourceType":"Keyframe<ColourKeyframe>","resourceVersion":"2.0","Stretch":false,},
