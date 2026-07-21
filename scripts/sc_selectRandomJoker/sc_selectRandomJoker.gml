@@ -28,36 +28,36 @@ function selectRandomJoker(availableJokers)
 	
 	var assignedJoker;
 	randomize();
-	var randomNumber = irandom(14);
+	var randomNumber = irandom(24);
 	
-	if (randomNumber >= 10){
+	if (randomNumber >= 15){
 		if (array_length(availableJokersCommon) > 0)
 		{
 			//choose a random common joker
 			assignedJoker = availableJokersCommon[irandom(array_length(availableJokersCommon)-1)];
 		}
-		else randomNumber = 9;	
+		else randomNumber = 14;	
 	}
 	
-	if ((randomNumber >= 6) and (randomNumber < 10)){
+	if ((randomNumber >= 8) and (randomNumber <= 14)){
 		if (array_length(availableJokersUncommon) > 0)
 		{
 			//choose a random uncommon joker
 			assignedJoker = availableJokersUncommon[irandom(array_length(availableJokersUncommon)-1)];
 		}
-		else randomNumber = 5;	
+		else randomNumber = 7;	
 	}
 	
-	if ((randomNumber >= 3) and (randomNumber < 6)){
+	if ((randomNumber >= 4) and (randomNumber <= 7)){
 		if (array_length(availableJokersRare) > 0)
 		{
 			//choose a random uncommon joker
 			assignedJoker = availableJokersRare[irandom(array_length(availableJokersRare)-1)];
 		}
-		else randomNumber = 2;	
+		else randomNumber = 3;	
 	}
 	
-	if ((randomNumber = 1) or (randomNumber = 2)){
+	if ((randomNumber >= 1) and (randomNumber <= 3)){
 		if (array_length(availableJokersEpic) > 0)
 		{
 			//choose a random epic joker
