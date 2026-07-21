@@ -79,8 +79,8 @@ draw_set_valign(fa_top);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2D9AA288
-/// @DnDArgument : "code" "draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,64),19,400)"
-draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,64),19,400)
+/// @DnDArgument : "code" "draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,56),19,400)"
+draw_text_ext(x+112,y+12,string_copy(global.pack.songs[songIndex].name,0,56),19,400)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
