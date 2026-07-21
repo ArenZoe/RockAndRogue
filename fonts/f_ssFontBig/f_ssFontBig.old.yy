@@ -561,6 +561,7 @@
   "ranges":[
     {"lower":32,"upper":127,},
     {"lower":198,"upper":198,},
+    {"lower":937,"upper":937,},
     {"lower":9647,"upper":9647,},
   ],
   "regenerateBitmap":false,
