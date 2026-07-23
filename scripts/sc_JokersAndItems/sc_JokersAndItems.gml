@@ -25,9 +25,9 @@ function initJokers(){
 			name: "Crowd Pleaser",
 			count: 0,
 			description: "X1.5 Avg Mult, Setlist Rerolls cost double",
-			rarity: 1,
-			buyValue: 5,
-			sellValue: 2,
+			rarity: 2,
+			buyValue: 7,
+			sellValue: 3,
 			type: jType.economic,
 			icon: sp_crowd
 		},
@@ -218,7 +218,7 @@ function initJokers(){
 		allYourBase:{
 			name: "All Your Base",
 			count: 0,
-			description: "+ Avg Mult, grows by 0.01 per 1000 [Base Note Score]", //+0.00 Avg Mult, grows by 0.01 per 1000 [Base Note Score]
+			description: "+ Avg Mult, grows by 0.01 per 2000 [Base Note Score]", //+0.00 Avg Mult, grows by 0.01 per 1000 [Base Note Score]
 			startVal: 0.00,
 			grow: 0.01,
 			rarity: 1,
@@ -290,7 +290,7 @@ function initJokers(){
 		spiritJar:{
 			name: "Spirit Jar",
 			count: 0,
-			description: "+ Avg Mult, decays by 0.1 per 10 [Ghost Inputs]", //+2.0 Avg Mult, decays by 0.1 per 10 [Ghost Inputs]
+			description: "+ Avg Mult, decays by 0.1 per 5 [Ghost Inputs]", //+2.0 Avg Mult, decays by 0.1 per 10 [Ghost Inputs]
 			startVal: 2.0,
 			grow: -0.1,
 			rarity: 0,
@@ -474,7 +474,7 @@ function initJokers(){
 		turboPower: {
 			name: "Turbo Power",
 			count: 0,
-			description: "x1.5 Avg Mult",
+			description: "x1.2 Avg Mult",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 4,
@@ -484,7 +484,7 @@ function initJokers(){
 		superPower: {
 			name: "Super Power",
 			count: 0,
-			description: "x2.0 Avg Mult",
+			description: "x1.5 Avg Mult",
 			rarity: 4,
 			buyValue: 15,
 			sellValue: 5,
@@ -495,9 +495,9 @@ function initJokers(){
 			name: "Instant Replay",
 			count: 0,
 			description: "Becomes a copy of your bottom-most Item",
-			rarity: 3,
-			buyValue: 10,
-			sellValue: 4,
+			rarity: 4,
+			buyValue: 15,
+			sellValue: 5,
 			type: jType.duplicator,
 			icon: sp_replay
 		},
@@ -505,9 +505,9 @@ function initJokers(){
 			name: "Copycat",
 			count: 0,
 			description: "Becomes a copy of the next acquired Item",
-			rarity: 4,
-			buyValue: 15,
-			sellValue: 5,
+			rarity: 3,
+			buyValue: 10,
+			sellValue: 4,
 			type: jType.duplicator,
 			icon: sp_copy
 		},
@@ -605,9 +605,9 @@ function initJokers(){
 			name: "Fire Sale",
 			count: 0,
 			description: "Shop prices -50%",
-			rarity: 1,
-			buyValue: 5,
-			sellValue: 2,
+			rarity: 3,
+			buyValue: 10,
+			sellValue: 4,
 			type: jType.economic,
 			icon: sp_fireSale
 		},

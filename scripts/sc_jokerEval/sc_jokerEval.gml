@@ -193,7 +193,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.allYourBase:        
 			//+0.00 Avg Mult, increases by +0.01 per 1000 Base Note Points
-			increase = floor(global.playDataBase.players[0].note_score / 1000);
+			increase = floor(global.playDataBase.players[0].note_score / 2000);
 			global.jokers.allYourBase.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.allYourBase.count += increase;}
 			show_debug_message("avg mult +" + string(0.01 * global.jokers.allYourBase.count));
@@ -247,7 +247,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.spiritJar:          
 			//+2.0 Avg Mult, reduces by -0.1 per 10 Ghost Inputs
-			decay = floor(global.playData.players[0].frets_ghosted / 10);
+			decay = floor(global.playData.players[0].frets_ghosted / 5);
 			if playerOwnsHighEndurance(){decay=floor(decay/2);}
 			global.jokers.spiritJar.count += decay;
 			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.spiritJar.count)));
@@ -420,14 +420,14 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.turboPower:         
 			//x1.5 Avg Mult
-			show_debug_message("avg mult x1.5");
-			global.playData.players[0].avg_multiplier *= 1.5;
+			show_debug_message("avg mult x1.2");
+			global.playData.players[0].avg_multiplier *= 1.2;
 		break;
 		
 		case global.jokers.superPower:         
 			//x2.0 Avg Mult
-			show_debug_message("avg mult x2.0");
-			global.playData.players[0].avg_multiplier *= 2.0;
+			show_debug_message("avg mult x1.5");
+			global.playData.players[0].avg_multiplier *= 1.5;
 		break;
 				
 		case global.jokers.instantReplay:      
