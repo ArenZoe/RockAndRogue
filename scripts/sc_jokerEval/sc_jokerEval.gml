@@ -510,7 +510,10 @@ function jokerEval(jokerToEval)
 		case global.jokers.overkill:           
 			//x3.0 Avg Mult. Activates after 5 FCs
 			if (global.playData.players[0].is_fc = true){global.jokers.overkill.subCount += 1;}
-			if (global.jokers.overkill.subCount >=5) {global.jokers.overkill.count = 1;}
+			if (global.jokers.overkill.subCount >=5) {
+				global.jokers.overkill.count = 1;
+				with (o_InventoryPanel){event_user(1);}
+				}
 			if (global.jokers.overkill.count = 1){
 				show_debug_message("avg mult x3");
 				global.playData.players[0].avg_multiplier *= 3.0;
@@ -520,7 +523,10 @@ function jokerEval(jokerToEval)
 		case global.jokers.blackHole:          
 			//x10.0 Avg Mult. Activates after 1000 Notes Missed
 			global.jokers.blackHole.subCount += global.playData.players[0].notes_missed;
-			if (global.jokers.blackHole.subCount > 1000){global.jokers.blackHole.count = 1;}
+			if (global.jokers.blackHole.subCount > 1000){
+				global.jokers.blackHole.count = 1;
+				with (o_InventoryPanel){event_user(1);}
+				}
 			if (global.jokers.blackHole.count = 1)
 			{
 				show_debug_message("avg mult x10");
@@ -538,6 +544,7 @@ function jokerEval(jokerToEval)
 			if ((global.playData.players[0].excess_hits>global.playData.players[0].total_notes) or (global.playData.players[0].frets_ghosted>global.playData.players[0].total_notes))
 			{
 				global.jokers.magicEraser.count = 1;
+				with (o_InventoryPanel){event_user(1);}
 			}
 			if (global.jokers.magicEraser.count = 1)
 			{
@@ -721,7 +728,10 @@ function jokerEvalEnd(jokerToEvalEnd)
 		case global.jokers.collector:          
 			//+10 Stars. Activates after 100 base Stars acquired
 			global.jokers.collector.subCount+= global.playDataBase.players[0].stars;
-			if (global.jokers.collector.subCount >=100){global.jokers.collector.count = 1;}
+			if (global.jokers.collector.subCount >=100){
+				global.jokers.collector.count = 1;
+				with (o_InventoryPanel){event_user(1);}
+				}
 			if (global.jokers.collector.count = 1)
 			{
 				show_debug_message("+10 stars");
@@ -734,6 +744,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if ((global.playData.players[0].notes_missed = 1) and (global.playData.players[0].section_stats[0].notes_missed = 1))
 			{
 				global.jokers.reverseChoke.count=1;
+				with (o_InventoryPanel){event_user(1);}
 			}
 			if global.jokers.reverseChoke.count = 1
 			{
@@ -748,6 +759,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if ((global.playData.players[0].notes_missed = 1) and (global.playData.players[0].section_stats[finalSec].notes_missed = 1))
 			{
 				global.jokers.awesomeChoke.count=1;
+				with (o_InventoryPanel){event_user(1);}
 			}
 			if global.jokers.awesomeChoke.count = 1
 			{
