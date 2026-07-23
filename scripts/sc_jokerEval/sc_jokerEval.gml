@@ -76,7 +76,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.aPlus:              
 			//+0.1 Avg Mult per Notes Hit % above 90%
-			var above90 = min(percentage-90,0);
+			var above90 = max(percentage-90,0);
 			show_debug_message("avg mult +" + string(0.1 * above90));
 			global.playData.players[0].avg_multiplier += (0.1 * above90);
 		break;
