@@ -1,5 +1,15 @@
 function selectRandomJoker(availableJokers) 
 {
+	
+	if (array_length(global.jokerInventory) = 0)
+	{
+		if (array_contains(availableJokers,"instantReplay"))
+		{
+			array_delete(availableJokers,array_get_index(availableJokers,"instantReplay"),1);
+			show_debug_message("removed instant replay from pool");
+		}
+	}
+	
 	var availableJokersCommon = [];
 	var availableJokersUncommon = [];
 	var availableJokersRare = [];
