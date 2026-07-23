@@ -121,8 +121,8 @@ draw_set_alpha(l3B0C3482_0 / $ff);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 134D9D95
-/// @DnDArgument : "code" "draw_text_ext(x+186,y+116,string_copy(global.pack.songs[songIndex].charter,0,20),30,664)"
-draw_text_ext(x+186,y+116,string_copy(global.pack.songs[songIndex].charter,0,20),30,664)
+/// @DnDArgument : "code" "draw_text_ext(x+186,y+116,string_copy(global.pack.songs[songIndex].charter,0,28),30,664)"
+draw_text_ext(x+186,y+116,string_copy(global.pack.songs[songIndex].charter,0,28),30,664)
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -168,8 +168,8 @@ draw_set_alpha(l765A8FAE_0 / $ff);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 03F2D64A
-/// @DnDArgument : "code" "draw_text_ext(x+309,y+139,string_copy(global.pack.songs[songIndex].genre,0,16),30,664)"
-draw_text_ext(x+309,y+139,string_copy(global.pack.songs[songIndex].genre,0,16),30,664)
+/// @DnDArgument : "code" "draw_text_ext(x+309,y+139,string_copy(global.pack.songs[songIndex].genre,0,24),30,664)"
+draw_text_ext(x+309,y+139,string_copy(global.pack.songs[songIndex].genre,0,24),30,664)
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1
