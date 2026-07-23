@@ -220,6 +220,7 @@
     {"id":{"name":"sp_jug","path":"sprites/sp_jug/sp_jug.yy",},},
     {"id":{"name":"sp_kickingAss","path":"sprites/sp_kickingAss/sp_kickingAss.yy",},},
     {"id":{"name":"sp_livewire","path":"sprites/sp_livewire/sp_livewire.yy",},},
+    {"id":{"name":"sp_lock","path":"sprites/sp_lock/sp_lock.yy",},},
     {"id":{"name":"sp_magicEraser","path":"sprites/sp_magicEraser/sp_magicEraser.yy",},},
     {"id":{"name":"sp_mainMenu","path":"sprites/sp_mainMenu/sp_mainMenu.yy",},},
     {"id":{"name":"sp_meticulous","path":"sprites/sp_meticulous/sp_meticulous.yy",},},
