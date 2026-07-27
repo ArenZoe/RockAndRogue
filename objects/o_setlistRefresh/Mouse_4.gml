@@ -5,7 +5,7 @@ if(global.gameMoney >= modifiedSetlistRefreshCost)
 	instance_create_layer(640, 32, "Instances", o_panelSetlist);
 
 	global.gameMoney += -modifiedSetlistRefreshCost;
-	var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+	var notif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 	notif.popupLabel = -modifiedSetlistRefreshCost;
 
 	global.setlistRefreshCost += +1;

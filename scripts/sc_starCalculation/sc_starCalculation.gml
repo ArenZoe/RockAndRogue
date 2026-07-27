@@ -52,6 +52,7 @@ function starCalculation()
 					with (o_InventoryPanel){event_user(1);}
 				}
 			}
+			starPopup("Text","Revived!");
 			exit;
 		}
 		

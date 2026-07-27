@@ -22,6 +22,13 @@ function playerOwnsHighEndurance()
 	return false;
 }
 
+function starPopup(type, value)
+{
+	var newPopup = instance_create_layer(970,440,"PopupLayer",o_popupMult);
+	newPopup.popupType = type;
+	newPopup.popupValue = value;
+}
+
 function jokerEval(jokerToEval) 
 {
 	var increase = 0;
@@ -55,6 +62,7 @@ function jokerEval(jokerToEval)
 		case global.jokers.crowd:              
 			//Setlist rerolls cost double, x1.5 Avg Mult
 			show_debug_message("avg mult x1.5");
+			starPopup("Multi",1.5);
 			global.playData.players[0].avg_multiplier *= 1.5;
 			show_debug_message("this joker is also triggered elsewhere");
 		break;
@@ -63,13 +71,14 @@ function jokerEval(jokerToEval)
 			//+2 Currency per song
 			show_debug_message("adding 2 money")
 			global.gameMoney += 2;
-			var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+			var notif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 			notif.popupLabel = 2;
 		break;
 		
 		case global.jokers.noteworthy:         
 			//+0.1 Avg Mult per 100 Notes Hit
 			show_debug_message("avg mult +" + string(0.1 * floor(global.playData.players[0].notes_hit / 100)));
+			starPopup("Plus",(0.1 * floor(global.playData.players[0].notes_hit / 100)));
 			global.playData.players[0].avg_multiplier += (0.1 * floor(global.playData.players[0].notes_hit / 100));
 			
 		break;
@@ -78,42 +87,49 @@ function jokerEval(jokerToEval)
 			//+0.1 Avg Mult per Notes Hit % above 90%
 			var above90 = max(percentage-90,0);
 			show_debug_message("avg mult +" + string(0.1 * above90));
+			starPopup("Plus",(0.1 * above90));
 			global.playData.players[0].avg_multiplier += (0.1 * above90);
 		break;
 		
 		case global.jokers.serial:             
 			//+0.005 Avg Mult per note in Best Streak
 			show_debug_message("avg mult +" + string(0.005 * global.playData.players[0].max_streak));
+			starPopup("Plus",(0.005 * global.playData.players[0].max_streak));
 			global.playData.players[0].avg_multiplier += (0.005 * global.playData.players[0].max_streak);
 		break;
 		
 		case global.jokers.plugged:            
 			//+0.1 Avg Mult per SP Phrase
 			show_debug_message("avg mult +" + string(0.1 * global.playData.players[0].sp_phrases_earned));
+			starPopup("Plus",(0.1 * global.playData.players[0].sp_phrases_earned));
 			global.playData.players[0].avg_multiplier += (0.1 * global.playData.players[0].sp_phrases_earned);
 		break;
 		
 		case global.jokers.discharged:         
 			//+0.2 Avg Mult per Activation
 			show_debug_message("avg mult +" + string(0.2 * global.playData.players[0].sp_activations));
+			starPopup("Plus",(0.2 * global.playData.players[0].sp_activations));
 			global.playData.players[0].avg_multiplier += (0.2 * global.playData.players[0].sp_activations);
 		break;
 		
 		case global.jokers.adrenaline:         
 			//+0.01 Avg Mult per second of SP Time Active (rounded down)
 			show_debug_message("avg mult +" + string(0.01 * floor(global.playData.players[0].time_in_sp)));
+			starPopup("Plus",(0.01 * floor(global.playData.players[0].time_in_sp)));
 			global.playData.players[0].avg_multiplier += (0.01 * floor(global.playData.players[0].time_in_sp));
 		break;
 		
 		case global.jokers.sustain:            
 			//+0.01 Avg Mult per 100 sustain points
 			show_debug_message("avg mult +" + string(0.01 * (floor(global.playData.players[0].sustain_score / 100))));
+			starPopup("Plus",(0.01 * (floor(global.playData.players[0].sustain_score / 100))));
 			global.playData.players[0].avg_multiplier += (0.01 * (floor(global.playData.players[0].sustain_score / 100)));
 		break;
 		
 		case global.jokers.sharpshooter:       
 			//+0.1 Avg Mult per 100% Section 
 			show_debug_message("avg mult +" + string((0.1 * perfectSec)));
+			starPopup("Plus",(0.1 * perfectSec));
 			global.playData.players[0].avg_multiplier += (0.1 * perfectSec);
 		break;
 		
@@ -123,6 +139,7 @@ function jokerEval(jokerToEval)
 			global.jokers.cent.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.cent.count += increase;}
 			show_debug_message("avg mult x" + string(1 + (0.005 * global.jokers.cent.count)));
+			starPopup("Multi",(1 + (0.005 * global.jokers.cent.count)));
 			global.playData.players[0].avg_multiplier *= (1 + (0.005 * global.jokers.cent.count));
 		break;
 		
@@ -132,6 +149,7 @@ function jokerEval(jokerToEval)
 			global.jokers.constellation.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.constellation.count += increase;}
 			show_debug_message("avg mult +" + string(0.05 * global.jokers.constellation.count));
+			starPopup("Plus",(0.05 * global.jokers.constellation.count));
 			global.playData.players[0].avg_multiplier += 0.05 * global.jokers.constellation.count;
 		break;
 		
@@ -142,6 +160,7 @@ function jokerEval(jokerToEval)
 			global.jokers.flawless.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.flawless.count += increase;}
 			show_debug_message("avg mult +" + string(0.8 * global.jokers.flawless.count));
+			starPopup("Plus",( 0.8 * global.jokers.flawless.coun));
 			global.playData.players[0].avg_multiplier += 0.8 * global.jokers.flawless.count;
 		break;
 		
@@ -152,6 +171,7 @@ function jokerEval(jokerToEval)
 			global.jokers.meticulous.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.meticulous.count+=increase;}
 			show_debug_message("avg mult +" + string(0.2 * global.jokers.meticulous.count));
+			starPopup("Plus",(0.2 * global.jokers.meticulous.count));
 			global.playData.players[0].avg_multiplier += (0.2 * global.jokers.meticulous.count);
 		break;
 		
@@ -162,6 +182,7 @@ function jokerEval(jokerToEval)
 			global.jokers.kickingAss.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.kickingAss.count += increase;}
 			show_debug_message("avg mult +" + string((0.2 + (0.1*global.jokers.kickingAss.count))));
+			starPopup("Plus",(0.2 + (0.1*global.jokers.kickingAss.count)));
 			global.playData.players[0].avg_multiplier += (0.2 + (0.1*global.jokers.kickingAss.count));
 		break;
 		
@@ -172,6 +193,7 @@ function jokerEval(jokerToEval)
 			global.jokers.takingNames.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.takingNames.count += increase;}
 			show_debug_message("avg mult x" + string(1.2 + (0.1*global.jokers.takingNames.count)));
+			starPopup("Multi",(1.2 + (0.1*global.jokers.takingNames.count)));
 			global.playData.players[0].avg_multiplier *= (1.2 + (0.1*global.jokers.takingNames.count));
 		break;
 		
@@ -179,6 +201,7 @@ function jokerEval(jokerToEval)
 			// +0.1 Avg Multiplier per [SP Bars Filled]
 			var spBars = floor(global.playData.players[0].sp_ticks_accumulated / global.playData.players[0].sp_bar_ticks);
 			show_debug_message("avg mult +" + string(0.1*spBars));
+			starPopup("Plus",(0.1 * spBars));
 			global.playData.players[0].avg_multiplier += (0.1 * spBars);
 		break;
 		
@@ -188,6 +211,7 @@ function jokerEval(jokerToEval)
 			global.jokers.zoning.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.zoning.count += increase;}
 			show_debug_message("avg mult +" + string(0.02 * global.jokers.zoning.count));
+			starPopup("Plus",(0.02 * global.jokers.zoning.count));
 			global.playData.players[0].avg_multiplier += (0.02 * global.jokers.zoning.count);
 		break;
 		
@@ -197,6 +221,7 @@ function jokerEval(jokerToEval)
 			global.jokers.allYourBase.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.allYourBase.count += increase;}
 			show_debug_message("avg mult +" + string(0.01 * global.jokers.allYourBase.count));
+			starPopup("Plus",(0.01 * global.jokers.allYourBase.count));
 			global.playData.players[0].avg_multiplier += (0.01 * global.jokers.allYourBase.count);
 		break;
 		
@@ -206,6 +231,7 @@ function jokerEval(jokerToEval)
 			if playerOwnsHighEndurance(){decay = floor(decay/2);}
 			global.jokers.extraCredit.count += decay;
 			show_debug_message("avg mult x" + string(1.5 - (0.01 * global.jokers.extraCredit.count)));
+			starPopup("Multi",(1.5 - (0.01 * global.jokers.extraCredit.count)));
 			global.playData.players[0].avg_multiplier *= (1.5 - (0.01 * global.jokers.extraCredit.count));
 		break;
 		
@@ -215,6 +241,7 @@ function jokerEval(jokerToEval)
 			if playerOwnsHighEndurance(){decay = floor(decay/2);}
 			global.jokers.evaporation.count += decay;
 			show_debug_message("avg mult +" + string(2.0 - (0.01*global.jokers.evaporation.count)));
+			starPopup("Plus",(2.0 - (0.01*global.jokers.evaporation.count)));
 			global.playData.players[0].avg_multiplier += (2.0 - (0.01*global.jokers.evaporation.count));
 		break;
 		
@@ -223,6 +250,7 @@ function jokerEval(jokerToEval)
 			decay = 2
 			if playerOwnsHighEndurance(){decay=1;}
 			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.borrowedTime.count)));
+			starPopup("Plus",(2.0 - (0.1*global.jokers.borrowedTime.count)));
 			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.borrowedTime.count)); //this one is -0.1 since we're decaying it by 2 (so that the half decay still works if the player has high endurance)
 			global.jokers.borrowedTime.count += decay; //we want this one to decay after it applies the bonus since it decays per song
 		break;
@@ -233,6 +261,7 @@ function jokerEval(jokerToEval)
 			if playerOwnsHighEndurance(){decay = floor(decay/2);}
 			global.jokers.aberration.count += decay;
 			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.aberration.count)));
+			starPopup("Plus",(2.0 - (0.1*global.jokers.aberration.count)));
 			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.aberration.count));
 		break;
 		
@@ -242,6 +271,7 @@ function jokerEval(jokerToEval)
 			if playerOwnsHighEndurance(){decay=floor(decay/2);}
 			global.jokers.idiomatic.count += decay;
 			show_debug_message("avg mult x" + string(2.0 - (0.1*global.jokers.idiomatic.count)));
+			starPopup("Multi",(2.0 - (0.1*global.jokers.idiomatic.count)));
 			global.playData.players[0].avg_multiplier *= (2.0 - (0.1*global.jokers.idiomatic.count));
 		break;
 		
@@ -251,6 +281,7 @@ function jokerEval(jokerToEval)
 			if playerOwnsHighEndurance(){decay=floor(decay/2);}
 			global.jokers.spiritJar.count += decay;
 			show_debug_message("avg mult +" + string(2.0 - (0.1*global.jokers.spiritJar.count)));
+			starPopup("Plus",(2.0 - (0.1*global.jokers.spiritJar.count)));
 			global.playData.players[0].avg_multiplier += (2.0 - (0.1*global.jokers.spiritJar.count));		
 		break;
 		
@@ -269,7 +300,7 @@ function jokerEval(jokerToEval)
 			global.jokers.bigTipper.count += decay;
 			show_debug_message("money +" + string(max(0,(4 - global.jokers.bigTipper.count))));
 			global.gameMoney += max(0,(4 - global.jokers.bigTipper.count));
-			var tipNotif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+			var tipNotif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 			tipNotif.popupLabel = max(0,(4 - global.jokers.bigTipper.count));
 		break;
 		
@@ -278,6 +309,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].max_streak mod 100 = 0)
 			{
 				show_debug_message("avg mult +5.0");
+				starPopup("Plus",5.0);
 				global.playData.players[0].avg_multiplier += 5.0;
 			}
 		break;
@@ -287,6 +319,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].is_fc = true)
 			{
 				show_debug_message("avg mult x2.0");
+				starPopup("Multi",2.0);
 				global.playData.players[0].avg_multiplier *= 2.0;
 			}
 		break;
@@ -296,6 +329,7 @@ function jokerEval(jokerToEval)
 			if (global.playDataBase.players[0].avg_multiplier >=4.40 and global.playDataBase.players[0].avg_multiplier <= 4.45)
 				{
 					show_debug_message("avg mult +4.4");
+					starPopup("Plus",4.4);
 					global.playData.players[0].avg_multiplier += 4.4;
 				}
 		break;
@@ -305,6 +339,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].excess_hits = 0)
 			{
 				show_debug_message("avg mult x1.5");
+				starPopup("Multi",1.5);
 				global.playData.players[0].avg_multiplier *= 1.5;
 			}
 		break;
@@ -314,6 +349,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].sp_phrases_missed = 0)
 			{
 				show_debug_message("avg mult x1.5");
+				starPopup("Multi",1.5);
 				global.playData.players[0].avg_multiplier *= 1.5;
 			}
 		break;
@@ -323,6 +359,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].frets_ghosted < 10)
 			{
 				show_debug_message("avg mult x1.5");
+				starPopup("Multi",1.5);
 				global.playData.players[0].avg_multiplier *= 1.5;
 			}
 		break;
@@ -332,6 +369,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].max_streak > 500)
 			{
 				show_debug_message("avg mult x1.2");
+				starPopup("Multi",1.2);
 				global.playData.players[0].avg_multiplier *= 1.2;
 			}
 		break;
@@ -341,6 +379,7 @@ function jokerEval(jokerToEval)
 			if (percentage > 90)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -350,6 +389,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].notes_missed < 50)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -359,6 +399,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].excess_hits < 25)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -368,6 +409,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].sp_activations > 4)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -377,6 +419,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].sp_activations < 4)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -386,6 +429,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].frets_ghosted < 20)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -403,6 +447,7 @@ function jokerEval(jokerToEval)
 			if (weakestSec > 80)
 			{
 				show_debug_message("avg mult +1.0");
+				starPopup("Plus",1.0);
 				global.playData.players[0].avg_multiplier += 1.0;
 			}
 		break;
@@ -410,6 +455,7 @@ function jokerEval(jokerToEval)
 		case global.jokers.booster:            
 			//+1.0 Avg Mult
 			show_debug_message("avg mult +1.0");
+			starPopup("Plus",1.0);
 			global.playData.players[0].avg_multiplier += 1.0;
 		break;
 				
@@ -419,14 +465,16 @@ function jokerEval(jokerToEval)
 		break;
 		
 		case global.jokers.turboPower:         
-			//x1.5 Avg Mult
+			//x1.2 Avg Mult
 			show_debug_message("avg mult x1.2");
+			starPopup("Multi",1.2);
 			global.playData.players[0].avg_multiplier *= 1.2;
 		break;
 		
 		case global.jokers.superPower:         
-			//x2.0 Avg Mult
+			//x1.5 Avg Mult
 			show_debug_message("avg mult x1.5");
+			starPopup("Multi",1.5);
 			global.playData.players[0].avg_multiplier *= 1.5;
 		break;
 				
@@ -504,6 +552,7 @@ function jokerEval(jokerToEval)
 		case global.jokers.doubleTap:          
 			//+1.0 avg mult per [Squeezed Note]
 			show_debug_message("avg mult +" + string(global.playData.players[0].squeezed_notes));
+			starPopup("Plus",global.playData.players[0].squeezed_notes);
 			global.playData.players[0].avg_multiplier += global.playData.players[0].squeezed_notes;
 		break;
 
@@ -516,6 +565,7 @@ function jokerEval(jokerToEval)
 				}
 			if (global.jokers.overkill.count = 1){
 				show_debug_message("avg mult x3");
+				starPopup("Multi",3.0);
 				global.playData.players[0].avg_multiplier *= 3.0;
 			}
 		break;
@@ -530,6 +580,7 @@ function jokerEval(jokerToEval)
 			if (global.jokers.blackHole.count = 1)
 			{
 				show_debug_message("avg mult x10");
+				starPopup("Multi",10.0);
 				global.playData.players[0].avg_multiplier *= 10.0;
 			}
 		break;
@@ -558,6 +609,7 @@ function jokerEval(jokerToEval)
 			//Adds x0.1 Avg Mult for every 5% song speed above 100
 			var speedAbove100 = max(0,((global.playData.playback_speed / 5) - 20));
 			show_debug_message("avg mult x" + string(1.0 + (0.1*speedAbove100)));
+			starPopup("Multi",(1.0 + (0.1*speedAbove100)));
 			global.playData.players[0].avg_multiplier *= (1.0 + (0.1*speedAbove100));
 		break;
 		
@@ -565,6 +617,7 @@ function jokerEval(jokerToEval)
 			//Adds x0.2 Avg Mult for every active challenge modifier
 			var numberOfMods = array_length(global.playedSongsData[(array_length(global.playedSongsData)-1)].modifiers);
 			show_debug_message("avg mult x" + string((1.0 + (0.2*numberOfMods))));
+			starPopup("Multi",(1.0 + (0.2*numberOfMods)));
 			global.playData.players[0].avg_multiplier *= (1.0 + (0.2*numberOfMods));
 		break;
 				
@@ -576,6 +629,7 @@ function jokerEval(jokerToEval)
 		case global.jokers.stonks:             
 			//+0.05 Avg Mult for every Currency
 			show_debug_message("avg mult +" + string(0.05*global.gameMoney));
+			starPopup("Plus",(0.05 * global.gameMoney));
 			global.playData.players[0].avg_multiplier += (0.05 * global.gameMoney);
 		break;
 		
@@ -584,6 +638,7 @@ function jokerEval(jokerToEval)
 			randomize();
 			var randomVal = random_range(-2.0,5.0);
 			show_debug_message("avg mult +" + string(randomVal));
+			starPopup("Plus",randomVal);
 			global.playData.players[0].avg_multiplier += randomVal;
 		break;
 		
@@ -592,6 +647,7 @@ function jokerEval(jokerToEval)
 			global.jokers.staminup.count += 1;
 			if playerOwnsGrowthSpurt(){global.jokers.staminup.count +=1;}
 			show_debug_message("avg mult +" + string(0.5*global.jokers.staminup.count));
+			starPopup("Plus",(0.5*global.jokers.staminup.count));
 			global.playData.players[0].avg_multiplier += (0.5*global.jokers.staminup.count);		
 		break;
 		
@@ -599,6 +655,7 @@ function jokerEval(jokerToEval)
 			//+1.0 Avg Mult for every SP bar filled
 			var barsFilled = floor(global.playData.players[0].sp_ticks_accumulated / global.playData.players[0].sp_bar_ticks);
 			show_debug_message("avg mult +" + string(barsFilled));
+			starPopup("Plus",barsFilled);
 			global.playData.players[0].avg_multiplier += barsFilled;
 		break;
 		
@@ -621,9 +678,8 @@ function jokerEval(jokerToEval)
 				}
 				//choose random item from available list
 				var randomItem = irandom(array_length(availableItems)-1);
-				
-				//then add to shop inv and remove from available
 				array_push(global.itemInventory,global.items[$ availableItems[randomItem]]);
+				starPopup("Text", "Consumable Gained");
 				with (o_InventoryPanel){event_user(1);}
 			}
 		break;
@@ -638,12 +694,14 @@ function jokerEval(jokerToEval)
 			//+0.0 Avg Mult, increases by +0.1 per Consumable used
 			global.jokers.gluttony.count = global.runStats.consumablesUsed;
 			show_debug_message("avg mult +" + string(0.1 * global.jokers.gluttony.count));
+			starPopup("Plus",(0.1 * global.jokers.gluttony.count));
 			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.gluttony.count);
 		break;
 		
 		case global.jokers.bassGrooved:        
 			//+0.005 avg mult per note in end streak
 			show_debug_message("avg mult +" + string(0.005 * global.playData.players[0].end_streak));
+			starPopup("Plus",(0.005 * global.playData.players[0].end_streak));
 			global.playData.players[0].avg_multiplier += (0.005 * global.playData.players[0].end_streak);
 		break;
 		
@@ -658,6 +716,7 @@ function jokerEval(jokerToEval)
 				}
 			}
 			show_debug_message("avg mult +" + string(0.005*soloNotes));
+			starPopup("Plus",(0.005 * soloNotes));
 			global.playData.players[0].avg_multiplier += (0.005 * soloNotes);
 		break;
 		
@@ -666,6 +725,7 @@ function jokerEval(jokerToEval)
 			if (global.playData.players[0].excess_hits = 10)
 			{
 				show_debug_message("avg mult x2");
+				starPopup("Multi",2.0);
 				global.playData.players[0].avg_multiplier *= 2;
 			}
 		break;
@@ -674,7 +734,8 @@ function jokerEval(jokerToEval)
 			//x3.0 Avg Mult if [Best Streak] < 50
 			if (global.playData.players[0].max_streak < 50)
 			{
-				show_debug_message("avg mult x3");	
+				show_debug_message("avg mult x3");
+				starPopup("Multi",3.0);
 				global.playData.players[0].avg_multiplier *= 3;
 			}
 		break;
@@ -688,7 +749,8 @@ function jokerEval(jokerToEval)
 			//x1.5 Avg Mult if [Final Streak] = [Best Streak]
 			if (global.playData.players[0].max_streak = global.playData.players[0].end_streak)
 			{
-				show_debug_message("avg mult x1.5");	
+				show_debug_message("avg mult x1.5");
+				starPopup("Multi",1.5);
 				global.playData.players[0].avg_multiplier *= 1.5;
 			}
 		break;
@@ -722,6 +784,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 		case global.jokers.oneUp:              
 			//+1 Star
 			show_debug_message("+1 star");
+			starPopup("Star",1);
 			resultsScreen.starBonusAdd += 1;
 		break;	
 		
@@ -735,6 +798,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if (global.jokers.collector.count = 1)
 			{
 				show_debug_message("+10 stars");
+				starPopup("Star",10);
 				resultsScreen.starBonusAdd += 10;
 			}
 		break;	
@@ -749,6 +813,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if global.jokers.reverseChoke.count = 1
 			{
 				show_debug_message("x2 stars");
+				starPopup("Star",resultsScreen.starsAchieved);
 				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}		
 		break;
@@ -764,6 +829,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			if global.jokers.awesomeChoke.count = 1
 			{
 				show_debug_message("x2 stars");
+				starPopup("Star",resultsScreen.starsAchieved);
 				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}	
 		break;
@@ -779,6 +845,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			else
 			{
 				show_debug_message("x2 stars");
+				starPopup("Star",resultsScreen.starsAchieved);
 				resultsScreen.starBonusMultiplier *= 2; //multiplying instead of adding here in case other x2 stars things trigger at the end
 			}
 		break;
@@ -786,6 +853,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 		case global.jokers.starPower:
 			//+1 Star per [Base Star]
 			show_debug_message("stars +" + string(global.playDataBase.players[0].stars));
+			starPopup("Star",global.playDataBase.players[0].stars);
 			resultsScreen.starBonusAdd += global.playDataBase.players[0].stars;
 		break;
 

@@ -8,7 +8,7 @@ for(var i = 0; i < instance_number(o_joker); i += 1) {
 		global.gameMoney += joker.sellValue;
 		global.runStats.itemsSold += +1;
 		
-		var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+		var notif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 		notif.popupLabel = joker.sellValue;
 	
 		array_delete(global.jokerInventory, joker.index, 1);
@@ -28,7 +28,7 @@ for(var i = 0; i < instance_number(o_consumable); i += 1) {
 	{
 		global.gameMoney += item.sellValue;
 		
-		var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+		var notif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 		notif.popupLabel = item.sellValue;
 	
 		array_delete(global.itemsActive, item.index, 1);

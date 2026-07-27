@@ -9,7 +9,7 @@ if(global.gameMoney >= modifiedShopRefreshCost)
 
 	global.shopInventoryItems = [];
 
-	var notif = instance_create_layer(400,125,"StarLayer",o_popupInt);
+	var notif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 	notif.popupLabel = -modifiedShopRefreshCost;
 
 	with(o_panelShop) instance_destroy();

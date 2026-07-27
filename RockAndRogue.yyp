@@ -106,6 +106,7 @@
     {"id":{"name":"o_poolScrollRight","path":"objects/o_poolScrollRight/o_poolScrollRight.yy",},},
     {"id":{"name":"o_poolSelect","path":"objects/o_poolSelect/o_poolSelect.yy",},},
     {"id":{"name":"o_popupInt","path":"objects/o_popupInt/o_popupInt.yy",},},
+    {"id":{"name":"o_popupMult","path":"objects/o_popupMult/o_popupMult.yy",},},
     {"id":{"name":"o_quitRunButton","path":"objects/o_quitRunButton/o_quitRunButton.yy",},},
     {"id":{"name":"o_resultsStar","path":"objects/o_resultsStar/o_resultsStar.yy",},},
     {"id":{"name":"o_resultsText","path":"objects/o_resultsText/o_resultsText.yy",},},

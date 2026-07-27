@@ -71,8 +71,9 @@ if (avgMultCurve = avgMult and jokerCheck != -1)
 		for (var i=0;i<array_length(global.jokerInventory);i++)
 		{
 			jokerEvalEnd(i);
+			starsAchieved = floor((starCount+starBonusAdd)*(starBonusMultiplier));
 		}
-		starsAchieved = floor((starCount+starBonusAdd)*(starBonusMultiplier));
+
 		global.playData.players[0].stars = starsAchieved;
 
 		starCalculation();
