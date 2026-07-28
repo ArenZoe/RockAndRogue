@@ -7,16 +7,18 @@ for (var i=0;i<array_length(global.jokerInventory);i++)
 		}
 	}
 
-if(modifiedShopRefreshCost > global.gameMoney)
-{
-	renderColour = $FF333333;
-}
+
 
 draw_set_colour($FF000000 & $ffffff);draw_set_alpha(1);
 
 draw_roundrect_ext(x,y,x+128,y+64,5,5,false)
 
 draw_set_colour(renderColour & $ffffff);draw_set_alpha(1);
+
+if(modifiedShopRefreshCost > global.gameMoney)
+{
+	draw_set_color(#333333);
+}
 
 draw_roundrect_ext(x+2,y+2,x+126,y+62,5,5,false)
 
