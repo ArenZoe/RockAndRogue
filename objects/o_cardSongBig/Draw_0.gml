@@ -213,9 +213,9 @@ draw_set_alpha(l1ECCD834_0 / $ff);
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "110"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""
+/// @DnDArgument : "caption" ""+""
 /// @DnDArgument : "var" "songMoney"
-draw_text(x + 647, y + 110,  + string(songMoney));
+draw_text(x + 647, y + 110, string("+") + string(songMoney));
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
