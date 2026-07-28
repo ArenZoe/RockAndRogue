@@ -105,7 +105,7 @@ for (var i=0;i<array_length(global.itemInventory);i++)
 		switch global.itemInventory[i]
 		{
 			case global.items.autoStrum:
-				modifierDescs = string_concat(modifierDescs,"\n• Enable the Auto Strum modifier");
+				modifierDescs = string_concat(modifierDescs,"\n• Enable the Auto Strum modifier\n• YOU MUST NOT BE IN LEADERBOARD MODE FOR AUTO-STRUM");
 			break;
 			
 			case global.items.drunk:
