@@ -80,39 +80,39 @@ function selectModifiers(roundNumber,setlistIndex){
 	for (var i = 0; i < modifierCount; i++){
 		var assignedModifier;
 		randomize();
-		var randomNumber = irandom(479);
+		var randomNumber = irandom_range(1,70);
 		
-		if (randomNumber >= 290){//ultra common
+		if (randomNumber >= 50){//ultra common
 			if (array_length(availableModifiersXCommon) > 0){
 				assignedModifier = availableModifiersXCommon[irandom(array_length(availableModifiersXCommon)-1)];
 				array_push(assignedModifiers, assignedModifier);
 				array_delete(availableModifiersXCommon, array_get_index(availableModifiersXCommon, assignedModifier),1);	
 			}
 			else {
-				randomNumber = 165;
+				randomNumber = 35;
 			}
 		}
-		if (randomNumber < 290 and randomNumber >= 165){//super common
+		if (randomNumber < 50 and randomNumber >= 35){//super common
 			if (array_length(availableModifiersSCommon) > 0){
 				assignedModifier = availableModifiersSCommon[irandom(array_length(availableModifiersSCommon)-1)];
 				array_push(assignedModifiers, assignedModifier);
 				array_delete(availableModifiersSCommon, array_get_index(availableModifiersSCommon, assignedModifier),1);	
 			}
 			else {
-				randomNumber = 71;	
+				randomNumber = 22;	
 			}
 		}
-		if (randomNumber < 165 and randomNumber >= 71){//common
+		if (randomNumber < 35 and randomNumber >= 22){//common
 			if (array_length(availableModifiersCommon) > 0){
 				assignedModifier = availableModifiersCommon[irandom(array_length(availableModifiersCommon)-1)];
 				array_push(assignedModifiers, assignedModifier);
 				array_delete(availableModifiersCommon, array_get_index(availableModifiersCommon, assignedModifier),1);	
 			}
 			else {
-				randomNumber = 11;	
+				randomNumber = 12;	
 			}
 		}
-		if (randomNumber < 71 and randomNumber >= 11){//uncommon
+		if (randomNumber < 22 and randomNumber >= 12){//uncommon
 			if (array_length(availableModifiersUncommon) > 0){
 				assignedModifier = availableModifiersUncommon[irandom(array_length(availableModifiersUncommon)-1)];
 				array_push(assignedModifiers, assignedModifier);
@@ -122,7 +122,7 @@ function selectModifiers(roundNumber,setlistIndex){
 				randomNumber = 5;	
 			}
 		}
-		if (randomNumber < 11 and randomNumber >= 5){//rare
+		if (randomNumber < 12 and randomNumber >= 5){//rare
 		if (array_length(availableModifiersRare) > 0){
 				assignedModifier = availableModifiersRare[irandom(array_length(availableModifiersRare)-1)];
 				array_push(assignedModifiers, assignedModifier);
