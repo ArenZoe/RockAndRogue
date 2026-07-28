@@ -393,6 +393,28 @@
 			"bucket": 2
 		},
 		{
+			"name": "Salt-Drowned Dead",
+			"artist": "Aeon Bridge",
+			"charter": "Jackie",
+			"genre": "Death Metal",
+			"length": 267007,
+			"albumArt": "https://files.enchor.us/740f84e2896e52f6d75fcdcf83c53461.jpg",
+			"instrument": "guitar",
+			"intensity": 6,
+			"bucket": 6
+		},
+		{
+			"name": "Inversion",
+			"artist": "tn-shi",
+			"charter": "MissMoo",
+			"genre": "Artcore",
+			"length": 330265,
+			"albumArt": "https://eternal.ae/snooch/rrAlbumArts/inversion.jpg",
+			"instrument": "guitar",
+			"intensity": 6,
+			"bucket": 5
+		},
+		{
 			"name": "Afx237 v.7",
 			"artist": "Aphex Twin",
 			"charter": "Caret",
