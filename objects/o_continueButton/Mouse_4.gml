@@ -1,24 +1,24 @@
 if (waitCounter < 3600){exit;}
 
 //build file path string using environment variables
-var scorePath = (environment_get_variable("userprofile")) + "\\Documents\\Clone Hero\\scorestats.json";
+//	used to be declared here, is not declared in the setGlobals function to save between songs
 
 //check if score file can be auto-found
 
-if !file_exists(scorePath)
+if !file_exists(global.scorePath)
 {
 	
 	//if score isn't auto-found
 	show_message("Couldn't auto-find your scorestats.json file. Please make sure you're on the latest version of Clone Hero, then locate the file. It should be in the same directory as your song cache, badsongs.txt, etc.");
 	
     //load the scorestats.json file
-	scorePath = get_open_filename("scorestats.json|scorestats.json","");
-	if (scorePath =""){
+	global.scorePath = get_open_filename("scorestats.json|scorestats.json","");
+	if (global.scorePath =""){
 		exit;
 	}
 	
 }
-var scoreFile = file_text_open_read(scorePath);
+var scoreFile = file_text_open_read(global.scorePath);
 
 
 //copy its contents into a string

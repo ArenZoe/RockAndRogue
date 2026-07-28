@@ -30,6 +30,8 @@ function setGlobals()
 	global.playData = [];
 	global.playDataBase = [];
 	
+	global.scorePath = (environment_get_variable("userprofile")) + "\\Documents\\Clone Hero\\scorestats.json";
+	
 	//stat trackers
 	global.runStats = {
 	songsPlayed:0,
