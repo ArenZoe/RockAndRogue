@@ -1,5 +1,3 @@
-draw_sprite_ext(sp_lock,0,250,186,0.4,0.4,0,c_white,0.4);
-
 avgMult = global.playData.players[0].avg_multiplier;
 
 //make the curved avg mult value "zoop" up to the real value instead of instantly jumping

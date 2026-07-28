@@ -93,6 +93,7 @@
     {"id":{"name":"o_endScreen","path":"objects/o_endScreen/o_endScreen.yy",},},
     {"id":{"name":"o_endScreenTitle","path":"objects/o_endScreenTitle/o_endScreenTitle.yy",},},
     {"id":{"name":"o_helpButton","path":"objects/o_helpButton/o_helpButton.yy",},},
+    {"id":{"name":"o_inventoryLock","path":"objects/o_inventoryLock/o_inventoryLock.yy",},},
     {"id":{"name":"o_InventoryPanel","path":"objects/o_InventoryPanel/o_InventoryPanel.yy",},},
     {"id":{"name":"o_invisibleLoader","path":"objects/o_invisibleLoader/o_invisibleLoader.yy",},},
     {"id":{"name":"o_joker","path":"objects/o_joker/o_joker.yy",},},

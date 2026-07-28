@@ -1,0 +1,1 @@
+draw_sprite_ext(sp_lock,0,250,186,0.4,0.4,0,c_white,0.4);

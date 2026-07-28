@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 4DFE823A
-/// @DnDArgument : "expr" "instance_exists(o_resultsText)"
+/// @DnDArgument : "expr" "instance_exists(o_inventoryLock)"
 /// @DnDArgument : "not" "1"
-if(!(instance_exists(o_resultsText))){	/// @DnDAction : YoYo Games.Common.If_Variable
+if(!(instance_exists(o_inventoryLock))){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 0F8FBAA1
 	/// @DnDParent : 4DFE823A
