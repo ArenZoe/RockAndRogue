@@ -646,9 +646,9 @@ function jokerEval(jokerToEval)
 			//+0.0 Avg Mult, increases by +0.5 per Song
 			global.jokers.staminup.count += 1;
 			if playerOwnsGrowthSpurt(){global.jokers.staminup.count +=1;}
-			show_debug_message("avg mult +" + string(0.5*global.jokers.staminup.count));
-			starPopup("Plus",(0.5*global.jokers.staminup.count));
-			global.playData.players[0].avg_multiplier += (0.5*global.jokers.staminup.count);		
+			show_debug_message("avg mult +" + string(0.2*global.jokers.staminup.count));
+			starPopup("Plus",(0.2*global.jokers.staminup.count));
+			global.playData.players[0].avg_multiplier += (0.2*global.jokers.staminup.count);		
 		break;
 		
 		case global.jokers.powerHungry:        

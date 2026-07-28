@@ -727,9 +727,9 @@ function initJokers(){
 		staminup: {
 			name: "Staminup",
 			count: 0,
-			description: "+ Avg Mult, grows by 0.5 per Song", //+0.0 Avg Mult, grows by 0.5 per Song
+			description: "+ Avg Mult, grows by 0.2 per Song", //+0.0 Avg Mult, grows by 0.2 per Song
 			startVal: 0.0,
-			grow: 0.5,
+			grow: 0.2,
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 3,
