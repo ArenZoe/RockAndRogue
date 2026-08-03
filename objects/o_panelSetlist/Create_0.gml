@@ -35,14 +35,16 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
 	/// @DnDHash : 306AAC00
-	/// @DnDInput : 2
+	/// @DnDComment : selectSong(round,bucket,recursiveDepth)
+	/// @DnDInput : 3
 	/// @DnDParent : 24200B77
 	/// @DnDArgument : "var" "randomSong"
 	/// @DnDArgument : "var_temp" "1"
 	/// @DnDArgument : "function" "selectSong"
 	/// @DnDArgument : "arg" "global.gameRound"
 	/// @DnDArgument : "arg_1" "i"
-	var randomSong = selectSong(global.gameRound, i);
+	/// @DnDArgument : "arg_2" "0"
+	var randomSong = selectSong(global.gameRound, i, 0);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

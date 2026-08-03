@@ -1,8 +1,4 @@
-/// @DnDAction : YoYo Games.Common.Execute_Code
-/// @DnDVersion : 1
-/// @DnDHash : 11D3A4C4
-/// @DnDArgument : "code" "function selectSong(roundNumber,setlistIndex){$(13_10)	var bucketTable = [$(13_10)		[0,1,2],$(13_10)		[0,1,2],$(13_10)		[1,2,3],$(13_10)		[2,3,4],$(13_10)		[2,3,4],$(13_10)		[3,4,5],$(13_10)		[3,4,5],$(13_10)		[4,5,6],$(13_10)		[4,5,6],$(13_10)		[5,6,7],$(13_10)		[5,6,7],$(13_10)		[6,7,7],$(13_10)		[6,7,7],$(13_10)		[-1,6,7],$(13_10)		[-1,6,7],$(13_10)		[-1,6,7],$(13_10)		[-1,7,7],$(13_10)		[-1,7,7],$(13_10)		[-1,-1,7],$(13_10)		[-1,-1,7],$(13_10)		[-1,-1,-1],$(13_10)	];$(13_10)	$(13_10)	var bucketNumber = bucketTable[clamp((roundNumber-1),0,array_length(bucketTable)-1),setlistIndex];$(13_10)	var bucketSongIndexes = [];$(13_10)	$(13_10)	for (var i = 0; i< array_length(global.pack.songs); i++){$(13_10)			if (global.pack.songs[i].bucket = bucketNumber or bucketNumber = -1 or global.pack.songs[i].bucket = -1){$(13_10)				if (!array_contains(global.seenSongs,i)){$(13_10)					array_push(bucketSongIndexes,i);$(13_10)				}$(13_10)			}$(13_10)	}$(13_10)	$(13_10)	//if no songs are left to pick from, reset seen songs and run the function again$(13_10)	if (array_length(bucketSongIndexes) = 0){$(13_10)		global.seenSongs = [];$(13_10)		$(13_10)		//add played songs back to seenSongs array$(13_10)		for (var i = 0; i < array_length(global.playedSongs); i++){$(13_10)			array_push(global.seenSongs, global.playedSongs[i]);	$(13_10)		}$(13_10)		$(13_10)		//if played songs is all songs, reset both arrays$(13_10)		if (array_length(global.playedSongs) >= array_length(global.pack.songs)){$(13_10)			global.seenSongs = [];$(13_10)			global.playedSongs = [];$(13_10)		}$(13_10)		$(13_10)		return selectSong(roundNumber, setlistIndex);$(13_10)	}$(13_10)	$(13_10)	var selectedSongIndex = bucketSongIndexes[irandom(array_length(bucketSongIndexes)-1)]$(13_10)	$(13_10)	array_push(global.seenSongs,selectedSongIndex);$(13_10)	return selectedSongIndex;$(13_10)}$(13_10)$(13_10)$(13_10)"
-function selectSong(roundNumber,setlistIndex){
+function selectSong(roundNumber,setlistIndex,recursiveDepth){
 	var bucketTable = [
 		[0,1,2],
 		[0,1,2],
@@ -53,7 +49,15 @@ function selectSong(roundNumber,setlistIndex){
 			global.playedSongs = [];
 		}
 		
-		return selectSong(roundNumber, setlistIndex);
+		//if the recursive depth is less than 3, call normally.
+		//if more, call with internal round set to 23 so all buckets are set to -1
+		if (recursiveDepth <3){
+			return selectSong(roundNumber, setlistIndex, (recursiveDepth +1));
+		}
+		else
+		{
+			return selectSong(23, setlistIndex, (recursiveDepth +1))
+		}
 	}
 	
 	var selectedSongIndex = bucketSongIndexes[irandom(array_length(bucketSongIndexes)-1)]
