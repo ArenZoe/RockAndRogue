@@ -89,7 +89,7 @@ The format template is as follows:
 ```
 
 - `"id":` A string containing the packs internal ID. Doesn't need to follow the same format as the default packs, just needs to be different from any other pack that may be installed.
-- `"icon":` A string URL linking directly to a small icon image. Needs to be a PNG file.
+- `"icon":` A string URL linking directly to a small icon image. Needs to be a square image file.
 - `"title":` A string for the in-game title of the pack.
 - `"description":` A string for the short blurb under the title on the packs screen.
 - `"downloadLink":` A string URL for the directory of charts needed to play the pack.
@@ -116,7 +116,7 @@ The format template is as follows:
 - `"charter":` A string for the song's charter
 - `"genre":` A string for the song's genre
 - `"length":` An integer for the song's length in ms
-- `"albumArt":` A string URL linking directly to an image of the song's album art.
+- `"albumArt":` A string URL linking directly to an image of the song's album art. Needs to be a square image file.
 - `"instrument":` A string for the song's instrument track. Usually `guitar`, but also supports `rhythm`, `guitarcoop`, `bass`, and `keys` 
 - `"intensity":` An integer specifiying the track's difficulty level, usually equal to the chart's `guitar_diff` value.
 - `"bucket":` An integer ranging from 0 to 7, with higher values appearing in later rounds of the game, or -1 to appear at any round.
