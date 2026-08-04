@@ -134,13 +134,13 @@ function jokerEval(jokerToEval)
 		break;
 		
 		case global.jokers.cent:               
-			//x1.00 Avg Mult, increases by x0.005 per 100 Notes Hit
+			//x1.00 Avg Mult, increases by x0.001 per 100 Notes Hit
 			increase = floor(global.playData.players[0].notes_hit / 100);
 			global.jokers.cent.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.cent.count += increase;}
-			show_debug_message("avg mult x" + string(1 + (0.005 * global.jokers.cent.count)));
-			starPopup("Multi",(1 + (0.005 * global.jokers.cent.count)));
-			global.playData.players[0].avg_multiplier *= (1 + (0.005 * global.jokers.cent.count));
+			show_debug_message("avg mult x" + string(1 + (0.001 * global.jokers.cent.count)));
+			starPopup("Multi",(1 + (0.001 * global.jokers.cent.count)));
+			global.playData.players[0].avg_multiplier *= (1 + (0.001 * global.jokers.cent.count));
 		break;
 		
 		case global.jokers.constellation:      
