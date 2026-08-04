@@ -4,6 +4,8 @@ for (var i=0;i<array_length(global.jokerInventory);i++)
 		switch global.jokerInventory[i]
 		{
 			case global.jokers.restock:{modifiedShopRefreshCost = max(0,modifiedShopRefreshCost-4);}break;
+			
+			case global.jokers.setInStone:{modifiedShopRefreshCost = 9999;}break;
 		}
 	}
 

@@ -697,7 +697,7 @@ function initJokers(){
 		setInStone: {
 			name: "Set In Stone",
 			count: 0,
-			description: "Shop prices set to $2, Setlist Rerolls are disabled",
+			description: "Shop prices set to $2, Setlist & Shop Rerolls are disabled",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
