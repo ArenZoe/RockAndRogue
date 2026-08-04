@@ -7,7 +7,7 @@ function initJokers(){
 			description: "[Notes Missed] and [Notes Hit] stats are treated as equal to [Total Notes]",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.statChanger,
 			icon: sp_shroedinger
 		},
@@ -17,7 +17,7 @@ function initJokers(){
 			description: "The first Setlist Reroll in each shop is free",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.economic,
 			icon: sp_wip
 		},
@@ -27,7 +27,7 @@ function initJokers(){
 			description: "X1.5 Avg Mult, Setlist Rerolls cost double",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.economic,
 			icon: sp_crowd
 		},
@@ -67,7 +67,7 @@ function initJokers(){
 			description: "+0.005 Avg Mult x [Max Streak]",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.linearScaler,
 			icon: sp_serial
 		},
@@ -97,7 +97,7 @@ function initJokers(){
 			description: "+0.01 Avg Mult per second of [Time in SP]",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.linearScaler,
 			icon: sp_adrenaline
 		},
@@ -129,7 +129,7 @@ function initJokers(){
 			grow: 0.001,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.growing,
 			icon: sp_cent
 		},
@@ -141,7 +141,7 @@ function initJokers(){
 			grow: 0.05,
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.growing,
 			icon: sp_constellation
 		},
@@ -153,7 +153,7 @@ function initJokers(){
 			grow: 0.8,
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.growing,
 			icon: sp_flawless
 		},
@@ -165,7 +165,7 @@ function initJokers(){
 			grow: 0.2,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.growing,
 			icon: sp_meticulous
 		},
@@ -177,7 +177,7 @@ function initJokers(){
 			grow: 0.1,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.growing,
 			icon: sp_kickingAss
 		},
@@ -189,7 +189,7 @@ function initJokers(){
 			grow: 0.1,
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.growing,
 			icon: sp_takingNames
 		},
@@ -199,7 +199,7 @@ function initJokers(){
 			description: "+0.1 Avg Mult x [SP Bars Filled]",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.linearScaler,
 			icon: sp_livewire
 		},
@@ -211,7 +211,7 @@ function initJokers(){
 			grow: 0.02,
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.growing,
 			icon: sp_zoning
 		},
@@ -223,7 +223,7 @@ function initJokers(){
 			grow: 0.01,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.growing,
 			icon: sp_allYourBase
 		},
@@ -235,7 +235,7 @@ function initJokers(){
 			grow: -0.01,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.decaying,
 			icon: sp_extraCredit
 		},
@@ -247,7 +247,7 @@ function initJokers(){
 			grow: -0.01,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.decaying,
 			icon: sp_evaporate
 		},
@@ -271,7 +271,7 @@ function initJokers(){
 			grow: -0.1,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.decaying,
 			icon: sp_aberration
 		},
@@ -283,7 +283,7 @@ function initJokers(){
 			grow: -0.1,
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.decaying,
 			icon: sp_idiomatic
 		},
@@ -317,7 +317,7 @@ function initJokers(){
 			description: "+5.0 Avg Mult when [Max Streak] is evenly divisible by 100",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.flatBig,
 			icon: sp_satisfy
 		},
@@ -327,7 +327,7 @@ function initJokers(){
 			description: "x2.0 Avg Mult when achieving an FC",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.flatBig,
 			icon: sp_friedChicken
 		},
@@ -337,7 +337,7 @@ function initJokers(){
 			description: "+4.4 Avg Mult when [Base Avg Mult] is between 4.400 - 4.450",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.flatBig,
 			icon: sp_bullseye
 		},
@@ -347,7 +347,7 @@ function initJokers(){
 			description: "x1.5 Avg Mult when [Overstrums] = 0",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.flatBig,
 			icon: sp_rhythmic
 		},
@@ -357,7 +357,7 @@ function initJokers(){
 			description: "x1.5 Avg Mult when [SP Phrases hit] = [SP Total Phrases]",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.flatBig,
 			icon: sp_fame
 		},
@@ -367,7 +367,7 @@ function initJokers(){
 			description: "x1.5 Avg Mult when [Ghost Inputs] < 10",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.flatBig,
 			icon: sp_exorcism
 		},
@@ -477,7 +477,7 @@ function initJokers(){
 			description: "x1.2 Avg Mult",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.passive,
 			icon: sp_turbo
 		},
@@ -487,7 +487,7 @@ function initJokers(){
 			description: "x1.5 Avg Mult",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.passive,
 			icon: sp_super
 		},
@@ -497,7 +497,7 @@ function initJokers(){
 			description: "Becomes a copy of your bottom-most Item",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.duplicator,
 			icon: sp_replay
 		},
@@ -507,7 +507,7 @@ function initJokers(){
 			description: "Becomes a copy of the next acquired Item",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.duplicator,
 			icon: sp_copy
 		},
@@ -517,7 +517,7 @@ function initJokers(){
 			description: "[Notes Missed] x 0.5",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.statChanger,
 			icon: sp_optional
 		},
@@ -527,7 +527,7 @@ function initJokers(){
 			description: "[Max Streak] x1.5",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.statChanger,
 			icon: sp_astigma
 		},
@@ -537,7 +537,7 @@ function initJokers(){
 			description: "[Overstrums] -20",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.statChanger,
 			icon: sp_jug
 		},
@@ -547,7 +547,7 @@ function initJokers(){
 			description: "[SP Phrases Hit] + 5",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.statChanger,
 			icon: sp_phrasing
 		},
@@ -557,7 +557,7 @@ function initJokers(){
 			description: "[SP Active Time] x2",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.statChanger,
 			icon: sp_doubleTime
 		},
@@ -567,7 +567,7 @@ function initJokers(){
 			description: "[Ghost Inputs] x0.5",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.statChanger,
 			icon: sp_elusiveSpirit
 		},
@@ -577,7 +577,7 @@ function initJokers(){
 			description: "Growing Items grow twice",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.synergizer,
 			icon: sp_growthSpurt
 		},
@@ -587,7 +587,7 @@ function initJokers(){
 			description: "Decaying Items decay half as much",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.synergizer,
 			icon: sp_highEndurance
 		},
@@ -607,7 +607,7 @@ function initJokers(){
 			description: "Shop prices -50%",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.economic,
 			icon: sp_fireSale
 		},
@@ -617,7 +617,7 @@ function initJokers(){
 			description: "Shop Refresh price -$4",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.economic,
 			icon: sp_restock
 		},
@@ -627,7 +627,7 @@ function initJokers(){
 			description: "+1.0 Avg Mult x [Notes Squeezed]",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.linearScaler,
 			icon: sp_doubleTap
 		},
@@ -638,7 +638,7 @@ function initJokers(){
 			description: "x3.0 Avg Mult. Activates after 5 FCs",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.toggle,
 			icon: sp_overkill
 		},
@@ -649,7 +649,7 @@ function initJokers(){
 			description: "x10.0 Avg Mult. Activates after 1000 [Notes Missed]",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.toggle,
 			icon: sp_blackHole
 		},
@@ -660,7 +660,7 @@ function initJokers(){
 			description: "+10 Stars. Activates after 100 Stars acquired",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.toggle,
 			icon: sp_collect
 		},
@@ -670,7 +670,7 @@ function initJokers(){
 			description: "[Overstrums] and [Ghost Inputs] = 0. Activates when either are greater than [Total Notes]",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.toggle,
 			icon: sp_magicEraser
 		},
@@ -680,7 +680,7 @@ function initJokers(){
 			description: "x1.1 Avg Mult, +0.1 per 5% speed-up increment",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.special,
 			icon: sp_speedCola
 		},
@@ -690,7 +690,7 @@ function initJokers(){
 			description: "x1.1 Avg Mult, +0.2 for every active challenge modifier",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.special,
 			icon: sp_challenger
 		},
@@ -700,7 +700,7 @@ function initJokers(){
 			description: "Shop prices set to $2, Setlist Rerolls are disabled",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.special,
 			icon: sp_setInStone
 		},
@@ -710,7 +710,7 @@ function initJokers(){
 			description: "+0.05 Avg Mult x [Money]",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.linearScaler,
 			icon: sp_stonks
 		},
@@ -732,7 +732,7 @@ function initJokers(){
 			grow: 0.2,
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.growing,
 			icon: sp_staminup
 		},
@@ -742,7 +742,7 @@ function initJokers(){
 			description: "+1.0 Avg Mult for every SP bar filled",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.linearScaler,
 			icon: sp_powerHungry
 		},
@@ -752,7 +752,7 @@ function initJokers(){
 			description: "Saves you, once",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.special,
 			icon: sp_revive
 		},
@@ -762,7 +762,7 @@ function initJokers(){
 			description: "Gain one random consumable after each Song",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.special,
 			icon: sp_surplus
 		},
@@ -772,7 +772,7 @@ function initJokers(){
 			description: "All Songs are considered FCs, but your notes hit/missed/streak are unchanged.",
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.special,
 			icon: sp_nullCombo
 		},
@@ -784,7 +784,7 @@ function initJokers(){
 			grow: 0.1,
 			rarity: 1,
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			type: jType.growing,
 			icon: sp_glutton
 		},
@@ -794,7 +794,7 @@ function initJokers(){
 			description: "+0.005 Avg Mult x [End Streak]",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.linearScaler,
 			icon: sp_bassGroove
 		},
@@ -804,7 +804,7 @@ function initJokers(){
 			description: "+0.005 Avg Mult per note hit in a Solo section",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.linearScaler,
 			icon: sp_soloSuite
 		},
@@ -814,7 +814,7 @@ function initJokers(){
 			description: "x2.0 Avg Mult when [Overstrums] = 10",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.flatBig,
 			icon: sp_calculated
 		},
@@ -824,7 +824,7 @@ function initJokers(){
 			description: "x3.0 Avg Mult when [Max Streak] < 50",
 			rarity: 3,
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			type: jType.flatBig,
 			icon: sp_inconsistent
 		},
@@ -834,7 +834,7 @@ function initJokers(){
 			description: " +1 Star per [Base Star]",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.passive,
 			icon: sp_sp
 		},
@@ -844,7 +844,7 @@ function initJokers(){
 			description: "x1.5 Avg Mult when [Final Streak] = [Max Streak]",
 			rarity: 2,
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			type: jType.flatBig,
 			icon: sp_backHeavy
 		},
@@ -854,7 +854,7 @@ function initJokers(){
 			description: "x2 Stars. Activates when missing only one note, in the first section of a song",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.toggle,
 			icon: sp_reverseChoke
 		},
@@ -864,7 +864,7 @@ function initJokers(){
 			description: "x2 Stars. Activates when missing only one note, in the last section of a song",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.toggle,
 			icon: sp_awesomeChoke
 		},
@@ -874,7 +874,7 @@ function initJokers(){
 			description: "x2 Stars. Self destructs if you overstrum.",
 			rarity: 4,
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			type: jType.special,
 			icon: sp_unstable
 		}
@@ -899,105 +899,105 @@ function initItems(){
 			name: "MORE!!!!!!1!",
 			description: "Create up to two random consumables",
 			buyValue: 6,
-			sellValue: 3,
+			sellValue: 2,
 			icon: sp_more
 		},
 		picky:{
 			name: "Picky",
 			description: "Ignore any one (1) modifier on the next song",
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			icon: sp_picky
 		},
 		drunk:{
 			name: "Alcomohol,",
 			description: "Enable [Drunk Mode] on the next song",
 			buyValue: 15,
-			sellValue: 5,
+			sellValue: 4,
 			icon: sp_drunk
 		},
 		hopos:{
 			name: "Hop-O's",
 			description: "Enable [All HOPOs] on the next song",
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			icon: sp_hopos
 		},
 		taps:{
 			name: "Tippity Taps",
 			description: "Enable [All Taps] on the next song",
 			buyValue: 10,
-			sellValue: 4,
+			sellValue: 3,
 			icon: sp_taps 
 		},
 		opens:{
 			name: "Open Sesame",
 			description: "Enable [All Opens] on the next song",
 			buyValue: 6,
-			sellValue: 3,
+			sellValue: 2,
 			icon: sp_opens
 		},
 		hoposToTaps:{
 			name: "Tapped Out",
 			description: "Enable [HOPOs to Taps] on the next song",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_hoposToTaps
 		},
 		autoStrum:{
 			name: "Strummer? I Har-",
 			description: "Enable [Auto Strum] on the next song",
 			buyValue: 18,
-			sellValue: 6,
+			sellValue: 5,
 			icon: sp_autoStrum
 		},
 		slow:{
 			name: "Slow Ride",
 			description: "Take it easy. Reduce the next song's play speed by 10%",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_slow
 		},
 		freeMoney:{
 			name: "Finder's Keepers",
 			description: "Get $5",
 			buyValue: 2,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_freeMoney
 		},
 		gamble:{
 			name: "Gamba",
 			description: "Random prize from -$5 to +$20",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_gamble
 		},
 		setlist:{
 			name: "New Release",
 			description: "Refresh the Setlist",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_setlist
 		},
 		shop:{
 			name: "Secret Menu",
 			description: "Refresh the Shop",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_shop
 		},
 		hard:{
 			name: "High Grade",
 			description: "Double your money, Star requirement increased by 20%",
 			buyValue: 5,
-			sellValue: 2,
+			sellValue: 1,
 			icon: sp_hard
 		},
 		easy:{
 			name: "Shortcut",
 			description: "Lose all your money, Star requirement decreased by 20%",
 			buyValue: 7,
-			sellValue: 3,
+			sellValue: 2,
 			icon: sp_easy
 		}
 	};	
