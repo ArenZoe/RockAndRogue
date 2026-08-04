@@ -33,7 +33,7 @@ function selectRandomJoker(availableJokers)
 	var availableJokersLegendary = [];
 	
 	
-	for (i=0;i<array_length(availableJokers);i++) //sorting available jokers into rarity buckets
+	for (var i=0;i<array_length(availableJokers);i++) //sorting available jokers into rarity buckets
 	{
 		if (global.jokers[$ availableJokers[i]].rarity = 0)
 			{array_push(availableJokersCommon,availableJokers[i]);}
