@@ -135,6 +135,8 @@ for (var i=2;i>-1;i--)
 	}
 }
 
+global.jokers.gluttony.count = global.runStats.consumablesUsed;
+
 instance_create_layer(960, 75, "Instances", o_resultsTitle);
 
 instance_create_layer(302, 160, "Instances", o_resultsText);

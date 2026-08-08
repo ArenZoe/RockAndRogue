@@ -692,7 +692,6 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.gluttony:           
 			//+0.0 Avg Mult, increases by +0.1 per Consumable used
-			global.jokers.gluttony.count = global.runStats.consumablesUsed;
 			show_debug_message("avg mult +" + string(0.1 * global.jokers.gluttony.count));
 			starPopup("Plus",(0.1 * global.jokers.gluttony.count));
 			global.playData.players[0].avg_multiplier += (0.1 * global.jokers.gluttony.count);

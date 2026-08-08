@@ -131,4 +131,5 @@ function itemEval(itemToEval)
 			show_debug_message("unimplemented item!");
 		break;
 	}
+	global.jokers.gluttony.count = global.runStats.consumablesUsed;
 }
