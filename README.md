@@ -95,7 +95,7 @@ The format template is as follows:
 - `"downloadLink":` A string URL for the directory of charts needed to play the pack.
 - `"startingMoney":` A positive integer, recommended somewhere between 0 and 20.
 - `"difficulty":` A short string, chosen from `Easy`, `Normal`, or `Hard`.
-- `"songs:"` An array of song objects, as shown below.
+- `"songs:"` An array of ***at least 20*** song objects, as shown below.
 
 ```
 {
