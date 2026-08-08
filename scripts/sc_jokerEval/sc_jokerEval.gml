@@ -819,7 +819,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 		
 		case global.jokers.awesomeChoke:       
 			//x2 Stars. Activates after missing only one note in the final section of the song.
-			var finalSec = array_length(global.playData.players[0].section_count) - 1;
+			var finalSec = global.playData.players[0].section_count - 1;
 			if ((global.playData.players[0].notes_missed = 1) and (global.playData.players[0].section_stats[finalSec].notes_missed = 1))
 			{
 				global.jokers.awesomeChoke.count=1;

@@ -105,7 +105,7 @@ for (var j = 0; j < array_length(scoreData.players[0].section_stats); j++;){
 //add miss counts to the play data since some items will care about and modify the value!
 scoreData.players[0].notes_missed = scoreData.players[0].total_notes - scoreData.players[0].notes_hit;
 scoreData.players[0].sp_phrases_missed = scoreData.players[0].sp_phrases_total - scoreData.players[0].sp_phrases_earned;
-for (var isec = 0; isec < array_length(scoreData.players[0].section_stats) -1; isec++)
+for (var isec = 0; isec < array_length(scoreData.players[0].section_stats); isec++)
 {
 	scoreData.players[0].section_stats[isec].notes_missed = scoreData.players[0].section_stats[isec].notes_count - scoreData.players[0].section_stats[isec].notes_hit;
 }
