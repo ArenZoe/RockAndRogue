@@ -789,7 +789,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 		
 		case global.jokers.collector:          
 			//+10 Stars. Activates after 100 base Stars acquired
-			global.jokers.collector.subCount+= global.playDataBase.players[0].stars;
+			global.jokers.collector.subCount+= resultsScreen.starsAchieved;
 			if (global.jokers.collector.subCount >=100){
 				global.jokers.collector.count = 1;
 				with (o_InventoryPanel){event_user(1);}

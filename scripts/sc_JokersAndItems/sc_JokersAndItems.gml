@@ -646,7 +646,8 @@ function initJokers(){
 			name: "Black Hole",
 			count: 0,
 			subCount: 0,
-			description: "x10.0 Avg Mult. Permanently activates after 1000 [Notes Missed]",
+			startVal: 1000,
+			description: "x10.0 Avg Mult. Permanently activates after (~) [Notes Missed]", //starts at 1000 notes
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -657,7 +658,8 @@ function initJokers(){
 			name: "Collector",
 			count: 0,
 			subCount: 0,
-			description: "+10 Stars. Permanently activates after 100 Stars acquired",
+			startVal: 100,
+			description: "+10 Stars. Permanently activates after (~) Stars acquired", //starts at 100 Stars
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
