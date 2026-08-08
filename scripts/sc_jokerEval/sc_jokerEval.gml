@@ -628,9 +628,9 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.stonks:             
 			//+0.05 Avg Mult for every Currency
-			show_debug_message("avg mult +" + string(0.05*global.gameMoney));
-			starPopup("Plus",(0.05 * global.gameMoney));
-			global.playData.players[0].avg_multiplier += (0.05 * global.gameMoney);
+			show_debug_message("avg mult +" + string(0.1*global.gameMoney));
+			starPopup("Plus",(0.1 * global.gameMoney));
+			global.playData.players[0].avg_multiplier += (0.1 * global.gameMoney);
 		break;
 		
 		case global.jokers.rngesus:            

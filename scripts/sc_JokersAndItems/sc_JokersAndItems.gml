@@ -707,7 +707,7 @@ function initJokers(){
 		stonks: {
 			name: "Stonks",
 			count: 0,
-			description: "+0.05 Avg Mult x [Money]",
+			description: "+0.1 Avg Mult x [Money]",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
