@@ -127,6 +127,29 @@ function itemEval(itemToEval)
 			global.itemsActive[itemToEval] = !global.itemsActive[itemToEval];
 		break;
 		
+		case global.items.mysteryBox:
+			if (array_length(global.jokerInventory) < 5)
+			{
+				var availableJokers = [];
+				availableJokers = struct_get_names(global.jokers);
+				
+				//delete inventory jokers from available list
+				for (var i = 0; i < array_length(availableJokers); i++){
+					if (array_contains(global.jokerInventory,global.jokers[$ availableJokers[i]])){
+						array_delete(availableJokers, i, 1);
+						i--;
+					}
+				}
+				//choose a random joker
+				var randomJoker = selectRandomJoker(availableJokers);
+				//then add to inventory and refresh
+				array_push(global.jokerInventory,global.jokers[$ randomJoker]);
+			}
+			array_delete(global.itemInventory,itemToEval,1)
+			with(o_InventoryPanel){event_user(1);}
+			global.runStats.consumablesUsed += 1;
+		break;
+		
 		default:
 			show_debug_message("unimplemented item!");
 		break;

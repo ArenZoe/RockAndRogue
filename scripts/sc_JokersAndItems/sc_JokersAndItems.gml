@@ -1001,6 +1001,13 @@ function initItems(){
 			buyValue: 7,
 			sellValue: 2,
 			icon: sp_easy
+		},
+		mysteryBox:{
+			name: "Mystery Box",
+			description: "Get a random Powerup (if you have room)",
+			buyValue: 6,
+			sellValue: 1,
+			icon: sp_mysteryBox
 		}
 	};	
 }

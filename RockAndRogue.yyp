@@ -229,6 +229,7 @@
     {"id":{"name":"sp_mainMenu","path":"sprites/sp_mainMenu/sp_mainMenu.yy",},},
     {"id":{"name":"sp_meticulous","path":"sprites/sp_meticulous/sp_meticulous.yy",},},
     {"id":{"name":"sp_more","path":"sprites/sp_more/sp_more.yy",},},
+    {"id":{"name":"sp_mysteryBox","path":"sprites/sp_mysteryBox/sp_mysteryBox.yy",},},
     {"id":{"name":"sp_notePallette","path":"sprites/sp_notePallette/sp_notePallette.yy",},},
     {"id":{"name":"sp_noteworthy","path":"sprites/sp_noteworthy/sp_noteworthy.yy",},},
     {"id":{"name":"sp_nullCombo","path":"sprites/sp_nullCombo/sp_nullCombo.yy",},},
