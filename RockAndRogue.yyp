@@ -55,6 +55,7 @@
     {"$GMIncludedFile":"","%Name":"defaultpack0_GH3Charts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack0_GH3Charts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"defaultpack1_CBFBCharts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack1_CBFBCharts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"defaultpack2_techCharts.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack2_techCharts.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"defaultpack3_PlayAShow.rrpack","CopyToMask":-1,"filePath":"datafiles/songPacks","name":"defaultpack3_PlayAShow.rrpack","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
