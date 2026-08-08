@@ -104,7 +104,7 @@ function initJokers(){
 		sustain:{
 			name: "Sustained",
 			count: 0,
-			description: "+0.1 Avg Mult per 100 [Sustain Score]",
+			description: "+0.01 Avg Mult per 100 [Sustain Score]",
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
