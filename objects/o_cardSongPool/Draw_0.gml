@@ -46,3 +46,39 @@ draw_set_alpha(l26B0660B_0 / $ff);
 /// @DnDHash : 5E2A199C
 /// @DnDArgument : "code" "draw_text_ext(x+96,y+16,string_copy(global.pack.title,0,70),15,128)$(13_10)"
 draw_text_ext(x+96,y+16,string_copy(global.pack.title,0,70),15,128)
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 35E15015
+/// @DnDArgument : "expr" "global.acceleratedMode"
+if(global.acceleratedMode){	/// @DnDAction : YoYo Games.Drawing.Set_Font
+	/// @DnDVersion : 1
+	/// @DnDHash : 4B2BC07E
+	/// @DnDParent : 35E15015
+	/// @DnDArgument : "font" "f_latoMinier"
+	/// @DnDSaveInfo : "font" "f_latoMinier"
+	draw_set_font(f_latoMinier);
+
+	/// @DnDAction : YoYo Games.Drawing.Set_Alpha
+	/// @DnDVersion : 1
+	/// @DnDHash : 7D4E0256
+	/// @DnDParent : 35E15015
+	/// @DnDArgument : "alpha" "0.35"
+	draw_set_alpha(0.35);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 359AC9C7
+	/// @DnDParent : 35E15015
+	/// @DnDArgument : "x" "104"
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y" "80"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "caption" ""Accelerated Mode""
+	draw_text(x + 104, y + 80, string("Accelerated Mode") + "");
+
+	/// @DnDAction : YoYo Games.Drawing.Set_Alpha
+	/// @DnDVersion : 1
+	/// @DnDHash : 58CF5333
+	/// @DnDParent : 35E15015
+	draw_set_alpha(1);}

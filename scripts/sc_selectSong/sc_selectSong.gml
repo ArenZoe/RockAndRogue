@@ -23,6 +23,32 @@ function selectSong(roundNumber,setlistIndex,recursiveDepth){
 		[-1,-1,-1],
 	];
 	
+	if global.acceleratedMode {
+		bucketTable = [
+		[0,1,2],
+		[1,2,3],
+		[2,3,4],
+		[4,5,6],
+		[4,5,6],
+		[5,6,7],
+		[5,6,7],
+		[6,7,7],
+		[6,7,7],
+		[7,7,7],
+		[5,7,7],
+		[7,7,7],
+		[-1,7,7],
+		[-1,7,7],
+		[-1,-1,7],
+		[-1,-1,7],
+		[-1,-1,-1],
+		[-1,-1,-1],
+		[-1,-1,-1],
+		[-1,-1,-1],
+		[-1,-1,-1],
+		];
+	}
+	
 	var bucketNumber = bucketTable[clamp((roundNumber-1),0,array_length(bucketTable)-1),setlistIndex];
 	var bucketSongIndexes = [];
 	

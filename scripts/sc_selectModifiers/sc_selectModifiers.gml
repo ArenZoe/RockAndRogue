@@ -23,6 +23,33 @@ function selectModifiers(roundNumber,setlistIndex){
 		[-1,-1,-1]
 	];
 	
+	if global.acceleratedMode {
+		modifierTable = [
+		[0,0,0],
+		[1,0,0],
+		[1,1,0],
+		[2,1,0],
+		[2,1,1],
+		[2,1,1],
+		[2,2,1],
+		[2,2,1],
+		[3,2,1],
+		[3,2,1],
+		[3,2,2],
+		[3,2,2],
+		[3,3,2],
+		[3,3,2],
+		[4,3,2],
+		[4,3,2],
+		[4,3,-1],
+		[4,3,-1],
+		[4,-1,-1],
+		[4,-1,-1],
+		[-1,-1,-1]
+		];
+	}
+	
+	
 	var modifierCount = modifierTable[clamp((roundNumber-1),0,array_length(modifierTable)-1),setlistIndex];
 	
 	var availableModifiersXCommon = [

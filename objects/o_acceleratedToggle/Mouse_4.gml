@@ -1,0 +1,1 @@
+global.acceleratedMode = !global.acceleratedMode;
