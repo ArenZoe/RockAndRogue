@@ -64,7 +64,7 @@ function initJokers(){
 		serial:{
 			name: "Serial",
 			count: 0,
-			description: "+0.005 Avg Mult x [Max Streak]",
+			description: "+0.005 Avg Mult per note in your [Best Streak]",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -74,7 +74,7 @@ function initJokers(){
 		plugged:{
 			name: "Plugged In",
 			count: 0,
-			description: "+0.1 Avg Mult x [SP Phrases Earned]",
+			description: "+0.1 Avg Mult per [SP Phrases Earned]",
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -84,7 +84,7 @@ function initJokers(){
 		discharged:{
 			name: "Discharged",
 			count: 0,
-			description: "+0.2 Avg Mult x [SP Activations]",
+			description: "+0.2 Avg Mult per [SP Activations]",
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -172,9 +172,9 @@ function initJokers(){
 		kickingAss:{
 			name: "Kicking Ass",
 			count: 0,
-			description: "+ Avg Mult, grows by 0.1 when [Max Streak] > 500", //+0.2 Avg Mult, grows by 0.1 when [Max Streak] > 500
+			description: "+ Avg Mult, grows by 0.2 when [Best Streak] > 500", //+0.2 Avg Mult, grows by 0.1 when [Max Streak] > 500
 			startVal: 0.2,
-			grow: 0.1,
+			grow: 0.2,
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -184,7 +184,7 @@ function initJokers(){
 		takingNames:{
 			name: "Taking Names",
 			count: 0,
-			description: "x Avg Mult, grows by 0.1 when [Max Streak] > 1000", //x1.2 Avg Mult, grows by 0.1 when [Max Streak] > 1000
+			description: "x Avg Mult, grows by 0.1 when [Best Streak] > 1000", //x1.2 Avg Mult, grows by 0.1 when [Max Streak] > 1000
 			startVal: 1.2,
 			grow: 0.1,
 			rarity: 2,
@@ -196,7 +196,7 @@ function initJokers(){
 		livewire:{
 			name: "Livewire",
 			count: 0,
-			description: "+0.1 Avg Mult x [SP Bars Filled]",
+			description: "+0.1 Avg Mult per [SP Bars Filled]",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -242,7 +242,7 @@ function initJokers(){
 		evaporation:{
 			name: "Evaporation",
 			count: 0,
-			description: "+ Avg Mult, decays by 0.01 x [Notes Missed]", //+2.0 Avg Mult, decays by 0.01 x [Notes Missed]
+			description: "+ Avg Mult, decays by 0.01 per [Notes Missed]", //+2.0 Avg Mult, decays by 0.01 x [Notes Missed]
 			startVal: 2.00,
 			grow: -0.01,
 			rarity: 1,
@@ -266,7 +266,7 @@ function initJokers(){
 		aberration:{
 			name: "Aberration",
 			count: 0,
-			description: "+ Avg Mult, decays by 0.1 x [Overstrums]", //+2.0 Avg Mult, decays by 0.1 x [Overstrums]
+			description: "+ Avg Mult, decays by 0.1 per [Overstrums]", //+2.0 Avg Mult, decays by 0.1 x [Overstrums]
 			startVal: 2.0,
 			grow: -0.1,
 			rarity: 1,
@@ -278,7 +278,7 @@ function initJokers(){
 		idiomatic:{
 			name: "Idiomatic",
 			count: 0,
-			description: "x Avg Mult, decays by 0.1 x [SP Phrases Missed]", //x2.0 Avg Mult, decays by 0.1 x [SP Phrases Missed]
+			description: "x Avg Mult, decays by 0.1 per [SP Phrases Missed]", //x2.0 Avg Mult, decays by 0.1 x [SP Phrases Missed]
 			startVal: 2.0,
 			grow: -0.1,
 			rarity: 2,
@@ -314,7 +314,7 @@ function initJokers(){
 		satisfying: {
 			name: "Satisfying",
 			count: 0,
-			description: "+5.0 Avg Mult when [Max Streak] is evenly divisible by 100",
+			description: "+5.0 Avg Mult when [Best Streak] is evenly divisible by 100",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -374,7 +374,7 @@ function initJokers(){
 		hotStreak: {
 			name: "Hot Streak",
 			count: 0,
-			description: "x1.2 Avg Mult when [Max Streak] > 500",
+			description: "x1.2 Avg Mult when [Best Streak] > 500",
 			rarity: 0,
 			buyValue: 4,
 			sellValue: 1,
@@ -494,7 +494,7 @@ function initJokers(){
 		instantReplay: {
 			name: "Instant Replay",
 			count: 0,
-			description: "Becomes a copy of your bottom-most Item",
+			description: "Becomes a copy of your bottom-most Power-Up",
 			rarity: 4,
 			buyValue: 15,
 			sellValue: 4,
@@ -504,7 +504,7 @@ function initJokers(){
 		copycat: {
 			name: "Copycat",
 			count: 0,
-			description: "Becomes a copy of the next acquired Item",
+			description: "Becomes a copy of the next acquired Power-Up",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -514,7 +514,7 @@ function initJokers(){
 		optionalNotes: {
 			name: "Optional Notes",
 			count: 0,
-			description: "[Notes Missed] x 0.5",
+			description: "Your [Notes Missed] stat is halved",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -524,7 +524,7 @@ function initJokers(){
 		astigmatism: {
 			name: "Astigmatism",
 			count: 0,
-			description: "[Max Streak] x1.5",
+			description: "Your [Best Streak] stat is increased by 50%",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -534,7 +534,7 @@ function initJokers(){
 		juggernaut: {
 			name: "Juggernaut",
 			count: 0,
-			description: "[Overstrums] -20",
+			description: "Your [Overstrums] stat is decreased by 20",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -544,7 +544,7 @@ function initJokers(){
 		phrasing: {
 			name: "Phrasing",
 			count: 0,
-			description: "[SP Phrases Hit] + 5",
+			description: "Your [SP Phrases Hit] stat is increased by 5",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -554,7 +554,7 @@ function initJokers(){
 		doubleTime: {
 			name: "Double Time",
 			count: 0,
-			description: "[SP Active Time] x2",
+			description: "Your [SP Active Time] stat is doubled",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -564,7 +564,7 @@ function initJokers(){
 		elusiveSpirit: {
 			name: "Elusive Spirit",
 			count: 0,
-			description: "[Ghost Inputs] x0.5",
+			description: "Your [Ghost Inputs] stat is halved",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -624,7 +624,7 @@ function initJokers(){
 		doubleTap: {
 			name: "Double Tap",
 			count: 0,
-			description: "+1.0 Avg Mult x [Notes Squeezed]",
+			description: "+1.0 Avg Mult per [Notes Squeezed]",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -635,7 +635,7 @@ function initJokers(){
 			name: "Overkill",
 			count: 0,
 			subCount: 0,
-			description: "x3.0 Avg Mult. Activates after 5 FCs",
+			description: "x3.0 Avg Mult. Permanently activates after 5 FCs",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -646,7 +646,7 @@ function initJokers(){
 			name: "Black Hole",
 			count: 0,
 			subCount: 0,
-			description: "x10.0 Avg Mult. Activates after 1000 [Notes Missed]",
+			description: "x10.0 Avg Mult. Permanently activates after 1000 [Notes Missed]",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -657,7 +657,7 @@ function initJokers(){
 			name: "Collector",
 			count: 0,
 			subCount: 0,
-			description: "+10 Stars. Activates after 100 Stars acquired",
+			description: "+10 Stars. Permanently activates after 100 Stars acquired",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -667,7 +667,7 @@ function initJokers(){
 		magicEraser: {
 			name: "Magic Eraser",
 			count: 0,
-			description: "[Overstrums] and [Ghost Inputs] = 0. Activates when either are greater than [Total Notes]",
+			description: "[Overstrums]&[Ghost Inputs] are set to 0. Activates when either are greater than [Total Notes]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -677,7 +677,7 @@ function initJokers(){
 		sleightOfHand: {
 			name: "Sleight of Hand",
 			count: 0,
-			description: "x1.1 Avg Mult, +0.1 per 5% speed-up increment",
+			description: "x1.1 Avg Mult per 10% speed-up increment. You may freely speed-up songs",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -687,7 +687,7 @@ function initJokers(){
 		challenger: {
 			name: "Challenger",
 			count: 0,
-			description: "x1.1 Avg Mult, +0.2 for every active challenge modifier",
+			description: "x1.1 Avg Mult, +0.2 per every active challenge modifier",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -707,7 +707,7 @@ function initJokers(){
 		stonks: {
 			name: "Stonks",
 			count: 0,
-			description: "+0.1 Avg Mult x [Money]",
+			description: "+0.1 Avg Mult per [Money]",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -739,7 +739,7 @@ function initJokers(){
 		powerHungry: {
 			name: "Power Hungry",
 			count: 0,
-			description: "+1.0 Avg Mult for every SP bar filled",
+			description: "+1.0 Avg Mult per [SP Bars Filled]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -769,7 +769,7 @@ function initJokers(){
 		nullCombo: {
 			name: "Null Combo",
 			count: 0,
-			description: "All Songs are considered FCs, but your notes hit/missed/streak are unchanged.",
+			description: "Every song is considered an FC. Does not change any note-related stats",
 			rarity: 1,
 			buyValue: 5,
 			sellValue: 1,
@@ -791,7 +791,7 @@ function initJokers(){
 		bassGrooved: {
 			name: "Bass Grooved",
 			count: 0,
-			description: "+0.005 Avg Mult x [End Streak]",
+			description: "+0.005 Avg Mult per note in your [Ending Streak]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -821,7 +821,7 @@ function initJokers(){
 		inconsistent: {
 			name: "(In)Consistent",
 			count: 0,
-			description: "x3.0 Avg Mult when [Max Streak] < 50",
+			description: "x3.0 Avg Mult when [Best Streak] < 50",
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -841,7 +841,7 @@ function initJokers(){
 		backHeavy: {
 			name: "Back Heavy",
 			count: 0,
-			description: "x1.5 Avg Mult when [Final Streak] = [Max Streak]",
+			description: "x1.5 Avg Mult when [Ending Streak] = [Best Streak]",
 			rarity: 2,
 			buyValue: 7,
 			sellValue: 2,
@@ -851,7 +851,7 @@ function initJokers(){
 		reverseChoke: {
 			name: "Reverse Choke",
 			count: 0,
-			description: "x2 Stars. Activates when missing only one note, in the first section of a song",
+			description: "x2 Stars. Permanently activates when only missing one note, and only in the first section of a song",
 			rarity: 4,
 			buyValue: 15,
 			sellValue: 4,
@@ -861,7 +861,7 @@ function initJokers(){
 		awesomeChoke: {
 			name: "Awesome Choke!",
 			count: 0,
-			description: "x2 Stars. Activates when missing only one note, in the last section of a song",
+			description: "x2 Stars. Permanently activates when only missing one note, and only in the last section of a song",
 			rarity: 4,
 			buyValue: 15,
 			sellValue: 4,
@@ -871,7 +871,7 @@ function initJokers(){
 		unstable: {
 			name: "Unstable",
 			count: 0,
-			description: "x2 Stars. Self destructs if you overstrum.",
+			description: "x2 Stars. Self destructs if you overstrum",
 			rarity: 4,
 			buyValue: 15,
 			sellValue: 4,

@@ -181,9 +181,9 @@ function jokerEval(jokerToEval)
 			else {increase=0;}
 			global.jokers.kickingAss.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.kickingAss.count += increase;}
-			show_debug_message("avg mult +" + string((0.2 + (0.1*global.jokers.kickingAss.count))));
-			starPopup("Plus",(0.2 + (0.1*global.jokers.kickingAss.count)));
-			global.playData.players[0].avg_multiplier += (0.2 + (0.1*global.jokers.kickingAss.count));
+			show_debug_message("avg mult +" + string((0.2 + (0.2*global.jokers.kickingAss.count))));
+			starPopup("Plus",(0.2 + (0.2*global.jokers.kickingAss.count)));
+			global.playData.players[0].avg_multiplier += (0.2 + (0.2*global.jokers.kickingAss.count));
 		break;
 		
 		case global.jokers.takingNames:        
@@ -607,7 +607,7 @@ function jokerEval(jokerToEval)
 		
 		case global.jokers.sleightOfHand:      
 			//Adds x0.1 Avg Mult for every 5% song speed above 100
-			var speedAbove100 = max(0,((global.playData.playback_speed / 5) - 20));
+			var speedAbove100 = max(0,((global.playData.playback_speed / 10) - 10));
 			show_debug_message("avg mult x" + string(1.0 + (0.1*speedAbove100)));
 			starPopup("Multi",(1.0 + (0.1*speedAbove100)));
 			global.playData.players[0].avg_multiplier *= (1.0 + (0.1*speedAbove100));
