@@ -839,6 +839,7 @@ function jokerEvalEnd(jokerToEvalEnd)
 			{
 				show_debug_message("Unstable exploded lol");
 				array_delete(global.jokerInventory,jokerToEvalEnd,1);
+				starPopup("Text","Unstable EXPLODED");
 				with (o_InventoryPanel){event_user(1);}
 			}
 			else
