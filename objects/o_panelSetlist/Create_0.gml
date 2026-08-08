@@ -107,10 +107,10 @@ for(var i = 0; i < 3; i += 1) {	/// @DnDAction : YoYo Games.Instances.Create_In
 			/// @DnDVersion : 1
 			/// @DnDHash : 07E17994
 			/// @DnDParent : 0A505BA9
-			/// @DnDArgument : "expr" "+5"
+			/// @DnDArgument : "expr" "+irandom_range(0,4)"
 			/// @DnDArgument : "expr_relative" "1"
 			/// @DnDArgument : "var" "thisSong.songMoney"
-			thisSong.songMoney += +5;}}
+			thisSong.songMoney += +irandom_range(0,4);}}
 
 	/// @DnDAction : YoYo Games.Instances.Call_User_Event
 	/// @DnDVersion : 1
