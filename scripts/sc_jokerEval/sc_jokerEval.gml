@@ -160,7 +160,7 @@ function jokerEval(jokerToEval)
 			global.jokers.flawless.count += increase;
 			if playerOwnsGrowthSpurt(){global.jokers.flawless.count += increase;}
 			show_debug_message("avg mult +" + string(0.8 * global.jokers.flawless.count));
-			starPopup("Plus",( 0.8 * global.jokers.flawless.coun));
+			starPopup("Plus",( 0.8 * global.jokers.flawless.count));
 			global.playData.players[0].avg_multiplier += 0.8 * global.jokers.flawless.count;
 		break;
 		
