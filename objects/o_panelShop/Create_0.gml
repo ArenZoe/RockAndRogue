@@ -35,7 +35,7 @@ for (var i = 0; i < array_length(availableItems); i++){
 
 for (var i = 0; i < 4; i++){
 	//choose random joker from available list
-	var randomJoker = selectRandomJoker(availableJokers);
+	var randomJoker = selectRandomJoker(availableJokers,0);
 
 	//then add to shop inv and remove from available
 	array_push(global.shopInventory,global.jokers[$ randomJoker]);
@@ -99,3 +99,5 @@ for(var i = 0; i < array_length(global.shopInventory); i += 1) {
 instance_create_layer(464, 608, "Buttons", o_setlistRefresh);
 
 instance_create_layer(320, 608, "Buttons", o_shopRefresh);
+
+if debug_mode {instance_create_layer(0, 0, "Buttons", o_debugAllJokers);}

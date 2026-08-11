@@ -141,7 +141,7 @@ function itemEval(itemToEval)
 					}
 				}
 				//choose a random joker
-				var randomJoker = selectRandomJoker(availableJokers);
+				var randomJoker = selectRandomJoker(availableJokers,0);
 				//then add to inventory and refresh
 				array_push(global.jokerInventory,global.jokers[$ randomJoker]);
 			}

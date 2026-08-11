@@ -1,6 +1,15 @@
 function initJokers(){
-	
 	global.jokers = {
+		nullJoker:{
+			name: "Debug Power-Up",
+			count: 0,
+			description: "idk how you managed to spawn this but it doesn't do anything lol",
+			rarity: -1,
+			buyValue: 9999,
+			sellValue: 9999,
+			type: jType.special,
+			icon: sp_defaultJoker
+		},
 		shroedinger:{
 			name: "Shroedinger's Combo",
 			count: 0,

@@ -90,6 +90,7 @@
     {"id":{"name":"o_consumable","path":"objects/o_consumable/o_consumable.yy",},},
     {"id":{"name":"o_continueButton","path":"objects/o_continueButton/o_continueButton.yy",},},
     {"id":{"name":"o_continueResultsButton","path":"objects/o_continueResultsButton/o_continueResultsButton.yy",},},
+    {"id":{"name":"o_debugAllJokers","path":"objects/o_debugAllJokers/o_debugAllJokers.yy",},},
     {"id":{"name":"o_downloadButton","path":"objects/o_downloadButton/o_downloadButton.yy",},},
     {"id":{"name":"o_endResultsButton","path":"objects/o_endResultsButton/o_endResultsButton.yy",},},
     {"id":{"name":"o_endScreen","path":"objects/o_endScreen/o_endScreen.yy",},},

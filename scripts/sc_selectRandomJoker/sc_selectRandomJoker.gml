@@ -1,5 +1,7 @@
-function selectRandomJoker(availableJokers) 
+function selectRandomJoker(availableJokers,recursiveDepth) 
 {
+	
+	if (recursiveDepth>8){return "nullJoker";}
 	
 	if (array_length(global.jokerInventory) = 0)
 	{
@@ -101,7 +103,7 @@ function selectRandomJoker(availableJokers)
 		else randomNumber = -1;	
 	}
 	if (randomNumber = -1){
-		assignedJoker = selectRandomJoker(availableJokers);
+		assignedJoker = selectRandomJoker(availableJokers,recursiveDepth+1);
 	}
 	
 	return assignedJoker;
