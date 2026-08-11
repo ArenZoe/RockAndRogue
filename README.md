@@ -16,6 +16,7 @@
 # Requirements
 - Clone Hero v1.1 or later
 - This set of highways and colour profiles in your game's custom data folder. [RockAndRogueCustom.zip](https://github.com/user-attachments/files/30100637/RockAndRogueCustom.zip)
+- [Download the latest release](https://github.com/ArenZoe/RockAndRogue/releases/latest)
 
 
 
