@@ -656,7 +656,7 @@ function initJokers(){
 			count: 0,
 			subCount: 0,
 			startVal: 1000,
-			description: "x10.0 Avg Mult. Permanently activates after (~) [Notes Missed]", //starts at 1000 notes
+			description: "x10.0 Avg Mult. Permanently activates after (~dyn) [Notes Missed]", //starts at 1000 notes
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -668,7 +668,7 @@ function initJokers(){
 			count: 0,
 			subCount: 0,
 			startVal: 100,
-			description: "+10 Stars. Permanently activates after (~) Stars acquired", //starts at 100 Stars
+			description: "+10 Stars. Permanently activates after (~dyn) Stars acquired", //starts at 100 Stars
 			rarity: 3,
 			buyValue: 10,
 			sellValue: 3,
@@ -888,6 +888,19 @@ function initJokers(){
 			sellValue: 4,
 			type: jType.special,
 			icon: sp_unstable
+		},
+		back2back: {
+			name: "Back2Back",
+			count: 0,
+			description: "+ Avg Mult. Multiplies per sequential chart by (~charter)",
+			startVal: 1.5,
+			grow: 1.5,
+			rarity: 4,
+			previousCharter: "The last song's charter",
+			buyValue: 15,
+			sellValue: 4,
+			type: jType.growing,
+			icon: sp_back2back
 		}
 		//
 		//:{

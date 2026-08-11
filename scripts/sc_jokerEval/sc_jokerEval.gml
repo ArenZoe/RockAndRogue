@@ -769,6 +769,25 @@ function jokerEval(jokerToEval)
 			show_debug_message("this joker is triggered elsewhere");
 		break;
 		
+		case global.jokers.back2back:
+		//+1.5 Avg Mult. Combos for every subsequent chart by the same charter (~)
+			show_debug_message("last charter was" + global.jokers.back2back.previousCharter);
+			show_debug_message("current charter is" + global.playData.charter_name);
+			if (global.jokers.back2back.previousCharter = global.playData.charter_name)
+			{
+				global.jokers.back2back.count +=1;	
+			}
+			else
+			{
+				global.jokers.back2back.previousCharter = string(global.playData.charter_name);
+				global.jokers.back2back.count = 0;
+			}
+			
+			show_debug_message("avg mult +" + string(1.5 + (1.5 * global.jokers.back2back.count)));
+			starPopup("Plus",(1.5 + (1.5 * global.jokers.back2back.count)));
+			global.playData.players[0].avg_multiplier += (1.5 + (1.5 * global.jokers.back2back.count));
+		break;
+		
 		default:
 			show_debug_message("unimplemented joker. uh oh !");
 		break;

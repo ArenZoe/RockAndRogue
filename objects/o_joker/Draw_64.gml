@@ -159,7 +159,7 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 		/// @DnDVersion : 1
 		/// @DnDHash : 55210C28
 		/// @DnDParent : 4E0DDBB8
-		/// @DnDArgument : "code" "var dynamicDesc = description;$(13_10)var dynamicVal = 0;$(13_10)$(13_10)if (type = jType.growing) or (type = jType.decaying)$(13_10){$(13_10)	dynamicVal = jokerID.startVal + (jokerID.grow * jokerID.count);$(13_10)	dynamicDesc = string_insert("(" + string(dynamicVal) + ")", description, 2);$(13_10)}$(13_10)$(13_10)if (string_count("~",description) > 0)$(13_10){$(13_10)	dynamicVal = jokerID.startVal - jokerID.subCount;$(13_10)	dynamicDesc = string_replace(dynamicDesc,"~",string(dynamicVal));$(13_10)}"
+		/// @DnDArgument : "code" "var dynamicDesc = description;$(13_10)var dynamicVal = 0;$(13_10)$(13_10)if (type = jType.growing) or (type = jType.decaying)$(13_10){$(13_10)	dynamicVal = jokerID.startVal + (jokerID.grow * jokerID.count);$(13_10)	dynamicDesc = string_insert("(" + string(dynamicVal) + ")", description, 2);$(13_10)}$(13_10)$(13_10)if (string_count("~dyn",description) > 0)$(13_10){$(13_10)	dynamicVal = jokerID.startVal - jokerID.subCount;$(13_10)	dynamicDesc = string_replace(dynamicDesc,"~",string(dynamicVal));$(13_10)}$(13_10)$(13_10)if (string_count("~charter",description) > 0)$(13_10){$(13_10)	dynamicVal = jokerID.previousCharter;$(13_10)	dynamicDesc = string_replace(dynamicDesc,"~charter",string_copy(dynamicVal,0,24));$(13_10)}"
 		var dynamicDesc = description;
 		var dynamicVal = 0;
 		
@@ -169,10 +169,16 @@ if(showDesc <= 0){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 			dynamicDesc = string_insert("(" + string(dynamicVal) + ")", description, 2);
 		}
 		
-		if (string_count("~",description) > 0)
+		if (string_count("~dyn",description) > 0)
 		{
 			dynamicVal = jokerID.startVal - jokerID.subCount;
 			dynamicDesc = string_replace(dynamicDesc,"~",string(dynamicVal));
+		}
+		
+		if (string_count("~charter",description) > 0)
+		{
+			dynamicVal = jokerID.previousCharter;
+			dynamicDesc = string_replace(dynamicDesc,"~charter",string_copy(dynamicVal,0,24));
 		}
 	
 		/// @DnDAction : YoYo Games.Common.Function_Call

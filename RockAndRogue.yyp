@@ -160,6 +160,7 @@
     {"id":{"name":"sp_astigma","path":"sprites/sp_astigma/sp_astigma.yy",},},
     {"id":{"name":"sp_autoStrum","path":"sprites/sp_autoStrum/sp_autoStrum.yy",},},
     {"id":{"name":"sp_awesomeChoke","path":"sprites/sp_awesomeChoke/sp_awesomeChoke.yy",},},
+    {"id":{"name":"sp_back2back","path":"sprites/sp_back2back/sp_back2back.yy",},},
     {"id":{"name":"sp_backHeavy","path":"sprites/sp_backHeavy/sp_backHeavy.yy",},},
     {"id":{"name":"sp_bassGroove","path":"sprites/sp_bassGroove/sp_bassGroove.yy",},},
     {"id":{"name":"sp_bigTip","path":"sprites/sp_bigTip/sp_bigTip.yy",},},
