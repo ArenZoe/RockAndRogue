@@ -2,7 +2,9 @@
 /// @DnDVersion : 1
 /// @DnDHash : 59866407
 /// @DnDArgument : "expr" "drawDesc"
-if(drawDesc){	/// @DnDAction : YoYo Games.Drawing.Set_Color
+if(drawDesc)
+{
+	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1
 	/// @DnDHash : 5A141C37
 	/// @DnDParent : 59866407
@@ -15,10 +17,10 @@ if(drawDesc){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDParent : 59866407
 	/// @DnDArgument : "x1" "mouse_x +15"
 	/// @DnDArgument : "y1" "mouse_y -1"
-	/// @DnDArgument : "x2" "mouse_x +182"
+	/// @DnDArgument : "x2" "mouse_x +256"
 	/// @DnDArgument : "y2" "mouse_y +14"
 	/// @DnDArgument : "fill" "1"
-	draw_rectangle(mouse_x +15, mouse_y -1, mouse_x +182, mouse_y +14, 0);
+	draw_rectangle(mouse_x +15, mouse_y -1, mouse_x +256, mouse_y +14, 0);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Font
 	/// @DnDVersion : 1
@@ -42,5 +44,6 @@ if(drawDesc){	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDParent : 59866407
 	/// @DnDArgument : "x" "mouse_x +17"
 	/// @DnDArgument : "y" "mouse_y "
-	/// @DnDArgument : "caption" ""Browse pack installation folder""
-	draw_text(mouse_x +17, mouse_y , string("Browse pack installation folder") + "");}
+	/// @DnDArgument : "caption" ""Browse the folder where packs are installed.""
+	draw_text(mouse_x +17, mouse_y , string("Browse the folder where packs are installed.") + "");
+}

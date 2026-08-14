@@ -87,7 +87,7 @@ for (var i = 0; i < array_length(songPackFilePaths); i++;){
 		data = json_parse(fileString);
 	} catch (err) {
 		// TODO: show error message to user for invalid pack file
-		show_message("Error loading " + string(poolFile));
+		show_message("INVALID JSON FILE. Error loading " + string(poolFile));
 		continue;
 	}
 	
@@ -107,7 +107,7 @@ for (var i = 0; i < array_length(songPackFilePaths); i++;){
 	}
 	
 	//validate the songs
-	var invalidSongs = false
+	var invalidSongs = [];
 	for (var j = 0; j < array_length(data.songs); j++;){
 		if(!struct_exists(data.songs[j], "name") or !is_string(data.songs[j].name) or string_length(data.songs[j].name) = 0 or
 		!struct_exists(data.songs[j], "artist") or !is_string(data.songs[j].artist) or string_length(data.songs[j].artist) = 0 or
@@ -119,13 +119,13 @@ for (var i = 0; i < array_length(songPackFilePaths); i++;){
 		!struct_exists(data.songs[j], "intensity") or !is_real(data.songs[j].intensity) or
 		!struct_exists(data.songs[j], "bucket") or !is_real(data.songs[j].bucket)
 		){
-			invalidSongs = true;
+			array_push(invalidSongs, j+1);
 		}
 		
 	}
-	if (invalidSongs)
+	if (array_length(invalidSongs)>0)
 
-		{show_message(string(poolFile) + " has invalid song data, and can't be loaded.");
+		{show_message(string(poolFile) + " has invalid song data, and can't be loaded. Invalid song(s): " + string(invalidSongs));
 			continue;}
 	if (array_length(data.songs) < 20){
 		show_message(string(poolFile) + " does not have enough songs to be loaded.");
