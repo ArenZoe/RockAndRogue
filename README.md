@@ -13,10 +13,12 @@
 - A fun little project that isn't meant to be serious
 - A barebones prototype / proof-of-concept
 
+## [🌐 Download the latest release](https://github.com/ArenZoe/RockAndRogue/releases/latest)
+
 # Requirements
 - Clone Hero v1.1 or later
 - This set of highways and colour profiles in your game's custom data folder. [RockAndRogueCustom.zip](https://github.com/user-attachments/files/30100637/RockAndRogueCustom.zip)
-- [Download the latest release](https://github.com/ArenZoe/RockAndRogue/releases/latest)
+
 
 
 
@@ -38,7 +40,7 @@
 
 <img width="257" height="555" alt="image" src="https://github.com/user-attachments/assets/95b7e92c-1b80-41b1-9c0e-2aa5b2086dbc" />
 
-- This is your inventory panel. The main ones go in the top section, and consumable items go in the bottom section. You can hold up to 5 main items, and up to 3 consumables.
+- This is your inventory panel. The Power-Ups go in the top section, and consumable items go in the bottom section. You can hold up to 5 Power-Ups, and up to 3 consumables.
 - You can click on items to select them, and from there, move them around, sell them, or use them if they're consumable!
 
 <img width="606" height="658" alt="image" src="https://github.com/user-attachments/assets/fbd1b616-f427-4880-a335-90900be5fa7e" />
