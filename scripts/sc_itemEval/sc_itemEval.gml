@@ -20,7 +20,7 @@ function itemEval(itemToEval)
 			var easyNotif = instance_create_layer(400,125,"PopupLayer",o_popupInt);
 			easyNotif.popupLabel = -global.gameMoney;
 			global.gameMoney *= 0;
-			global.nextStars = ceil(global.nextStars * 0.8);
+			global.nextStars -= 1;
 			array_delete(global.itemInventory,itemToEval,1);
 			with(o_InventoryPanel){event_user(1);}
 			global.runStats.consumablesUsed += 1;

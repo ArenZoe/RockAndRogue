@@ -1019,7 +1019,7 @@ function initItems(){
 		},
 		easy:{
 			name: "Shortcut",
-			description: "Lose all your money, Star requirement decreased by 20%",
+			description: "Lose all your money, Star requirement decreased by 1",
 			buyValue: 7,
 			sellValue: 2,
 			icon: sp_easy
