@@ -2,32 +2,47 @@ function selectRandomJoker(availableJokers,recursiveDepth)
 {
 	
 	if (recursiveDepth>8){return "nullJoker";}
-	
-	if (array_length(global.jokerInventory) = 0)
+	if (array_contains(availableJokers,"instantReplay"))
 	{
-		if (array_contains(availableJokers,"instantReplay"))
+		if (array_length(global.jokerInventory) = 0)
+		{
+				array_delete(availableJokers,array_get_index(availableJokers,"instantReplay"),1);
+				show_debug_message("instant replay removed due to no inventory");
+		}
+		
+		var inventoryHasDuplicates = false;
+		for (var i=0;i<array_length(global.jokerInventory);i++)
+		{
+			var firstCopy = global.jokerInventory[i];
+			for (var j=i+1;j<array_length(global.jokerInventory);j++)
+			{
+				if (global.jokerInventory[j] = firstCopy) {inventoryHasDuplicates = true;}
+			}
+		}
+		
+		if inventoryHasDuplicates
 		{
 			array_delete(availableJokers,array_get_index(availableJokers,"instantReplay"),1);
-			show_debug_message("removed instant replay from pool");
+			show_debug_message("instant replay removed due to duplicates");	
 		}
 	}
-	
-	var inventoryHasDuplicates = false;
-	for (var i=0;i<array_length(global.jokerInventory);i++)
-	{
-		var firstCopy = global.jokerInventory[i];
-		for (var j=i+1;j<array_length(global.jokerInventory);j++)
+	//check for charter variety
+	if (array_contains(availableJokers,"back2back"))
 		{
-			if (global.jokerInventory[j] = firstCopy) {inventoryHasDuplicates = true;}
+		var uniqueCharters = [];
+		for (var i=0;i<array_length(global.pack.songs);i++)
+		{
+			if (!array_contains(uniqueCharters,global.pack.songs[i].charter))
+			{
+				array_push(uniqueCharters,global.pack.songs[i].charter)
+			}
+		}
+		if (array_length(uniqueCharters) < 8)
+		{
+			array_delete(availableJokers,array_get_index(availableJokers,"back2back"),1);
+			show_debug_message("back2back removed due to lack of charter variety in current pack");	
 		}
 	}
-	
-	if inventoryHasDuplicates
-	{
-		array_delete(availableJokers,array_get_index(availableJokers,"instantReplay"),1);
-		show_debug_message("instant replay denied due to duplicates");	
-	}
-	
 	var availableJokersCommon = [];
 	var availableJokersUncommon = [];
 	var availableJokersRare = [];
