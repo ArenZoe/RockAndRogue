@@ -148,3 +148,5 @@ for (var i = 0; i < array_length(global.packs); i++;){
 
 //global variable for UI position
 global.Position = 0/**/
+
+global.enableAnimatedBGs = true;

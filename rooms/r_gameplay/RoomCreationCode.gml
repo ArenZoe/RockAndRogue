@@ -11,3 +11,29 @@ script_execute(sc_msToTimestamp);
 /// @DnDArgument : "value" "true"
 /// @DnDArgument : "var" "buttonsActive"
 global.buttonsActive = true;
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 12632045
+/// @DnDArgument : "expr" "global.enableAnimatedBGs"
+/// @DnDArgument : "not" "1"
+if(!(global.enableAnimatedBGs)){	/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+	/// @DnDVersion : 1
+	/// @DnDHash : 5DA2E03D
+	/// @DnDParent : 12632045
+	/// @DnDArgument : "layer" ""BG_Dark""
+	layer_set_visible("BG_Dark", 0);
+
+	/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+	/// @DnDVersion : 1
+	/// @DnDHash : 7D6CDEE7
+	/// @DnDParent : 12632045
+	/// @DnDArgument : "layer" ""BG_Blur""
+	layer_set_visible("BG_Blur", 0);
+
+	/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+	/// @DnDVersion : 1
+	/// @DnDHash : 38B64905
+	/// @DnDParent : 12632045
+	/// @DnDArgument : "layer" ""Background""
+	layer_set_visible("Background", 0);}
