@@ -50,7 +50,7 @@ if (_status == 0)
 		{
 			global.updateAvailable = true;
 		}
-		if ((newVersionSplit[3] > currentVersionSplit[3]) and (newVersionSplit[2] >= currentVersionSplit[2]) and (newVersionSplit[1] >= currentVersionSplit[1]) and (newVersionSplit[0] <= currentVersionSplit[0]))
+		if ((newVersionSplit[3] > currentVersionSplit[3]) and (newVersionSplit[2] >= currentVersionSplit[2]) and (newVersionSplit[1] >= currentVersionSplit[1]) and (newVersionSplit[0] >= currentVersionSplit[0]))
 		{
 			global.updateAvailable = true;
 		}
