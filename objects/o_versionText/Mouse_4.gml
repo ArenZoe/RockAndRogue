@@ -1,0 +1,1 @@
+if global.updateAvailable {url_open("https://github.com/ArenZoe/RockAndRogue/releases/latest");}

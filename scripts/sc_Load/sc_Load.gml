@@ -150,3 +150,4 @@ for (var i = 0; i < array_length(global.packs); i++;){
 global.Position = 0/**/
 
 global.enableAnimatedBGs = true;
+global.updateAvailable = false;
